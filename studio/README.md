@@ -1,8 +1,10 @@
 # WordPress Studio workshop references
 
-This directory contains concise, workshop-oriented references for WordPress Studio in Brazilian Portuguese and English. They summarize official documentation and record workshop-specific cautions; they are not a replacement for the official docs.
+This directory contains concise, workshop-oriented references for WordPress Studio in Brazilian Portuguese, English, and Spanish. They summarize official documentation and record workshop-specific cautions; they are not a replacement for the official docs.
 
-Esta pasta contém referências concisas e orientadas ao workshop sobre o WordPress Studio em português do Brasil e inglês. Elas resumem a documentação oficial e registram cuidados específicos do treinamento; não substituem a documentação oficial.
+Esta pasta contém referências concisas e orientadas ao workshop sobre o WordPress Studio em português do Brasil, inglês e espanhol. Elas resumem a documentação oficial e registram cuidados específicos do treinamento; não substituem a documentação oficial.
+
+Esta carpeta contiene referencias concisas y orientadas al workshop sobre WordPress Studio en portugués de Brasil, inglés y español. Resumen la documentación oficial y registran precauciones específicas del workshop; no reemplazan la documentación oficial.
 
 ## Editorial baseline / Base editorial
 
@@ -10,32 +12,32 @@ Esta pasta contém referências concisas e orientadas ao workshop sobre o WordPr
 - Verified / verificado em: **2026-08-04**.
 - The locally installed `1.18.0-dev79` build is not an authoritative source for the core workshop.
 - A versão local `1.18.0-dev79` não é fonte autoritativa para o núcleo do workshop.
-- Volatile facts live in [`current-state.md`](pt-BR/current-state.md) and [`current-state.md`](en/current-state.md).
+- Volatile facts live in [`current-state.md`](pt-BR/current-state.md), [`current-state.md`](en/current-state.md), and [`current-state.md`](es/current-state.md).
 - Canonical source metadata lives in [`sources.json`](sources.json).
 - In `sources.json`, `official_last_updated` is the most recent update date among an entry's `official_urls`; page-specific dates remain discoverable at the sources. `tested_with_studio: null` means the editorial claim is documented but still awaits the event-build smoke test.
 
 ## Reference index / Índice de referências
 
-| Reference | Track | Stability | Português | English |
-| --- | --- | --- | --- | --- |
-| Overview | `core` | `stable` | [Visão geral](pt-BR/overview.md) | [Overview](en/overview.md) |
-| Sites | `core` | `stable` | [Sites](pt-BR/sites.md) | [Sites](en/sites.md) |
-| Studio Code | `core` | `volatile` | [Studio Code](pt-BR/studio-code.md) | [Studio Code](en/studio-code.md) |
-| Preview Sites | `core` | `stable` | [Preview Sites](pt-BR/preview-sites.md) | [Preview Sites](en/preview-sites.md) |
-| SSL | `core` | `stable` | [SSL](pt-BR/ssl.md) | [SSL](en/ssl.md) |
-| FAQ | `core` | `volatile` | [Perguntas frequentes](pt-BR/faq.md) | [FAQ](en/faq.md) |
-| Current state | `facilitator` | `volatile` | [Estado atual](pt-BR/current-state.md) | [Current state](en/current-state.md) |
-| Blueprints | `facilitator` | `stable` | [Blueprints](pt-BR/blueprints.md) | [Blueprints](en/blueprints.md) |
-| Import and export | `facilitator` | `stable` | [Importar e exportar](pt-BR/import-export.md) | [Import and export](en/import-export.md) |
-| Open in Studio | `facilitator` | `stable` | [Botão Open in Studio](pt-BR/open-in-studio-button.md) | [Open in Studio button](en/open-in-studio-button.md) |
-| Agent Skills | `challenge` | `volatile` | [Agent Skills](pt-BR/agent-skills.md) | [Agent Skills](en/agent-skills.md) |
-| Debugging | `challenge` | `stable` | [Depuração](pt-BR/debugging.md) | [Debugging](en/debugging.md) |
-| Studio CLI | `advanced` | `volatile` | [Studio CLI](pt-BR/cli.md) | [Studio CLI](en/cli.md) |
-| Custom Blueprints | `advanced` | `beta` | [Blueprints personalizados](pt-BR/custom-blueprints-guide.md) | [Custom Blueprints](en/custom-blueprints-guide.md) |
-| MCP in Studio | `advanced` | `volatile` | [MCP no Studio](pt-BR/mcp-server.md) | [MCP in Studio](en/mcp-server.md) |
-| Studio Sync | `advanced` | `stable` | [Studio Sync](pt-BR/sync.md) | [Studio Sync](en/sync.md) |
-| WordPress.com MCP | `advanced` | `volatile` | [MCP do WordPress.com](pt-BR/wordpress-com-mcp.md) | [WordPress.com MCP](en/wordpress-com-mcp.md) |
-| Studio Assistant legacy note | `advanced` | `volatile` | [Referência legada](pt-BR/assistant.md) | [Legacy reference](en/assistant.md) |
+| Reference | Track | Stability | Português | English | Español |
+| --- | --- | --- | --- | --- | --- |
+| Overview | `core` | `stable` | [Visão geral](pt-BR/overview.md) | [Overview](en/overview.md) | [Descripción general](es/overview.md) |
+| Sites | `core` | `stable` | [Sites](pt-BR/sites.md) | [Sites](en/sites.md) | [Sitios](es/sites.md) |
+| Studio Code | `core` | `volatile` | [Studio Code](pt-BR/studio-code.md) | [Studio Code](en/studio-code.md) | [Studio Code](es/studio-code.md) |
+| Preview Sites | `core` | `stable` | [Preview Sites](pt-BR/preview-sites.md) | [Preview Sites](en/preview-sites.md) | [Preview Sites](es/preview-sites.md) |
+| SSL | `core` | `stable` | [SSL](pt-BR/ssl.md) | [SSL](en/ssl.md) | [SSL](es/ssl.md) |
+| FAQ | `core` | `volatile` | [Perguntas frequentes](pt-BR/faq.md) | [FAQ](en/faq.md) | [Preguntas frecuentes](es/faq.md) |
+| Current state | `facilitator` | `volatile` | [Estado atual](pt-BR/current-state.md) | [Current state](en/current-state.md) | [Estado actual](es/current-state.md) |
+| Blueprints | `facilitator` | `stable` | [Blueprints](pt-BR/blueprints.md) | [Blueprints](en/blueprints.md) | [Blueprints](es/blueprints.md) |
+| Import and export | `facilitator` | `stable` | [Importar e exportar](pt-BR/import-export.md) | [Import and export](en/import-export.md) | [Importar y exportar](es/import-export.md) |
+| Open in Studio | `facilitator` | `stable` | [Botão Open in Studio](pt-BR/open-in-studio-button.md) | [Open in Studio button](en/open-in-studio-button.md) | [Botón Open in Studio](es/open-in-studio-button.md) |
+| Agent Skills | `challenge` | `volatile` | [Agent Skills](pt-BR/agent-skills.md) | [Agent Skills](en/agent-skills.md) | [Agent Skills](es/agent-skills.md) |
+| Debugging | `challenge` | `stable` | [Depuração](pt-BR/debugging.md) | [Debugging](en/debugging.md) | [Depuración](es/debugging.md) |
+| Studio CLI | `advanced` | `volatile` | [Studio CLI](pt-BR/cli.md) | [Studio CLI](en/cli.md) | [Studio CLI](es/cli.md) |
+| Custom Blueprints | `advanced` | `beta` | [Blueprints personalizados](pt-BR/custom-blueprints-guide.md) | [Custom Blueprints](en/custom-blueprints-guide.md) | [Blueprints personalizados](es/custom-blueprints-guide.md) |
+| MCP in Studio | `advanced` | `volatile` | [MCP no Studio](pt-BR/mcp-server.md) | [MCP in Studio](en/mcp-server.md) | [MCP en Studio](es/mcp-server.md) |
+| Studio Sync | `advanced` | `stable` | [Studio Sync](pt-BR/sync.md) | [Studio Sync](en/sync.md) | [Studio Sync](es/sync.md) |
+| WordPress.com MCP | `advanced` | `volatile` | [MCP do WordPress.com](pt-BR/wordpress-com-mcp.md) | [WordPress.com MCP](en/wordpress-com-mcp.md) | [WordPress.com MCP](es/wordpress-com-mcp.md) |
+| Studio Assistant legacy note | `advanced` | `volatile` | [Referência legada](pt-BR/assistant.md) | [Legacy reference](en/assistant.md) | [Referencia heredada](es/assistant.md) |
 
 ## Track policy / Política de trilhas
 
@@ -48,11 +50,13 @@ Esta pasta contém referências concisas e orientadas ao workshop sobre o WordPr
 
 Product names, commands, paths, and visible interface labels stay in English. Portuguese explanatory prose follows the WordPress pt-BR glossary: **bloco** for “block”, **configurações** for “settings”, **rascunho** for “draft”, and **pré-visualização** only for the generic noun. **Preview Sites**, **Studio Code**, **Site Editor**, **Agent Skills**, and **Quick Start** remain product or interface names.
 
+En español, los nombres de producto, comandos, rutas y rótulos visibles de la interfaz también se mantienen en inglés. La explicación se localiza de forma natural sin traducir **Preview Sites**, **Studio Code**, **Site Editor**, **Agent Skills** ni **Quick Start**.
+
 ## Maintenance workflow / Fluxo de manutenção
 
 1. Review the official changelog and Studio Code docs seven days before each event.
 2. Update `sources.json` before changing facts in localized files.
-3. Keep the same `section_order` and heading-level sequence in both locales.
+3. Keep the same `section_order` and heading-level sequence in all supported locales.
 4. Mark unresolved documentation conflicts as `official_conflict`; mark behavior that requires a real 1.17.x smoke test as `needs_local_test`.
 5. Run `node scripts/validate-content.mjs` after every edit. Use `--check-links` when network access is available.
 6. Smoke-test the complete participant flow on Studio 1.17.x 48 hours before the event, then record `tested_with_studio` and `verified_on`.

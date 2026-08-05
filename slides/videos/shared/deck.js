@@ -22,7 +22,7 @@
   };
 
   document.documentElement.lang = locale;
-  document.title = `${moduleData.number}. ${moduleData.title} — ${catalog.seriesTitle}`;
+  document.title = `${moduleData.number}. ${moduleData.title} — ${localeData.seriesTitle || catalog.seriesTitle}`;
 
   const root = document.getElementById("deck-root");
   const shell = element("main", "deck-shell");

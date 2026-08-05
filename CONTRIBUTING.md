@@ -1,6 +1,8 @@
-# Contributing / Como contribuir
+# Contributing / Como contribuir / Cómo contribuir
 
-This repository treats Portuguese and English content as a single deliverable. Este repositório considera o conteúdo em português e inglês uma única entrega.
+This repository treats Portuguese, English, and Spanish content as a single deliverable. Este repositório considera o conteúdo em português, inglês e espanhol uma única entrega.
+
+Este repositorio considera el contenido en portugués, inglés y español una única entrega.
 
 ## Regra principal / Primary rule
 
@@ -8,18 +10,22 @@ Toda alteração editorial feita em um idioma deve incluir a atualização equiv
 
 Every editorial change made in one language must include the equivalent update in every other supported language in the same commit or pull request.
 
+Cada cambio editorial realizado en un idioma debe incluir la actualización equivalente en todos los demás idiomas compatibles en el mismo commit o pull request.
+
 ## Mapa de contrapartes / Counterpart map
 
-| Conteúdo / Content | Português | English |
-| --- | --- | --- |
-| Referências do Studio | `studio/pt-BR/<slug>.md` | `studio/en/<slug>.md` |
-| Plano do workshop | `workshop/pt-BR/plan.md` | `workshop/en/plan.md` |
-| Slides dos vídeos | `locales["pt-BR"].modules` em `slides/videos/shared/content.js` | `locales.en.modules` no mesmo arquivo |
-| Decks HTML | `slides/videos/pt-BR/` | `slides/videos/en/` |
+| Conteúdo / Content | Português | English | Español |
+| --- | --- | --- | --- |
+| Referências do Studio | `studio/pt-BR/<slug>.md` | `studio/en/<slug>.md` | `studio/es/<slug>.md` |
+| Plano do workshop | `workshop/pt-BR/plan.md` | `workshop/en/plan.md` | `workshop/es/plan.md` |
+| Slides dos vídeos | `locales["pt-BR"].modules` | `locales.en.modules` | `locales.es.modules` |
+| Decks HTML | `slides/videos/pt-BR/` | `slides/videos/en/` | `slides/videos/es/` |
 
-Arquivos bilíngues únicos, como `README.md`, `studio/README.md` e `slides/videos/README.md`, devem manter as duas seções atualizadas.
+Arquivos multilíngues únicos, como `README.md`, `studio/README.md` e `slides/videos/README.md`, devem manter todas as seções atualizadas.
 
-Single bilingual files such as `README.md`, `studio/README.md`, and `slides/videos/README.md` must keep both language sections current.
+Single multilingual files such as `README.md`, `studio/README.md`, and `slides/videos/README.md` must keep every language section current.
+
+Los archivos multilíngües únicos, como `README.md`, `studio/README.md` y `slides/videos/README.md`, deben mantener actualizadas todas sus secciones de idioma.
 
 ## Checklist
 
@@ -35,10 +41,10 @@ node scripts/validate-content.mjs
 node scripts/validate-video-slides.mjs
 ```
 
-Para verificar se o diff modificou os dois lados de cada par:
+Para verificar se o diff modificou todas as versões localizadas:
 
 ```sh
-node scripts/validate-bilingual-changes.mjs <base-commit>
+node scripts/validate-language-parity.mjs <base-commit>
 ```
 
-The GitHub Actions workflow runs the same checks automatically and blocks a change that updates only one side of a bilingual pair.
+The GitHub Actions workflow runs the same checks automatically and blocks a change that updates only part of a multilingual set.

@@ -173,7 +173,7 @@ The fallback must still reach local site + Preview; only the automation changes.
 
 ### Forty-eight hours before
 
-- Run the complete flow in PT-BR and EN without cached conversations.
+- Run the complete flow in PT-BR, EN, and ES without cached conversations.
 - Confirm login, payment method, usage limit, and available models.
 - Create, rename, update, and delete a Preview.
 - Test stopped-site behavior and unstable network conditions.

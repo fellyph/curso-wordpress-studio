@@ -24,7 +24,7 @@ fs.mkdirSync(outputRoot, { recursive: true });
   let checkedMobileSlides = 0;
 
   try {
-    for (const locale of ["pt-BR", "en"]) {
+    for (const locale of ["pt-BR", "en", "es"]) {
       const localeData = catalog.locales[locale];
       const localeOutput = path.join(outputRoot, locale);
       fs.mkdirSync(localeOutput, { recursive: true });
@@ -90,7 +90,7 @@ fs.mkdirSync(outputRoot, { recursive: true });
             errors.push(`${locale}/${moduleId} slide ${index + 1}: reveal animation is not active`);
           }
 
-          if (locale === "pt-BR") {
+          if (locale === "pt-BR" || locale === "es") {
             const screenshotName = `${module.number}-${String(index + 1).padStart(2, "0")}.png`;
             await page.locator(".deck-stage").screenshot({ path: path.join(localeOutput, screenshotName) });
           }
@@ -104,40 +104,42 @@ fs.mkdirSync(outputRoot, { recursive: true });
 
     const indexPage = await browser.newPage({ viewport: { width: 1440, height: 1000 }, deviceScaleFactor: 1 });
     await indexPage.goto(pathToFileURL(path.join(videoRoot, "index.html")).href, { waitUntil: "load" });
-    if ((await indexPage.locator(".playlist a").count()) !== 18) errors.push("index does not contain 18 module links");
+    if ((await indexPage.locator(".playlist a").count()) !== 27) errors.push("index does not contain 27 module links");
     await indexPage.screenshot({ path: path.join(outputRoot, "index.png"), fullPage: true });
     await indexPage.close();
 
     const mobilePage = await browser.newPage({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 1 });
-    const ptData = catalog.locales["pt-BR"];
-    for (const moduleId of ptData.moduleOrder) {
-      const module = ptData.modules[moduleId];
-      const mobileEntry = path.join(videoRoot, "pt-BR", module.slug);
-      await mobilePage.goto(pathToFileURL(mobileEntry).href, { waitUntil: "load" });
-      await mobilePage.waitForSelector(".slide.is-active");
-      for (let index = 0; index < module.slides.length; index += 1) {
-        if (index > 0) await mobilePage.keyboard.press("ArrowRight");
-        await mobilePage.evaluate(() => document.getAnimations().forEach((animation) => animation.finish()));
-        const mobileFit = await mobilePage.locator(".slide.is-active").evaluate((slide) => {
-          const stage = slide.parentElement.getBoundingClientRect();
-          const content = slide.querySelector(".slide__content").getBoundingClientRect();
-          const footer = slide.querySelector(".slide__footer").getBoundingClientRect();
-          return content.left >= stage.left - 2 && content.right <= stage.right + 2 && content.top >= stage.top - 2 && content.bottom <= stage.bottom + 2 && footer.bottom <= stage.bottom + 2;
-        });
-        if (!mobileFit) errors.push(`mobile pt-BR/${moduleId} slide ${index + 1} exceeds the stage`);
-        checkedMobileSlides += 1;
-      }
-      if (moduleId === "studio-code") {
-        await mobilePage.keyboard.press("Home");
-        await mobilePage.evaluate(() => document.getAnimations().forEach((animation) => animation.finish()));
-        await mobilePage.screenshot({ path: path.join(outputRoot, "mobile.png"), fullPage: true });
+    for (const locale of ["pt-BR", "es"]) {
+      const localeData = catalog.locales[locale];
+      for (const moduleId of localeData.moduleOrder) {
+        const module = localeData.modules[moduleId];
+        const mobileEntry = path.join(videoRoot, locale, module.slug);
+        await mobilePage.goto(pathToFileURL(mobileEntry).href, { waitUntil: "load" });
+        await mobilePage.waitForSelector(".slide.is-active");
+        for (let index = 0; index < module.slides.length; index += 1) {
+          if (index > 0) await mobilePage.keyboard.press("ArrowRight");
+          await mobilePage.evaluate(() => document.getAnimations().forEach((animation) => animation.finish()));
+          const mobileFit = await mobilePage.locator(".slide.is-active").evaluate((slide) => {
+            const stage = slide.parentElement.getBoundingClientRect();
+            const content = slide.querySelector(".slide__content").getBoundingClientRect();
+            const footer = slide.querySelector(".slide__footer").getBoundingClientRect();
+            return content.left >= stage.left - 2 && content.right <= stage.right + 2 && content.top >= stage.top - 2 && content.bottom <= stage.bottom + 2 && footer.bottom <= stage.bottom + 2;
+          });
+          if (!mobileFit) errors.push(`mobile ${locale}/${moduleId} slide ${index + 1} exceeds the stage`);
+          checkedMobileSlides += 1;
+        }
+        if (moduleId === "studio-code") {
+          await mobilePage.keyboard.press("Home");
+          await mobilePage.evaluate(() => document.getAnimations().forEach((animation) => animation.finish()));
+          await mobilePage.screenshot({ path: path.join(outputRoot, `mobile-${locale}.png`), fullPage: true });
+        }
       }
     }
     await mobilePage.close();
 
     const reducedPage = await browser.newPage({ viewport: { width: 1280, height: 800 } });
     await reducedPage.emulateMedia({ reducedMotion: "reduce" });
-    const reducedEntry = path.join(videoRoot, "pt-BR", ptData.modules["studio-code"].slug);
+    const reducedEntry = path.join(videoRoot, "pt-BR", catalog.locales["pt-BR"].modules["studio-code"].slug);
     await reducedPage.goto(pathToFileURL(reducedEntry).href, { waitUntil: "load" });
     const reducedDuration = await reducedPage.locator(".slide.is-active .reveal").first().evaluate((node) => getComputedStyle(node).animationDuration);
     if (!reducedDuration.startsWith("0.001")) errors.push(`reduced motion animation duration is ${reducedDuration}`);
@@ -154,7 +156,7 @@ fs.mkdirSync(outputRoot, { recursive: true });
 
   console.log("Browser validation passed:");
   console.log(`- ${checkedSlides} slides rendered without stage overflow`);
-  console.log(`- ${checkedMobileSlides} PT-BR slides rendered at 390 × 844`);
+  console.log(`- ${checkedMobileSlides} PT-BR/ES slides rendered at 390 × 844`);
   console.log("- keyboard navigation, notes, animation, and reduced motion verified");
   console.log(`- visual QA output: ${outputRoot}`);
 })().catch((error) => {

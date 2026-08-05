@@ -173,7 +173,7 @@ A alternativa deve alcançar site local + Preview; somente a automação muda.
 
 ### Quarenta e oito horas antes
 
-- Executar todo o fluxo em PT-BR e EN sem cache de conversa.
+- Executar todo o fluxo em PT-BR, EN e ES sem cache de conversa.
 - Confirmar login, método de pagamento, limite e modelos disponíveis.
 - Criar, renomear, atualizar e excluir um Preview.
 - Testar comportamento com site parado e rede instável.

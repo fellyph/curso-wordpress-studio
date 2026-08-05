@@ -4,7 +4,8 @@ import process from 'node:process';
 
 const root = process.cwd();
 const studioDir = path.join(root, 'studio');
-const locales = ['pt-BR', 'en'];
+const locales = ['pt-BR', 'en', 'es'];
+const canonicalLocale = 'en';
 const allowed = {
   stability: new Set(['stable', 'beta', 'volatile']),
   source_status: new Set(['aligned', 'official_conflict', 'needs_local_test']),
@@ -115,6 +116,9 @@ async function validateLinks(urls) {
 
 const manifestPath = path.join(studioDir, 'sources.json');
 const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
+if (JSON.stringify(manifest.supported_locales) !== JSON.stringify(locales)) {
+  errors.push(`studio/sources.json: supported_locales must be ${locales.join(', ')}`);
+}
 const entries = new Map(manifest.sources.map((entry) => [entry.id, entry]));
 const readmePath = path.join(studioDir, 'README.md');
 await validateInternalLinks(await readFile(readmePath, 'utf8'), path.relative(root, readmePath));
@@ -163,28 +167,32 @@ for (const locale of locales) {
   }
 }
 
-if (localeFiles['pt-BR'].join('|') !== localeFiles.en.join('|')) {
-  errors.push('studio locales do not contain the same Markdown files');
-}
-
 const expectedFiles = [...entries.keys()].map((id) => `${id}.md`).sort();
-if (localeFiles.en.join('|') !== expectedFiles.join('|')) {
-  errors.push(`locale file set differs from sources.json\nexpected: ${expectedFiles.join(', ')}\nactual: ${localeFiles.en.join(', ')}`);
+for (const locale of locales) {
+  if (localeFiles[locale].join('|') !== localeFiles[canonicalLocale].join('|')) {
+    errors.push(`${locale}: studio locale does not contain the same Markdown files as ${canonicalLocale}`);
+  }
+  if (localeFiles[locale].join('|') !== expectedFiles.join('|')) {
+    errors.push(`${locale}: locale file set differs from sources.json\nexpected: ${expectedFiles.join(', ')}\nactual: ${localeFiles[locale].join(', ')}`);
+  }
 }
 
 for (const fileName of expectedFiles) {
-  const pt = docs.get(`pt-BR/${fileName}`);
-  const en = docs.get(`en/${fileName}`);
-  if (!pt || !en) continue;
-  if (pt.meta.section_order !== en.meta.section_order) errors.push(`${fileName}: section_order differs between locales`);
-  if (headingShape(pt.text) !== headingShape(en.text)) errors.push(`${fileName}: heading-level sequence differs between locales`);
-  if (JSON.stringify(contentShape(pt.text)) !== JSON.stringify(contentShape(en.text))) errors.push(`${fileName}: list/table/code-fence structure differs between locales`);
-  if (externalUrls(pt.text) !== externalUrls(en.text)) errors.push(`${fileName}: external URL set differs between locales`);
+  const canonical = docs.get(`${canonicalLocale}/${fileName}`);
+  if (!canonical) continue;
+  for (const locale of locales) {
+    const doc = docs.get(`${locale}/${fileName}`);
+    if (!doc) continue;
+    if (doc.meta.section_order !== canonical.meta.section_order) errors.push(`${fileName}: section_order differs in ${locale}`);
+    if (headingShape(doc.text) !== headingShape(canonical.text)) errors.push(`${fileName}: heading-level sequence differs in ${locale}`);
+    if (JSON.stringify(contentShape(doc.text)) !== JSON.stringify(contentShape(canonical.text))) errors.push(`${fileName}: list/table/code-fence structure differs in ${locale}`);
+    if (externalUrls(doc.text) !== externalUrls(canonical.text)) errors.push(`${fileName}: external URL set differs in ${locale}`);
 
-  for (const doc of [pt, en]) {
     const counterpart = path.resolve(path.dirname(path.join(root, doc.relative)), doc.meta.counterpart);
-    const expectedCounterpart = path.join(root, doc === pt ? en.relative : pt.relative);
-    if (counterpart !== expectedCounterpart) errors.push(`${doc.relative}: counterpart does not resolve to the paired file`);
+    const validCounterparts = locales
+      .filter((candidate) => candidate !== locale)
+      .map((candidate) => path.join(root, docs.get(`${candidate}/${fileName}`)?.relative ?? ''));
+    if (!validCounterparts.includes(counterpart)) errors.push(`${doc.relative}: counterpart does not resolve to another supported locale`);
   }
 }
 
@@ -227,16 +235,18 @@ for (const locale of locales) {
   }
   await validateInternalLinks(text, relative);
 }
-if (plans['pt-BR'].meta.section_order !== plans.en.meta.section_order) errors.push('workshop plans: section_order differs');
-if (headingShape(plans['pt-BR'].text) !== headingShape(plans.en.text)) errors.push('workshop plans: heading-level sequence differs');
-if (JSON.stringify(contentShape(plans['pt-BR'].text)) !== JSON.stringify(contentShape(plans.en.text))) errors.push('workshop plans: list/table/code-fence structure differs');
-if (externalUrls(plans['pt-BR'].text) !== externalUrls(plans.en.text)) errors.push('workshop plans: external URL set differs');
 for (const locale of locales) {
   const plan = plans[locale];
+  const canonical = plans[canonicalLocale];
+  if (plan.meta.section_order !== canonical.meta.section_order) errors.push(`workshop plans: section_order differs in ${locale}`);
+  if (headingShape(plan.text) !== headingShape(canonical.text)) errors.push(`workshop plans: heading-level sequence differs in ${locale}`);
+  if (JSON.stringify(contentShape(plan.text)) !== JSON.stringify(contentShape(canonical.text))) errors.push(`workshop plans: list/table/code-fence structure differs in ${locale}`);
+  if (externalUrls(plan.text) !== externalUrls(canonical.text)) errors.push(`workshop plans: external URL set differs in ${locale}`);
   const counterpart = path.resolve(path.dirname(path.join(root, plan.relative)), plan.meta.counterpart);
-  const otherLocale = locale === 'pt-BR' ? 'en' : 'pt-BR';
-  const expected = path.join(root, plans[otherLocale].relative);
-  if (counterpart !== expected) errors.push(`${plan.relative}: counterpart does not resolve to the paired plan`);
+  const validCounterparts = locales
+    .filter((candidate) => candidate !== locale)
+    .map((candidate) => path.join(root, plans[candidate].relative));
+  if (!validCounterparts.includes(counterpart)) errors.push(`${plan.relative}: counterpart does not resolve to another supported locale`);
 }
 
 if (process.argv.includes('--check-links')) {

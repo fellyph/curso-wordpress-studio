@@ -4,6 +4,7 @@ window.STUDIO_VIDEO_DECKS = {
   verifiedOn: "2026-08-04",
   locales: {
     "pt-BR": {
+      seriesTitle: "Do brief ao Preview · WordPress Studio",
       ui: {
         video: "Vídeo",
         minute: "Minuto",
@@ -639,6 +640,7 @@ window.STUDIO_VIDEO_DECKS = {
       }
     },
     "en": {
+      seriesTitle: "From brief to Preview · WordPress Studio",
       ui: {
         video: "Video",
         minute: "Minute",
@@ -1268,6 +1270,642 @@ window.STUDIO_VIDEO_DECKS = {
               body: "Return to the index to revisit a module or use the full plan to run the four-hour workshop.",
               next: "Back to index",
               notes: "Close by asking the participant to explain the site in three sentences: who it is for, what it offers, and which action it expects. That is the final clarity test."
+            }
+          ]
+        }
+      }
+    },
+    "es": {
+      seriesTitle: "Del brief al Preview · WordPress Studio",
+      ui: {
+        video: "Vídeo",
+        minute: "Minuto",
+        seriesIndex: "Índice de la serie",
+        navigation: "Navegación de slides",
+        previous: "Slide anterior",
+        next: "Siguiente slide",
+        nextVideo: "Siguiente vídeo",
+        speakerNotes: "Notas del presentador",
+        noNotes: "No hay notas adicionales para este slide."
+      },
+      moduleOrder: [
+        "overview",
+        "mini-brief",
+        "create-site",
+        "studio-code",
+        "site-editor",
+        "annotate",
+        "preview",
+        "apply-feedback",
+        "next-steps"
+      ],
+      modules: {
+        "overview": {
+          number: "01",
+          slug: "01-overview.html",
+          shortTitle: "Visión general",
+          title: "Del brief al Preview",
+          duration: "5 min",
+          promise: "Un recorrido breve, local y revisable.",
+          slides: [
+            {
+              tone: "cobalt",
+              layout: "cover",
+              eyebrow: "Comienza por el resultado",
+              title: "Del brief al Preview",
+              accent: "Preview",
+              body: "Un flujo completo para transformar una idea en un sitio de una página, sin tocar producción.",
+              takeaway: "Idea → construcción local → revisión → compartir",
+              notes: "Comienza mostrando el resultado final y la URL de Preview. Explica que la serie sigue el mismo recorrido del workshop en partes pequeñas e independientes."
+            },
+            {
+              tone: "paper",
+              layout: "flow",
+              eyebrow: "El recorrido",
+              title: "Cuatro movimientos. Un sitio.",
+              accent: "Un sitio",
+              items: [
+                { label: "Definir", text: "Mini-brief y alcance." },
+                { label: "Construir", text: "Studio + Studio Code." },
+                { label: "Revisar", text: "Site Editor + Annotate." },
+                { label: "Compartir", text: "Preview temporal." }
+              ],
+              notes: "Destaca que cada etapa produce algo observable. No es necesario comenzar con código ni publicar un sitio real para aprender el flujo."
+            },
+            {
+              tone: "frost",
+              layout: "steps",
+              eyebrow: "Mapa de herramientas",
+              title: "Cada herramienta tiene una función",
+              accent: "una función",
+              items: [
+                { label: "Studio", text: "Crea y administra el sitio local." },
+                { label: "Studio Code", text: "Planifica y propone cambios." },
+                { label: "Site Editor", text: "Inspecciona y ajusta visualmente." },
+                { label: "Annotate + Preview", text: "Registra y comparte feedback." }
+              ],
+              notes: "Evita presentar una lista de funciones. Relaciona cada herramienta con una decisión del proceso y mantén el foco en entregar una página."
+            },
+            {
+              tone: "ink",
+              layout: "comparison",
+              eyebrow: "Límite de seguridad",
+              title: "Local primero. Remoto cuando tenga sentido.",
+              accent: "Local primero",
+              items: [
+                { marker: "L", label: "Local", text: "Construir, probar, revisar y equivocarse con seguridad." },
+                { marker: "R", label: "Remoto", text: "Compartir solo contenido ficticio o autorizado." }
+              ],
+              notes: "Diferencia Preview de alojamiento permanente. En esta serie no hay Sync, producción ni datos reales; lo remoto aparece solamente al compartir."
+            },
+            {
+              tone: "terracotta",
+              layout: "outro",
+              eyebrow: "Resultado de la serie",
+              title: "Una página que puedes explicar",
+              accent: "explicar",
+              body: "Tendrás un sitio local, decisiones registradas y un Preview revisado por otra persona.",
+              next: "02 · Mini-brief",
+              notes: "Cierra con el criterio más importante: no basta con generar una página; la persona debe reconocer su propósito, justificar decisiones y revisar el resultado."
+            }
+          ]
+        },
+        "mini-brief": {
+          number: "02",
+          slug: "02-mini-brief.html",
+          shortTitle: "Mini-brief",
+          title: "Crear un mini-brief",
+          duration: "5 min",
+          promise: "Un brief lo bastante pequeño para orientar decisiones.",
+          slides: [
+            {
+              tone: "ink",
+              layout: "cover",
+              eyebrow: "Antes de la herramienta",
+              title: "Una buena idea cabe en un brief breve",
+              accent: "brief breve",
+              body: "Define lo que la página debe conseguir antes de decidir cómo debe verse.",
+              notes: "Explica que el mini-brief no es burocracia. Es un filtro rápido para decisiones de contenido, estilo y feedback."
+            },
+            {
+              tone: "paper",
+              layout: "split",
+              eyebrow: "Base",
+              title: "Propósito + público",
+              accent: "público",
+              body: "Comienza con dos frases específicas.",
+              items: [
+                { marker: "P", label: "Propósito", text: "¿Qué debe hacer posible esta página?" },
+                { marker: "A", label: "Público", text: "¿Para quién debe ser más fácil esta decisión?" }
+              ],
+              notes: "Pide respuestas concretas. ‘Promocionar mi trabajo’ es amplio; ‘ayudar a organizadores a solicitar una charla’ ya orienta una página."
+            },
+            {
+              tone: "cobalt",
+              layout: "split",
+              eyebrow: "Dirección",
+              title: "Una acción. Una voz.",
+              accent: "Una voz",
+              items: [
+                { marker: "→", label: "CTA principal", text: "Elige una única acción siguiente." },
+                { marker: "Aa", label: "Tono", text: "Usa tres adjetivos para guiar texto e imágenes." }
+              ],
+              notes: "La CTA resuelve la prioridad. El tono evita descripciones vagas como ‘bonito y moderno’; usa características que cambien decisiones, como directo, acogedor y seguro."
+            },
+            {
+              tone: "frost",
+              layout: "checklist",
+              eyebrow: "Contenido mínimo",
+              title: "Tres mensajes. Cinco secciones como máximo.",
+              accent: "Cinco secciones",
+              items: [
+                { marker: "3", label: "Mensajes", text: "Lo que la persona debe comprender." },
+                { marker: "5", label: "Secciones", text: "El orden que cuenta la historia." },
+                { marker: "✓", label: "Assets", text: "Solo archivos disponibles y autorizados." }
+              ],
+              notes: "Sugiere una estructura simple: hero, evidencia, oferta, proceso y CTA. Los assets pueden ser fotos propias, logotipo y textos aprobados."
+            },
+            {
+              tone: "cream",
+              layout: "outro",
+              eyebrow: "Checkpoint",
+              title: "Si no está en el brief, no bloquea la primera versión",
+              accent: "no bloquea",
+              body: "Guarda las ideas adicionales para después. Ahora necesitas una base que pueda revisarse.",
+              next: "03 · Crear el sitio",
+              notes: "Muestra el brief completo en una sola pantalla. Si no puede leerse en un minuto, reduce el alcance antes de abrir Studio."
+            }
+          ]
+        },
+        "create-site": {
+          number: "03",
+          slug: "03-create-site.html",
+          shortTitle: "Crear el sitio",
+          title: "Crear un sitio con Quick Start",
+          duration: "5 min",
+          promise: "Una base local lista para recibir el brief.",
+          slides: [
+            {
+              tone: "terracotta",
+              layout: "cover",
+              eyebrow: "WordPress Studio",
+              title: "La misma base para todos",
+              accent: "misma base",
+              body: "Crea un sitio local con Quick Start y conoce solamente lo necesario para este recorrido.",
+              notes: "Presenta Studio como entorno local. El objetivo no es explorar todos los menús, sino obtener una base predecible para construir la página."
+            },
+            {
+              tone: "paper",
+              layout: "checklist",
+              eyebrow: "Preflight",
+              title: "Comprueba antes de comenzar",
+              accent: "antes",
+              items: [
+                { marker: "1", label: "Studio instalado", text: "Usa la versión estable indicada por el workshop." },
+                { marker: "2", label: "Cuenta conectada", text: "Necesaria para Studio Code y Preview." },
+                { marker: "3", label: "Assets disponibles", text: "Prepara la carpeta del proyecto." }
+              ],
+              notes: "Realiza esta comprobación antes del evento. Si Studio Code no está disponible, conserva el sitio inicial de fallback para continuar en Site Editor."
+            },
+            {
+              tone: "cobalt",
+              layout: "flow",
+              eyebrow: "Quick Start",
+              title: "De cero a WordPress local",
+              accent: "WordPress local",
+              items: [
+                { label: "Add site", text: "Inicia un proyecto." },
+                { label: "Build a new site", text: "Elige una base nueva." },
+                { label: "Quick Start", text: "Usa la configuración guiada." },
+                { label: "Start", text: "Abre el sitio local." }
+              ],
+              notes: "Muestra los rótulos de la interfaz en inglés y explícalos en español. Asigna al sitio un nombre breve y reconocible para evitar confusión en Preview."
+            },
+            {
+              tone: "ink",
+              layout: "split",
+              eyebrow: "Tour de 60 segundos",
+              title: "Dos lados del mismo proyecto",
+              accent: "Dos lados",
+              items: [
+                { marker: "↗", label: "Site", text: "Observa la experiencia pública local." },
+                { marker: "W", label: "WP Admin", text: "Entra en Site Editor y revisa la estructura." }
+              ],
+              notes: "Señala dónde iniciar y detener el sitio, abrir WP Admin y visitar la página. Deja las funciones avanzadas para referencias posteriores."
+            },
+            {
+              tone: "frost",
+              layout: "outro",
+              eyebrow: "Checkpoint",
+              title: "El sitio abre. El editor abre. El brief está al lado.",
+              accent: "brief",
+              body: "Esta es la base mínima para comenzar la construcción asistida.",
+              next: "04 · Studio Code",
+              notes: "Confirma los tres puntos en directo. Si algo falla, cambia al sitio inicial de fallback en lugar de consumir el tiempo del recorrido con configuración."
+            }
+          ]
+        },
+        "studio-code": {
+          number: "04",
+          slug: "04-studio-code.html",
+          shortTitle: "Studio Code",
+          title: "Planificar y construir con Studio Code",
+          duration: "5 min",
+          promise: "Aprobación humana antes de cada cambio importante.",
+          slides: [
+            {
+              tone: "cobalt",
+              layout: "cover",
+              eyebrow: "Construcción asistida",
+              title: "Plan antes de ejecutar",
+              accent: "Plan",
+              body: "Proporciona contexto, revisa la propuesta y solo entonces autoriza la primera versión.",
+              notes: "Presenta Studio Code como colaborador dentro del proyecto, no como botón mágico. La calidad depende del contexto y de la revisión humana."
+            },
+            {
+              tone: "paper",
+              layout: "checklist",
+              eyebrow: "Contexto",
+              title: "Entrega el brief y los límites",
+              accent: "límites",
+              items: [
+                { marker: "B", label: "Brief", text: "Propósito, público, CTA, tono y secciones." },
+                { marker: "A", label: "Assets", text: "Indica los archivos que pueden utilizarse." },
+                { marker: "G", label: "Guardrails", text: "Una página, local y sin plugins nuevos." }
+              ],
+              notes: "Pega o adjunta el mini-brief e indica claramente lo que no debe suceder. Los límites claros reducen cambios innecesarios y hacen el diff más legible."
+            },
+            {
+              tone: "frost",
+              layout: "steps",
+              eyebrow: "Prompt inicial",
+              title: "Pide una propuesta verificable",
+              accent: "verificable",
+              items: [
+                { label: "Objetivo", text: "Describe la página deseada." },
+                { label: "Restricciones", text: "Indica qué conservar y evitar." },
+                { label: "Plan", text: "Solicita pasos antes de ejecutar." }
+              ],
+              notes: "Una buena solicitud termina con una acción concreta: analizar el proyecto, proponer un plan breve y esperar la aprobación. Así se crea el primer checkpoint humano."
+            },
+            {
+              tone: "ink",
+              layout: "flow",
+              eyebrow: "Checkpoint humano",
+              title: "Aprobar no es pulsar “sí”",
+              accent: "Aprobar",
+              items: [
+                { label: "Leer", text: "Comprende archivos y etapas." },
+                { label: "Preguntar", text: "Corrige suposiciones." },
+                { label: "Reducir", text: "Elimina alcance innecesario." },
+                { label: "Ejecutar", text: "Autoriza por partes." }
+              ],
+              notes: "Modela una revisión real: pide una aclaración, elimina un paso y aprueba solamente la primera parte. Este comportamiento importa más que el prompt exacto."
+            },
+            {
+              tone: "terracotta",
+              layout: "outro",
+              eyebrow: "Checkpoint",
+              title: "Revisa el diff y dos capturas",
+              accent: "dos capturas",
+              body: "Desktop y mobile deben contar la misma historia antes de abrir el editor.",
+              next: "05 · Site Editor",
+              notes: "No aceptes la conclusión solamente por el texto del agente. Abre la página, revisa el diff y compara dos anchos. Si Studio Code no está disponible, usa el sitio de fallback."
+            }
+          ]
+        },
+        "site-editor": {
+          number: "05",
+          slug: "05-site-editor.html",
+          shortTitle: "Site Editor",
+          title: "Revisar en Site Editor",
+          duration: "5 min",
+          promise: "La página debe seguir siendo editable y legible.",
+          slides: [
+            {
+              tone: "cream",
+              layout: "cover",
+              eyebrow: "Revisión visual",
+              title: "El agente construye. Tú decides.",
+              accent: "Tú decides",
+              body: "Usa Site Editor para probar estructura, contenido y comportamiento en pantallas pequeñas.",
+              notes: "Cambia del modo de generación al modo de decisión. La revisión visual conecta el resultado técnico con el brief y la experiencia del visitante."
+            },
+            {
+              tone: "paper",
+              layout: "steps",
+              eyebrow: "Estructura",
+              title: "¿La página sigue siendo WordPress?",
+              accent: "WordPress",
+              items: [
+                { label: "Bloques", text: "Los elementos pueden seleccionarse y editarse." },
+                { label: "Patterns", text: "La composición tiene una lógica reconocible." },
+                { label: "Styles", text: "Las decisiones globales no se convirtieron en excepciones locales." }
+              ],
+              notes: "Haz clic en elementos clave. Un resultado bonito pero difícil de editar no cumple el objetivo. Comprueba también que los estilos globales conserven sentido."
+            },
+            {
+              tone: "cobalt",
+              layout: "checklist",
+              eyebrow: "Contenido",
+              title: "Lee como visitante, no como autor",
+              accent: "visitante",
+              items: [
+                { marker: "H", label: "Jerarquía", text: "Los títulos revelan el orden del mensaje." },
+                { marker: "→", label: "CTA", text: "La siguiente acción aparece sin ambigüedad." },
+                { marker: "Aa", label: "Legibilidad", text: "Contraste y tamaño sostienen la lectura." }
+              ],
+              notes: "Recorre la página sin explicar nada. Si el propósito o la acción principal solo se entienden con tu narración, la página aún necesita revisión."
+            },
+            {
+              tone: "ink",
+              layout: "comparison",
+              eyebrow: "Responsive",
+              title: "Misma intención. Otro ancho.",
+              accent: "Otro ancho",
+              items: [
+                { marker: "▭", label: "Desktop", text: "Ritmo, espacio y línea de lectura." },
+                { marker: "▯", label: "Mobile", text: "Orden, toque, cortes y foco." }
+              ],
+              notes: "No trates mobile como una miniatura. Revisa el orden de las secciones, cortes de texto, tamaño de objetivos y si la CTA continúa siendo evidente."
+            },
+            {
+              tone: "terracotta",
+              layout: "outro",
+              eyebrow: "Checkpoint",
+              title: "Haz un cambio manual",
+              accent: "manual",
+              body: "Ajusta un texto o estilo y confirma que mantienes el control del resultado.",
+              next: "06 · Annotate",
+              notes: "Una pequeña edición manual demuestra que la página no es una caja negra. Guarda y vuelve a comparar con el mini-brief."
+            }
+          ]
+        },
+        "annotate": {
+          number: "06",
+          slug: "06-annotate.html",
+          shortTitle: "Annotate",
+          title: "Registrar feedback con Annotate",
+          duration: "5 min",
+          promise: "Feedback ligado al elemento, al problema y al resultado.",
+          slides: [
+            {
+              tone: "ink",
+              layout: "cover",
+              eyebrow: "Revisión contextual",
+              title: "El feedback específico mejora el cambio",
+              accent: "específico",
+              body: "Selecciona el elemento, describe el problema e indica lo que debe conservarse.",
+              notes: "Presenta Annotate como puente entre inspección visual y cambio. El comentario gana contexto porque está ligado al punto exacto de la página."
+            },
+            {
+              tone: "paper",
+              layout: "comparison",
+              eyebrow: "Calidad de la solicitud",
+              title: "Cambia opinión por dirección",
+              accent: "dirección",
+              items: [
+                { marker: "×", label: "“No me gusta”", text: "Sin problema, intención ni límite." },
+                { marker: "✓", label: "“Destaca la CTA”", text: "Explica por qué y conserva el tono." }
+              ],
+              notes: "Compara un comentario vago con una solicitud verificable. La segunda conecta el cambio con el brief y protege lo que ya funciona."
+            },
+            {
+              tone: "cobalt",
+              layout: "flow",
+              eyebrow: "Anotación útil",
+              title: "Cuatro partes, una decisión",
+              accent: "una decisión",
+              items: [
+                { label: "Elemento", text: "Dónde cambiar." },
+                { label: "Problema", text: "Qué no funciona." },
+                { label: "Resultado", text: "Qué debe mejorar." },
+                { label: "Restricción", text: "Qué debe conservarse." }
+              ],
+              notes: "Usa la fórmula para crear dos anotaciones, no una lista enorme. Pocos cambios coherentes son más fáciles de revisar y demostrar."
+            },
+            {
+              tone: "frost",
+              layout: "steps",
+              eyebrow: "Ciclo de cambio",
+              title: "Anota. Propón. Revisa.",
+              accent: "Revisa",
+              items: [
+                { label: "Anota", text: "Registra el feedback en contexto." },
+                { label: "Propón", text: "Pide un plan antes del cambio." },
+                { label: "Revisa", text: "Comprueba el diff y las capturas." }
+              ],
+              notes: "Mantén el mismo patrón de checkpoint de Studio Code. Una anotación no autoriza cualquier implementación; abre una conversación verificable."
+            },
+            {
+              tone: "cream",
+              layout: "outro",
+              eyebrow: "Checkpoint",
+              title: "Dos cambios. Una historia más clara.",
+              accent: "más clara",
+              body: "Si la modificación no refuerza el brief, no entra en esta ronda.",
+              next: "07 · Preview",
+              notes: "Termina mostrando el antes y el después. Indica qué mensaje o acción se volvió más claro, en lugar de valorar solamente si se ve más bonito."
+            }
+          ]
+        },
+        "preview": {
+          number: "07",
+          slug: "07-preview.html",
+          shortTitle: "Preview",
+          title: "Compartir un Preview",
+          duration: "5 min",
+          promise: "Una URL pública y temporal para recoger feedback.",
+          slides: [
+            {
+              tone: "cobalt",
+              layout: "cover",
+              eyebrow: "Compartir",
+              title: "Muestra sin publicar en producción",
+              accent: "sin publicar",
+              body: "Crea un Preview temporal para que otra persona experimente la página en el navegador.",
+              notes: "Aclara desde el principio: Preview es una forma temporal de compartir, no alojamiento permanente. Usa solamente contenido ficticio o autorizado."
+            },
+            {
+              tone: "paper",
+              layout: "flow",
+              eyebrow: "Crear Preview",
+              title: "Nombra, crea, copia",
+              accent: "copia",
+              items: [
+                { label: "Nombrar", text: "Usa proyecto y ronda." },
+                { label: "Crear", text: "Genera la versión remota." },
+                { label: "Abrir", text: "Prueba la URL como visitante." },
+                { label: "Copiar", text: "Envíala a tu pareja." }
+              ],
+              notes: "Elige un nombre reconocible, como ‘portfolio-r1’. Abre la URL fuera de la sesión de edición para probar la experiencia real de quien la recibe."
+            },
+            {
+              tone: "terracotta",
+              layout: "checklist",
+              eyebrow: "Antes de compartir",
+              title: "Público. Temporal. Intencional.",
+              accent: "Intencional",
+              items: [
+                { marker: "◎", label: "Público", text: "Cualquier persona con la URL puede acceder." },
+                { marker: "◷", label: "Temporal", text: "No es el destino final del sitio." },
+                { marker: "✓", label: "Autorizado", text: "Revisa datos, imágenes y archivos enviados." }
+              ],
+              notes: "Haz una pausa de seguridad antes de crear el Preview. Elimina información real, confidencial o no autorizada y confirma lo que se compartirá."
+            },
+            {
+              tone: "ink",
+              layout: "steps",
+              eyebrow: "Revisión en pareja",
+              title: "Da tres lentes a quien revisa",
+              accent: "tres lentes",
+              items: [
+                { label: "Claridad", text: "¿Comprendo el propósito y la oferta?" },
+                { label: "Acción", text: "¿Sé qué hacer después?" },
+                { label: "Mobile", text: "¿La historia funciona en una pantalla pequeña?" }
+              ],
+              notes: "No preguntes ‘¿qué te parece?’. Proporciona criterios breves y pide una evidencia para cada comentario. Así la siguiente ronda puede aplicarse."
+            },
+            {
+              tone: "frost",
+              layout: "outro",
+              eyebrow: "Checkpoint",
+              title: "Feedback recibido. Ningún cambio automático.",
+              accent: "Ningún cambio automático",
+              body: "Registra el comentario y vuelve al brief antes de decidir.",
+              next: "08 · Aplicar feedback",
+              notes: "Cierra diferenciando recibir y aceptar feedback. La siguiente etapa filtra cada sugerencia según el objetivo y las restricciones del proyecto."
+            }
+          ]
+        },
+        "apply-feedback": {
+          number: "08",
+          slug: "08-apply-feedback.html",
+          shortTitle: "Aplicar feedback",
+          title: "Aplicar feedback y actualizar",
+          duration: "5 min",
+          promise: "Una segunda ronda coherente, revisada y compartida.",
+          slides: [
+            {
+              tone: "terracotta",
+              layout: "cover",
+              eyebrow: "Segunda ronda",
+              title: "El feedback no es una orden automática",
+              accent: "no es una orden",
+              body: "Usa el brief para separar señales útiles, preferencias y cambios fuera de alcance.",
+              notes: "Explica que revisar también es decidir. El objetivo no es obedecer todos los comentarios, sino reforzar el propósito de la página."
+            },
+            {
+              tone: "paper",
+              layout: "steps",
+              eyebrow: "Filtro",
+              title: "Pasa cada comentario por tres preguntas",
+              accent: "tres preguntas",
+              items: [
+                { label: "¿Ayuda al público?", text: "¿Resuelve una dificultad real?" },
+                { label: "¿Refuerza la CTA?", text: "¿Aclara la acción?" },
+                { label: "¿Cabe en el alcance?", text: "¿Evita abrir un proyecto nuevo?" }
+              ],
+              notes: "Clasifica los comentarios rápidamente. Acepta lo que tenga evidencia y encaje; registra lo que queda para después; rechaza lo que contradiga el brief."
+            },
+            {
+              tone: "cobalt",
+              layout: "statement",
+              eyebrow: "Cambio coherente",
+              title: "Resuelve una causa, no cinco síntomas",
+              accent: "una causa",
+              body: "Agrupa comentarios relacionados y propón una modificación que conserve el resto de la página.",
+              notes: "Si CTA, jerarquía y texto parecen débiles, la causa puede ser una propuesta de valor imprecisa. Corrige el mensaje antes de decorar botones."
+            },
+            {
+              tone: "ink",
+              layout: "checklist",
+              eyebrow: "Revisión local",
+              title: "Comprueba antes de actualizar",
+              accent: "antes",
+              items: [
+                { marker: "B", label: "Brief", text: "El cambio refuerza la intención." },
+                { marker: "D", label: "Desktop", text: "El ritmo continúa equilibrado." },
+                { marker: "M", label: "Mobile", text: "El orden y la CTA siguen íntegros." }
+              ],
+              notes: "Repite los mismos criterios de la primera versión. Un ciclo de feedback solo termina cuando el cambio se ha validado localmente."
+            },
+            {
+              tone: "cream",
+              layout: "outro",
+              eyebrow: "Checkpoint",
+              title: "Update Preview + decisión registrada",
+              accent: "decisión registrada",
+              body: "Comparte la nueva versión e indica qué cambió, qué no cambió y por qué.",
+              next: "09 · Próximos pasos",
+              notes: "Usa Update en el Preview existente, prueba la URL de nuevo y escribe una nota breve de decisión. Así se cierra el ciclo con transparencia."
+            }
+          ]
+        },
+        "next-steps": {
+          number: "09",
+          slug: "09-next-steps.html",
+          shortTitle: "Próximos pasos",
+          title: "Del Preview a los próximos pasos",
+          duration: "5 min",
+          promise: "Un cierre claro sin convertir Preview en producción.",
+          slides: [
+            {
+              tone: "ink",
+              layout: "cover",
+              eyebrow: "Cierre",
+              title: "Preview inicia el handoff",
+              accent: "inicia",
+              body: "Ahora tienes un resultado demostrable y decisiones que pueden orientar la siguiente fase.",
+              notes: "Vuelve a la imagen final del primer vídeo. El participante ahora sabe cómo se construyó, revisó y compartió el resultado."
+            },
+            {
+              tone: "paper",
+              layout: "checklist",
+              eyebrow: "Lo que se creó",
+              title: "Más que una página",
+              accent: "Más",
+              items: [
+                { marker: "1", label: "Sitio local", text: "Una base editable y segura para continuar." },
+                { marker: "2", label: "Preview revisado", text: "Una versión accesible para feedback." },
+                { marker: "3", label: "Registro de decisiones", text: "Contexto para la siguiente persona o etapa." }
+              ],
+              notes: "Muestra que el valor incluye proceso y trazabilidad. Esto reduce retrabajo cuando el proyecto pasa a otra herramienta, persona o entorno."
+            },
+            {
+              tone: "cobalt",
+              layout: "split",
+              eyebrow: "Después del workshop",
+              title: "Elige el siguiente camino",
+              accent: "siguiente camino",
+              items: [
+                { marker: "↓", label: "Exportar", text: "Lleva los archivos a otro flujo." },
+                { marker: "↗", label: "Alojar o sincronizar", text: "Planifica credenciales, backup y revisión antes de producción." }
+              ],
+              notes: "Menciona los caminos sin demostrarlos en esta serie. Producción, Sync y deployment requieren otro conjunto de permisos, pruebas y responsabilidades."
+            },
+            {
+              tone: "terracotta",
+              layout: "checklist",
+              eyebrow: "Guardrails finales",
+              title: "Lleva estas reglas contigo",
+              accent: "reglas",
+              items: [
+                { marker: "✓", label: "Local primero", text: "Prueba antes de compartir." },
+                { marker: "✓", label: "Humano en el proceso", text: "Revisa planes, diffs y resultados." },
+                { marker: "✓", label: "Datos autorizados", text: "Preview es público y temporal." }
+              ],
+              notes: "Estas tres reglas atraviesan cualquier proyecto: seguridad del entorno, responsabilidad sobre los cambios y cuidado con el contenido compartido."
+            },
+            {
+              tone: "cream",
+              layout: "outro",
+              eyebrow: "Serie completa",
+              title: "Idea clara. Sitio revisable. Siguiente paso.",
+              accent: "Siguiente paso",
+              body: "Vuelve al índice para revisar un módulo o utiliza el plan completo para facilitar el workshop de cuatro horas.",
+              next: "Volver al índice",
+              notes: "Cierra pidiendo a la persona que explique el sitio en tres frases: para quién es, qué ofrece y qué acción espera. Esa es la prueba final de claridad."
             }
           ]
         }

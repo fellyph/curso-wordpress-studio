@@ -18,23 +18,26 @@ vm.runInContext(fs.readFileSync(contentPath, "utf8"), sandbox, {
 });
 
 const catalog = sandbox.window.STUDIO_VIDEO_DECKS;
-const locales = ["pt-BR", "en"];
+const locales = ["pt-BR", "en", "es"];
+const canonicalLocale = "en";
 const validTones = new Set(["paper", "frost", "cobalt", "ink", "terracotta", "cream"]);
 const validLayouts = new Set(["cover", "outro", "split", "comparison", "flow", "checklist", "steps", "statement"]);
 const forbidden = [
   { pattern: /Studio 1\.15/i, label: "obsolete Studio 1.15 baseline" },
   { pattern: /GPT[ -]?5\.5/i, label: "obsolete GPT 5.5 model" },
-  { pattern: /Preview (is|é) (a |uma )?(permanent hosting|hospedagem permanente)/i, label: "Preview described as permanent hosting" }
+  { pattern: /Preview (is|é|es) (a |uma |un )?(permanent hosting|hospedagem permanente|alojamiento permanente)/i, label: "Preview described as permanent hosting" }
 ];
 
 if (!catalog) errors.push("content.js did not expose window.STUDIO_VIDEO_DECKS");
 
-const ptOrder = catalog?.locales?.["pt-BR"]?.moduleOrder ?? [];
-const enOrder = catalog?.locales?.en?.moduleOrder ?? [];
+const canonicalOrder = catalog?.locales?.[canonicalLocale]?.moduleOrder ?? [];
 
-if (ptOrder.length !== 9) errors.push(`expected 9 modules, found ${ptOrder.length}`);
-if (JSON.stringify(ptOrder) !== JSON.stringify(enOrder)) {
-  errors.push("PT-BR and EN module order differs");
+if (canonicalOrder.length !== 9) errors.push(`expected 9 modules, found ${canonicalOrder.length}`);
+for (const locale of locales) {
+  const order = catalog?.locales?.[locale]?.moduleOrder ?? [];
+  if (JSON.stringify(order) !== JSON.stringify(canonicalOrder)) {
+    errors.push(`${locale} module order differs from ${canonicalLocale}`);
+  }
 }
 
 for (const locale of locales) {
@@ -87,21 +90,24 @@ for (const locale of locales) {
   });
 }
 
-for (const moduleId of ptOrder) {
-  const pt = catalog.locales["pt-BR"].modules[moduleId];
-  const en = catalog.locales.en.modules[moduleId];
-  if (!en) continue;
-  if (pt.slug !== en.slug) errors.push(`${moduleId}: locale slugs differ`);
-  if (pt.slides.length !== en.slides.length) errors.push(`${moduleId}: locale slide counts differ`);
-  pt.slides.forEach((slide, index) => {
-    const counterpart = en.slides[index];
-    if (slide.layout !== counterpart.layout || slide.tone !== counterpart.tone) {
-      errors.push(`${moduleId} slide ${index + 1}: layout/tone parity differs`);
-    }
-    if ((slide.items?.length ?? 0) !== (counterpart.items?.length ?? 0)) {
-      errors.push(`${moduleId} slide ${index + 1}: item counts differ`);
-    }
-  });
+for (const moduleId of canonicalOrder) {
+  const canonical = catalog.locales[canonicalLocale].modules[moduleId];
+  if (!canonical) continue;
+  for (const locale of locales) {
+    const localized = catalog.locales[locale].modules[moduleId];
+    if (!localized) continue;
+    if (localized.slug !== canonical.slug) errors.push(`${moduleId}: ${locale} slug differs from ${canonicalLocale}`);
+    if (localized.slides.length !== canonical.slides.length) errors.push(`${moduleId}: ${locale} slide count differs from ${canonicalLocale}`);
+    localized.slides.forEach((slide, index) => {
+      const counterpart = canonical.slides[index];
+      if (slide.layout !== counterpart.layout || slide.tone !== counterpart.tone) {
+        errors.push(`${moduleId} slide ${index + 1}: ${locale} layout/tone differs from ${canonicalLocale}`);
+      }
+      if ((slide.items?.length ?? 0) !== (counterpart.items?.length ?? 0)) {
+        errors.push(`${moduleId} slide ${index + 1}: ${locale} item count differs from ${canonicalLocale}`);
+      }
+    });
+  }
 }
 
 const searchable = fs.readFileSync(contentPath, "utf8");
@@ -127,7 +133,7 @@ if (errors.length) {
 }
 
 console.log("Video slide validation passed:");
-console.log(`- ${ptOrder.length} modules × ${locales.length} locales`);
+console.log(`- ${canonicalOrder.length} modules × ${locales.length} locales`);
 console.log("- 5 slides per deck (45 minutes per language)");
-console.log("- bilingual layout, tone, item, slug, and entry-file parity");
+console.log("- multilingual layout, tone, item, slug, and entry-file parity");
 console.log("- required runtime, index, and documentation files present");

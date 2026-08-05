@@ -1,5 +1,6 @@
 {
   "schema_version": 1,
+  "supported_locales": ["pt-BR", "en", "es"],
   "editorial_baseline": "1.17.0",
   "verified_on": "2026-08-04",
   "local_non_authoritative_build": "1.18.0-dev79",

@@ -12,6 +12,11 @@
       section: "Series in English",
       count: "9 videos · 45 minutes",
       path: "en"
+    },
+    "es": {
+      section: "Serie en español",
+      count: "9 vídeos · 45 minutos",
+      path: "es"
     }
   };
 
