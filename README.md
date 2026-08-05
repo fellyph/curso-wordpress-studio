@@ -14,6 +14,16 @@ Bilingual materials for a four-hour, in-person workshop covering the website cre
 | [`ref/`](./ref/) | Apresentação e PDF originais preservados como referência / Original presentation and PDF preserved as references |
 | [`scripts/`](./scripts/) | Validação de conteúdo, paridade linguística e slides / Content, language parity, and slide validation |
 
+## Contribuição e paridade bilíngue / Contribution and bilingual parity
+
+Toda atualização de conteúdo em um idioma deve incluir a atualização equivalente nos demais idiomas suportados. As regras completas estão em [`AGENTS.md`](./AGENTS.md), e o fluxo para contribuições humanas está em [`CONTRIBUTING.md`](./CONTRIBUTING.md).
+
+Every content update in one language must include the equivalent update in every other supported language. Complete project rules are in [`AGENTS.md`](./AGENTS.md), and the human contribution workflow is in [`CONTRIBUTING.md`](./CONTRIBUTING.md).
+
+O GitHub Actions executa validações estruturais e também compara o diff para impedir que apenas um lado de um par PT-BR/EN seja alterado.
+
+GitHub Actions runs structural checks and compares the diff to prevent changes that update only one side of a PT-BR/EN pair.
+
 ## Slides HTML / HTML slides
 
 Abra [`slides/videos/index.html`](./slides/videos/index.html) no navegador para acessar os 18 decks. Cada apresentação oferece navegação por setas, atalhos de teclado, gestos, notas do apresentador, animações e suporte a movimento reduzido.
@@ -37,6 +47,7 @@ Execute os validadores com Node.js:
 ```sh
 node scripts/validate-content.mjs
 node scripts/validate-video-slides.mjs
+node scripts/validate-bilingual-changes.mjs <base-commit>
 ```
 
 O teste visual usa Playwright quando a dependência está disponível:
