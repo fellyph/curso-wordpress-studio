@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "editorial_baseline": "1.17.0",
+  "verified_on": "2026-08-04",
+  "local_non_authoritative_build": "1.18.0-dev79",
+  "sources": [
+    {
+      "id": "overview",
+      "official_urls": [
+        "https://developer.wordpress.com/docs/developer-tools/studio/",
+        "https://developer.wordpress.com/docs/developer-tools/studio/changelog/"
+      ],
+      "official_last_updated": "2026-07-27",
+      "verified_on": "2026-08-04",
+      "tested_with_studio": null,
+      "stability": "stable",
+      "source_status": "aligned",
+      "workshop_track": "core",
+      "ui_variant": "both"
+    },
+    {
+      "id": "sites",
+      "official_urls": [
+        "https://developer.wordpress.com/docs/developer-tools/studio/sites/",
+        "https://developer.wordpress.com/docs/developer-tools/studio/changelog/"
+      ],
+      "official_last_updated": "2026-07-27",
+      "verified_on": "2026-08-04",
+      "tested_with_studio": null,
+      "stability": "stable",
+      "source_status": "aligned",
+      "workshop_track": "core",
+      "ui_variant": "both"
+    },
+    {
+      "id": "studio-code",
+      "official_urls": [
+        "https://developer.wordpress.com/docs/developer-tools/studio/studio-code/",
+        "https://developer.wordpress.com/docs/developer-tools/studio/changelog/"
+      ],
+      "official_last_updated": "2026-08-03",
+      "verified_on": "2026-08-04",
+      "tested_with_studio": null,
+      "stability": "volatile",
+      "source_status": "aligned",
+      "workshop_track": "core",
+      "ui_variant": "both"
+    },
+    {
+      "id": "preview-sites",
+      "official_urls": [
+        "https://developer.wordpress.com/docs/developer-tools/studio/preview-sites/"
+      ],
+      "official_last_updated": "2026-04-16",
+      "verified_on": "2026-08-04",
+      "tested_with_studio": null,
+      "stability": "stable",
+      "source_status": "needs_local_test",
+      "workshop_track": "core",
+      "ui_variant": "both"
+    },
+    {
+      "id": "ssl",
+      "official_urls": [
+        "https://developer.wordpress.com/docs/developer-tools/studio/ssl-in-studio/"
+      ],
+      "official_last_updated": "2026-07-24",
+      "verified_on": "2026-08-04",
+      "tested_with_studio": null,
+      "stability": "stable",
+      "source_status": "aligned",
+      "workshop_track": "core",
+      "ui_variant": "both"
+    },
+    {
+      "id": "faq",
+      "official_urls": [
+        "https://developer.wordpress.com/docs/developer-tools/studio/frequently-asked-questions/"
+      ],
+      "official_last_updated": "2026-07-28",
+      "verified_on": "2026-08-04",
+      "tested_with_studio": null,
+      "stability": "volatile",
+      "source_status": "aligned",
+      "workshop_track": "core",
+      "ui_variant": "both"
+    },
+    {
+      "id": "current-state",
+      "official_urls": [
+        "https://developer.wordpress.com/docs/developer-tools/studio/changelog/",
+        "https://developer.wordpress.com/docs/developer-tools/studio/studio-code/",
+        "https://developer.wordpress.com/docs/developer-tools/studio/roadmap/",
+        "https://developer.wordpress.com/docs/developer-tools/studio/roadmap/beta-features/",
+        "https://github.com/Automattic/studio/releases/tag/v1.17.0"
+      ],
+      "official_last_updated": "2026-08-03",
+      "verified_on": "2026-08-04",
+      "tested_with_studio": null,
+      "stability": "volatile",
+      "source_status": "aligned",
+      "workshop_track": "facilitator",
+      "ui_variant": "both"
+    },
+    {
+      "id": "blueprints",
+      "official_urls": [
+        "https://developer.wordpress.com/docs/developer-tools/studio/blueprints/",
+        "https://developer.wordpress.com/docs/guides/how-to-create-custom-blueprints/"
+      ],
+      "official_last_updated": "2026-07-28",
+      "verified_on": "2026-08-04",
+      "tested_with_studio": null,
+      "stability": "stable",
+      "source_status": "aligned",
+      "workshop_track": "facilitator",
+      "ui_variant": "both"
+    },
+    {
+      "id": "import-export",
+      "official_urls": [
+        "https://developer.wordpress.com/docs/developer-tools/studio/import-export/",
+        "https://developer.wordpress.com/docs/developer-tools/studio/changelog/"
+      ],
+      "official_last_updated": "2026-07-27",
+      "verified_on": "2026-08-04",
+      "tested_with_studio": null,
+      "stability": "stable",
+      "source_status": "official_conflict",
+      "workshop_track": "facilitator",
+      "ui_variant": "both",
+      "notes": "The 1.17 changelog documents WXR/XML import, while the dedicated import/export page had not yet incorporated it when verified."
+    },
+    {
+      "id": "open-in-studio-button",
+      "official_urls": [
+        "https://developer.wordpress.com/docs/developer-tools/studio/blueprints/open-in-wordpress-studio-button/"
+      ],
+      "official_last_updated": "2025-12-09",
+      "verified_on": "2026-08-04",
+      "tested_with_studio": null,
+      "stability": "stable",
+      "source_status": "aligned",
+      "workshop_track": "facilitator",
+      "ui_variant": "both"
+    },
+    {
+      "id": "agent-skills",
+      "official_urls": [
+        "https://developer.wordpress.com/docs/developer-tools/studio/agent-skills-wordpress-studio/",
+        "https://developer.wordpress.com/docs/agent-skills/"
+      ],
+      "official_last_updated": "2026-04-21",
+      "verified_on": "2026-08-04",
+      "tested_with_studio": null,
+      "stability": "volatile",
+      "source_status": "aligned",
+      "workshop_track": "challenge",
+      "ui_variant": "both"
+    },
+    {
+      "id": "debugging",
+      "official_urls": [
+        "https://developer.wordpress.com/docs/developer-tools/studio/debugging/",
+        "https://developer.wordpress.com/docs/developer-tools/studio/xdebug/",
+        "https://developer.wordpress.com/docs/developer-tools/studio/changelog/"
+      ],
+      "official_last_updated": "2026-07-27",
+      "verified_on": "2026-08-04",
+      "tested_with_studio": null,
+      "stability": "stable",
+      "source_status": "aligned",
+      "workshop_track": "challenge",
+      "ui_variant": "both"
+    },
+    {
+      "id": "cli",
+      "official_urls": [
+        "https://developer.wordpress.com/docs/developer-tools/studio/cli/",
+        "https://developer.wordpress.com/docs/developer-tools/studio/changelog/"
+      ],
+      "official_last_updated": "2026-07-27",
+      "verified_on": "2026-08-04",
+      "tested_with_studio": null,
+      "stability": "volatile",
+      "source_status": "aligned",
+      "workshop_track": "advanced",
+      "ui_variant": "both"
+    },
+    {
+      "id": "custom-blueprints-guide",
+      "official_urls": [
+        "https://developer.wordpress.com/docs/guides/how-to-create-custom-blueprints/",
+        "https://wordpress.github.io/wordpress-playground/blueprints/"
+      ],
+      "official_last_updated": "2026-07-28",
+      "verified_on": "2026-08-04",
+      "tested_with_studio": null,
+      "stability": "beta",
+      "source_status": "needs_local_test",
+      "workshop_track": "advanced",
+      "ui_variant": "both"
+    },
+    {
+      "id": "mcp-server",
+      "official_urls": [
+        "https://developer.wordpress.com/docs/developer-tools/studio/mcp-on-studio/",
+        "https://developer.wordpress.com/docs/developer-tools/studio/changelog/"
+      ],
+      "official_last_updated": "2026-07-27",
+      "verified_on": "2026-08-04",
+      "tested_with_studio": null,
+      "stability": "volatile",
+      "source_status": "aligned",
+      "workshop_track": "advanced",
+      "ui_variant": "both"
+    },
+    {
+      "id": "sync",
+      "official_urls": [
+        "https://developer.wordpress.com/docs/developer-tools/studio/sync/",
+        "https://developer.wordpress.com/docs/developer-tools/studio/frequently-asked-questions/"
+      ],
+      "official_last_updated": "2026-07-28",
+      "verified_on": "2026-08-04",
+      "tested_with_studio": null,
+      "stability": "stable",
+      "source_status": "aligned",
+      "workshop_track": "advanced",
+      "ui_variant": "both"
+    },
+    {
+      "id": "wordpress-com-mcp",
+      "official_urls": [
+        "https://developer.wordpress.com/docs/mcp/",
+        "https://developer.wordpress.com/docs/mcp/tools-reference/"
+      ],
+      "official_last_updated": "2026-06-19",
+      "verified_on": "2026-08-04",
+      "tested_with_studio": null,
+      "stability": "volatile",
+      "source_status": "aligned",
+      "workshop_track": "advanced",
+      "ui_variant": "both"
+    },
+    {
+      "id": "assistant",
+      "official_urls": [
+        "https://developer.wordpress.com/docs/developer-tools/studio/studio-code/",
+        "https://developer.wordpress.com/docs/developer-tools/studio/frequently-asked-questions/",
+        "https://wordpress.com/blog/2026/06/25/studio-code-desktop/"
+      ],
+      "official_last_updated": "2026-08-03",
+      "verified_on": "2026-08-04",
+      "tested_with_studio": null,
+      "stability": "volatile",
+      "source_status": "aligned",
+      "workshop_track": "advanced",
+      "ui_variant": "classic"
+    }
+  ]
+}
