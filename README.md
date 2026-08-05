@@ -6,6 +6,14 @@ Portuguese, English, and Spanish materials for a four-hour, in-person workshop c
 
 Materiales en portugués, inglés y español para un workshop presencial de cuatro horas sobre el proceso de creación de un sitio con WordPress Studio: desde la definición del brief hasta la construcción local, revisión y publicación compartida mediante Preview.
 
+## Acessar o treinamento / Open the training / Abrir la formación
+
+**Português:** [Abrir a estrutura completa de treinamento no GitHub Pages](https://fellyph.github.io/curso-wordpress-studio/#pt-BR).
+
+**English:** [Open the complete training structure on GitHub Pages](https://fellyph.github.io/curso-wordpress-studio/#en).
+
+**Español:** [Abrir la estructura completa de formación en GitHub Pages](https://fellyph.github.io/curso-wordpress-studio/#es).
+
 ## Conteúdo / Contents
 
 | Pasta / Folder | Conteúdo / Contents |
