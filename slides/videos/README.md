@@ -82,6 +82,15 @@ Each slide is an approximately one-minute beat, not a word-for-word timed script
 
 Cada slide representa un bloque de aproximadamente un minuto, no un guion cronometrado palabra por palabra. Pulsa `N` para consultar la intención narrativa, cierra las notas antes de capturar la pantalla y usa `R` para repetir la animación de entrada.
 
+### Roteiros / Scripts / Guiones
+
+Os roteiros acompanham os cinco slides de cada vídeo e incluem gancho, transições e fechamento. / The scripts follow all five slides in each video and include a hook, transitions, and a closing bridge. / Los guiones acompañan los cinco slides de cada vídeo e incluyen un gancho, transiciones y cierre.
+
+| Vídeo / Video | PT-BR | EN | ES |
+| --- | --- | --- | --- |
+| 01 · Visão geral / Overview | [Roteiro](./pt-BR/01-overview-script.md) | [Script](./en/01-overview-script.md) | [Guion](./es/01-overview-script.md) |
+| 02 · Requisitos / Requirements | [Roteiro](./pt-BR/02-mini-brief-script.md) | [Script](./en/02-mini-brief-script.md) | [Guion](./es/02-mini-brief-script.md) |
+
 ## Baseline editorial
 
 Conteúdo alinhado ao plano do workshop e à base local de referências para WordPress Studio 1.17.x, verificada em 4 de agosto de 2026. Preview é tratado como URL pública e temporária, não como hospedagem permanente. Sync, MCP, Liberate, criação de plugins e operações em produção permanecem fora do núcleo desta série.
