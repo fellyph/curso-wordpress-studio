@@ -240,7 +240,7 @@ window.STUDIO_VIDEO_DECKS = {
           shortTitle: "Studio Code",
           title: "Implementar com Studio Code",
           duration: "5 min",
-          promise: "Contexto completo, modelo escolhido e execução supervisionada.",
+          promise: "Três fontes de contexto, modelo escolhido e execução supervisionada.",
           slides: [
             {
               tone: "cobalt",
@@ -878,7 +878,7 @@ window.STUDIO_VIDEO_DECKS = {
           shortTitle: "Studio Code",
           title: "Implement with Studio Code",
           duration: "5 min",
-          promise: "Complete context, a chosen model, and supervised execution.",
+          promise: "Three context sources, a chosen model, and supervised execution.",
           slides: [
             {
               tone: "cobalt",
@@ -1516,7 +1516,7 @@ window.STUDIO_VIDEO_DECKS = {
           shortTitle: "Studio Code",
           title: "Implementar con Studio Code",
           duration: "5 min",
-          promise: "Contexto completo, modelo elegido y ejecución supervisada.",
+          promise: "Tres fuentes de contexto, modelo elegido y ejecución supervisada.",
           slides: [
             {
               tone: "cobalt",
