@@ -48,7 +48,7 @@ El hash de la URL (`#1` a `#5`) identifica el slide actual y facilita volver a u
 | 01 | Definir o projeto com IA | Define the project with AI | Definir el proyecto con IA | Conversa simulada, decisões e perguntas abertas / Simulated conversation, decisions, and open questions |
 | 02 | Definir os requisitos do evento | Define the event requirements | Definir los requisitos del evento | Brief do evento, `requirements.md`, Design System e `design.md` |
 | 03 | Criar um site com Quick Start | Create a site with Quick Start | Crear un sitio con Quick Start | Base local e tour essencial |
-| 04 | Planejar e construir com Studio Code | Plan and build with Studio Code | Planificar y construir con Studio Code | Contexto, plano e checkpoints humanos |
+| 04 | Implementar com Studio Code | Implement with Studio Code | Implementar con Studio Code | Ferramentas, modelos, contexto e execução supervisionada / Tools, models, context, and supervised execution |
 | 05 | Revisar no Site Editor | Review in the Site Editor | Revisar en Site Editor | Editabilidade, conteúdo e mobile |
 | 06 | Registrar feedback com Annotate | Capture feedback with Annotate | Registrar feedback con Annotate | Feedback contextual e verificável |
 | 07 | Compartilhar um Preview | Share a Preview | Compartir un Preview | URL pública temporária e revisão em dupla |

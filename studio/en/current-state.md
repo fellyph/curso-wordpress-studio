@@ -23,7 +23,7 @@ This project uses WordPress Studio 1.17.0 as its stable reference release. It wa
 
 ## Documented models
 
-On August 3, 2026, the Studio Code page lists Claude Sonnet 5 as the default, Claude Opus 4.8, and GPT 5.6 Sol. This list is volatile: check the model picker before every event and do not repeat it on core slides.
+On August 5, 2026, the Studio Code page lists Claude Sonnet 5 as the default, Claude Opus 4.8, and GPT 5.6 Sol. This list is volatile: check the model picker before every event and present it in slides as a dated snapshot.
 
 ## Relevant changes in 1.16 and 1.17
 

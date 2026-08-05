@@ -23,7 +23,7 @@ Este proyecto utiliza WordPress Studio 1.17.0 como versión estable de referenci
 
 ## Modelos documentados
 
-El 3 de agosto de 2026, la página de Studio Code enumera Claude Sonnet 5 como modelo predeterminado, Claude Opus 4.8 y GPT 5.6 Sol. Esta lista es volátil: revisa el selector de modelos antes de cada evento y no la repitas en los slides principales.
+El 5 de agosto de 2026, la página de Studio Code enumera Claude Sonnet 5 como modelo predeterminado, Claude Opus 4.8 y GPT 5.6 Sol. Esta lista es volátil: revisa el selector de modelos antes de cada evento y preséntala en los slides como una fotografía fechada.
 
 ## Cambios relevantes en 1.16 y 1.17
 

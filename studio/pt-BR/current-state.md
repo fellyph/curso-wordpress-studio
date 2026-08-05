@@ -23,7 +23,7 @@ Este projeto usa WordPress Studio 1.17.0 como versão estável de referência. V
 
 ## Modelos documentados
 
-Em 3 de agosto de 2026, a página do Studio Code lista Claude Sonnet 5 como padrão, Claude Opus 4.8 e GPT 5.6 Sol. Essa lista é volátil: confira o seletor de modelos antes de cada evento e não a replique nos slides principais.
+Em 5 de agosto de 2026, a página do Studio Code lista Claude Sonnet 5 como padrão, Claude Opus 4.8 e GPT 5.6 Sol. Essa lista é volátil: confira o seletor de modelos antes de cada evento e apresente-a nos slides como uma fotografia datada.
 
 ## Mudanças relevantes em 1.16 e 1.17
 

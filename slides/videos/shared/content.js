@@ -876,68 +876,69 @@ window.STUDIO_VIDEO_DECKS = {
           number: "04",
           slug: "04-studio-code.html",
           shortTitle: "Studio Code",
-          title: "Plan and build with Studio Code",
+          title: "Implement with Studio Code",
           duration: "5 min",
-          promise: "Human approval before every important change.",
+          promise: "Complete context, a chosen model, and supervised execution.",
           slides: [
             {
               tone: "cobalt",
               layout: "cover",
-              eyebrow: "Assisted construction",
-              title: "Plan before execution",
-              accent: "Plan",
-              body: "Provide context, review the proposal, and only then authorize version one.",
-              notes: "Present Studio Code as a collaborator inside the project, not a magic button. Quality depends on context and human review."
+              eyebrow: "Phase 4 · Implementation",
+              title: "Studio Code connects conversation and site",
+              accent: "Studio Code",
+              body: "Open the local site, enter the Studio Code tab, and work with the agent inside the project.",
+              takeaway: "From the open project to assisted implementation",
+              notes: "Give a short introduction: Studio Code is the coding agent built into the WordPress Studio app and also available in the CLI. On desktop, select the site and open the Studio Code tab; the agent then works in that project's directory. [Sources] https://developer.wordpress.com/docs/developer-tools/studio/studio-code/"
             },
             {
               tone: "paper",
-              layout: "checklist",
-              eyebrow: "Context",
-              title: "Provide the brief and boundaries",
-              accent: "boundaries",
+              layout: "steps",
+              eyebrow: "Core tools",
+              title: "The agent works with the open site",
+              accent: "open site",
               items: [
-                { marker: "B", label: "Brief", text: "Purpose, audience, CTA, tone, and sections." },
-                { marker: "A", label: "Assets", text: "Identify files that can be used." },
-                { marker: "G", label: "Guardrails", text: "One page, local, no new plugins." }
+                { marker: "C", label: "Chat", text: "Receives instructions, files, and questions." },
+                { marker: "F", label: "Files", text: "Reads and edits the site directory." },
+                { marker: "W", label: "WP-CLI", text: "Runs commands in local WordPress." },
+                { marker: "▣", label: "Screenshots", text: "Opens and captures the visual result." }
               ],
-              notes: "Paste or attach the mini-brief and state what must not happen. Clear boundaries reduce unnecessary changes and make the diff easier to review."
+              notes: "Show only the essentials of the interface: conversation, attachments, model picker, and action history. The documentation states that the agent can read and write files, run WP-CLI, and capture the site. Remote operations are outside this demonstration. [Sources] https://developer.wordpress.com/docs/developer-tools/studio/studio-code/"
             },
             {
               tone: "frost",
               layout: "steps",
-              eyebrow: "Opening prompt",
-              title: "Ask for a verifiable proposal",
-              accent: "verifiable",
+              eyebrow: "Available models · 2026-08-05",
+              title: "Choose the model for the task",
+              accent: "model",
               items: [
-                { label: "Goal", text: "Describe the page you want." },
-                { label: "Constraints", text: "Say what to preserve and avoid." },
-                { label: "Plan", text: "Request steps before execution." }
+                { marker: "S5", label: "Claude Sonnet 5", text: "The fast, effective default for most tasks." },
+                { marker: "O", label: "Claude Opus 4.8", text: "More capable for complex, multi-step tasks." },
+                { marker: "G", label: "GPT 5.6 Sol", text: "A fast, effective OpenAI option for general tasks." }
               ],
-              notes: "A good request ends with a concrete action: analyze the project, propose a short plan, and wait for approval. This creates the first human checkpoint."
+              notes: "On desktop, use the menu at the bottom of the conversation; in the terminal, use /model. Explain that this list changes quickly and should be checked in the picker before the event. The official documentation verified on August 5, 2026 lists Sonnet 5 as the default, Opus 4.8, and GPT 5.6 Sol. [Sources] https://developer.wordpress.com/docs/developer-tools/studio/studio-code/"
             },
             {
               tone: "ink",
               layout: "flow",
-              eyebrow: "Human checkpoint",
-              title: "Approval is not clicking “yes”",
-              accent: "Approval",
+              eyebrow: "Implementation context",
+              title: "Three sources guide the agent",
+              accent: "Three sources",
               items: [
-                { label: "Read", text: "Understand files and steps." },
-                { label: "Question", text: "Correct assumptions." },
-                { label: "Reduce", text: "Cut unnecessary scope." },
-                { label: "Execute", text: "Authorize in stages." }
+                { marker: "R", label: "requirements.md", text: "Purpose, audience, features, and acceptance criteria." },
+                { marker: "D", label: "design.md", text: "Layout, behavior, and visual decisions." },
+                { marker: "DS", label: "Design System", text: "Colors, typography, components, tokens, and assets." }
               ],
-              notes: "Model a real review: ask a question, remove one step, and approve only the first part. This behavior matters more than the exact prompt."
+              notes: "Attach both Markdown files and point to the Design System folder or assets. Ask the agent to read all three sources, inspect the current site, flag conflicts, and propose a short plan before editing. File uploads are supported on desktop and in the CLI. [Sources] https://developer.wordpress.com/docs/developer-tools/studio/studio-code/"
             },
             {
               tone: "terracotta",
               layout: "outro",
-              eyebrow: "Checkpoint",
-              title: "Review the diff and two screenshots",
-              accent: "two screenshots",
-              body: "Desktop and mobile should tell the same story before you open the editor.",
+              eyebrow: "Plan approved",
+              title: "Context delivered. Agent at work.",
+              accent: "Agent at work",
+              body: "Authorize implementation in stages; then review the diff and desktop and mobile screenshots.",
               next: "05 · Site Editor",
-              notes: "Do not accept completion from the agent's text alone. Open the page, review the diff, and compare two widths. If Studio Code is unavailable, use the fallback site."
+              notes: "Once requirements.md, design.md, and the Design System are understood and the plan is approved, let the agent execute. Keep supervising: review permissions, the diff, and the visual result before continuing to the Site Editor. If Studio Code is unavailable, use the fallback site."
             }
           ]
         },
@@ -1513,68 +1514,69 @@ window.STUDIO_VIDEO_DECKS = {
           number: "04",
           slug: "04-studio-code.html",
           shortTitle: "Studio Code",
-          title: "Planificar y construir con Studio Code",
+          title: "Implementar con Studio Code",
           duration: "5 min",
-          promise: "Aprobación humana antes de cada cambio importante.",
+          promise: "Contexto completo, modelo elegido y ejecución supervisada.",
           slides: [
             {
               tone: "cobalt",
               layout: "cover",
-              eyebrow: "Construcción asistida",
-              title: "Plan antes de ejecutar",
-              accent: "Plan",
-              body: "Proporciona contexto, revisa la propuesta y solo entonces autoriza la primera versión.",
-              notes: "Presenta Studio Code como colaborador dentro del proyecto, no como botón mágico. La calidad depende del contexto y de la revisión humana."
+              eyebrow: "Fase 4 · Implementación",
+              title: "Studio Code conecta conversación y sitio",
+              accent: "Studio Code",
+              body: "Abre el sitio local, entra en la pestaña Studio Code y trabaja con el agente dentro del proyecto.",
+              takeaway: "Del proyecto abierto a una implementación asistida",
+              notes: "Haz una presentación breve: Studio Code es el agente de programación integrado en la aplicación WordPress Studio y también disponible en la CLI. En desktop, selecciona el sitio y abre la pestaña Studio Code; el agente pasa a trabajar en el directorio de ese proyecto. [Sources] https://developer.wordpress.com/docs/developer-tools/studio/studio-code/"
             },
             {
               tone: "paper",
-              layout: "checklist",
-              eyebrow: "Contexto",
-              title: "Entrega el brief y los límites",
-              accent: "límites",
+              layout: "steps",
+              eyebrow: "Herramientas básicas",
+              title: "El agente trabaja con el sitio abierto",
+              accent: "sitio abierto",
               items: [
-                { marker: "B", label: "Brief", text: "Propósito, público, CTA, tono y secciones." },
-                { marker: "A", label: "Assets", text: "Indica los archivos que pueden utilizarse." },
-                { marker: "G", label: "Guardrails", text: "Una página, local y sin plugins nuevos." }
+                { marker: "C", label: "Chat", text: "Recibe instrucciones, archivos y preguntas." },
+                { marker: "F", label: "Archivos", text: "Lee y edita el directorio del sitio." },
+                { marker: "W", label: "WP-CLI", text: "Ejecuta comandos en el WordPress local." },
+                { marker: "▣", label: "Capturas", text: "Abre y registra el resultado visual." }
               ],
-              notes: "Pega o adjunta el mini-brief e indica claramente lo que no debe suceder. Los límites claros reducen cambios innecesarios y hacen el diff más legible."
+              notes: "Muestra solo lo esencial de la interfaz: conversación, adjuntos, selector de modelo e historial de acciones. La documentación indica que el agente puede leer y escribir archivos, ejecutar WP-CLI y capturar el sitio. Las operaciones remotas quedan fuera de esta demostración. [Sources] https://developer.wordpress.com/docs/developer-tools/studio/studio-code/"
             },
             {
               tone: "frost",
               layout: "steps",
-              eyebrow: "Prompt inicial",
-              title: "Pide una propuesta verificable",
-              accent: "verificable",
+              eyebrow: "Modelos disponibles · 05/08/2026",
+              title: "Elige el modelo para la tarea",
+              accent: "modelo",
               items: [
-                { label: "Objetivo", text: "Describe la página deseada." },
-                { label: "Restricciones", text: "Indica qué conservar y evitar." },
-                { label: "Plan", text: "Solicita pasos antes de ejecutar." }
+                { marker: "S5", label: "Claude Sonnet 5", text: "La opción predeterminada, rápida y eficaz para la mayoría de las tareas." },
+                { marker: "O", label: "Claude Opus 4.8", text: "Más capaz para tareas complejas y con varias etapas." },
+                { marker: "G", label: "GPT 5.6 Sol", text: "Una opción OpenAI rápida y eficaz para tareas generales." }
               ],
-              notes: "Una buena solicitud termina con una acción concreta: analizar el proyecto, proponer un plan breve y esperar la aprobación. Así se crea el primer checkpoint humano."
+              notes: "En desktop, usa el menú de la parte inferior de la conversación; en el terminal, usa /model. Explica que esta lista cambia rápidamente y debe comprobarse en el selector antes del evento. La documentación oficial verificada el 5 de agosto de 2026 enumera Sonnet 5 como predeterminado, Opus 4.8 y GPT 5.6 Sol. [Sources] https://developer.wordpress.com/docs/developer-tools/studio/studio-code/"
             },
             {
               tone: "ink",
               layout: "flow",
-              eyebrow: "Checkpoint humano",
-              title: "Aprobar no es pulsar “sí”",
-              accent: "Aprobar",
+              eyebrow: "Contexto de implementación",
+              title: "Tres fuentes guían al agente",
+              accent: "Tres fuentes",
               items: [
-                { label: "Leer", text: "Comprende archivos y etapas." },
-                { label: "Preguntar", text: "Corrige suposiciones." },
-                { label: "Reducir", text: "Elimina alcance innecesario." },
-                { label: "Ejecutar", text: "Autoriza por partes." }
+                { marker: "R", label: "requirements.md", text: "Propósito, público, funcionalidades y criterios de aceptación." },
+                { marker: "D", label: "design.md", text: "Layout, comportamiento y decisiones visuales." },
+                { marker: "DS", label: "Design System", text: "Colores, tipografía, componentes, tokens y assets." }
               ],
-              notes: "Modela una revisión real: pide una aclaración, elimina un paso y aprueba solamente la primera parte. Este comportamiento importa más que el prompt exacto."
+              notes: "Adjunta los dos archivos Markdown e indica la carpeta o los assets del Design System. Pide al agente que lea las tres fuentes, inspeccione el sitio actual, señale conflictos y proponga un plan breve antes de editar. La carga de archivos está disponible en desktop y en la CLI. [Sources] https://developer.wordpress.com/docs/developer-tools/studio/studio-code/"
             },
             {
               tone: "terracotta",
               layout: "outro",
-              eyebrow: "Checkpoint",
-              title: "Revisa el diff y dos capturas",
-              accent: "dos capturas",
-              body: "Desktop y mobile deben contar la misma historia antes de abrir el editor.",
+              eyebrow: "Plan aprobado",
+              title: "Contexto entregado. Agente en acción.",
+              accent: "Agente en acción",
+              body: "Autoriza la implementación por etapas; después revisa el diff y las capturas en desktop y mobile.",
               next: "05 · Site Editor",
-              notes: "No aceptes la conclusión solamente por el texto del agente. Abre la página, revisa el diff y compara dos anchos. Si Studio Code no está disponible, usa el sitio de fallback."
+              notes: "Cuando requirements.md, design.md y el Design System se hayan comprendido y el plan esté aprobado, deja que el agente ejecute. Continúa supervisando: revisa permisos, diff y resultado visual antes de seguir al Site Editor. Si Studio Code no está disponible, usa el sitio de fallback."
             }
           ]
         },

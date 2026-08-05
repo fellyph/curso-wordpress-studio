@@ -41,7 +41,7 @@ Os comandos disponíveis mudam. No terminal, a documentação atual inclui `/bro
 
 ## Modelos e informações voláteis
 
-Não fixe modelos em exercícios ou slides. Consulte [Estado atual](current-state.md) e confira o seletor de modelos na véspera. Escolha um modelo pelo tipo de tarefa: iteração rápida, arquitetura complexa ou revisão independente.
+Quando os modelos aparecerem em exercícios ou slides, trate a lista como uma fotografia datada do workshop. Consulte [Estado atual](current-state.md) e confira o seletor de modelos na véspera. Escolha um modelo pelo tipo de tarefa: iteração rápida, arquitetura complexa ou revisão independente.
 
 ## Segurança e alternativa manual
 

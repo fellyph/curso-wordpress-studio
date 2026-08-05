@@ -41,9 +41,8 @@ Available commands change. In the terminal, current documentation includes `/bro
 
 ## Models and volatile information
 
-Do not freeze model names in exercises or slides. Use [Current state](current-state.md) and check the model picker the day before the event. Select a model by task type: fast iteration, complex architecture, or independent review.
+When models appear in exercises or slides, treat the list as a dated workshop snapshot. Use [Current state](current-state.md) and check the model picker the day before the event. Select a model by task type: fast iteration, complex architecture, or independent review.
 
 ## Safety and fallback
 
 Do not use production during the workshop. Limit permissions, review commands, and never include secrets in prompts or assets. If Studio Code is unavailable because of login, payment method, usage limit, or network access, use the supplied starter site and continue in the Site Editor.
-

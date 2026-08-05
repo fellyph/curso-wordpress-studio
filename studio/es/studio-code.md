@@ -41,7 +41,7 @@ Los comandos disponibles pueden cambiar. En el terminal, la documentación actua
 
 ## Modelos e información volátil
 
-No fijes nombres de modelos en ejercicios ni slides. Consulta [Estado actual](current-state.md) y revisa el selector de modelos el día anterior al evento. Selecciona un modelo según el tipo de tarea: iteración rápida, arquitectura compleja o revisión independiente.
+Cuando los modelos aparezcan en ejercicios o slides, trata la lista como una fotografía fechada del workshop. Consulta [Estado actual](current-state.md) y revisa el selector de modelos el día anterior al evento. Selecciona un modelo según el tipo de tarea: iteración rápida, arquitectura compleja o revisión independiente.
 
 ## Seguridad y fallback
 
