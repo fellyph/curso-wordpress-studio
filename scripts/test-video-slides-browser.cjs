@@ -150,7 +150,10 @@ fs.mkdirSync(outputRoot, { recursive: true });
 
     const indexPage = await browser.newPage({ viewport: { width: 1440, height: 1000 }, deviceScaleFactor: 1 });
     await indexPage.goto(pathToFileURL(path.join(videoRoot, "index.html")).href, { waitUntil: "load" });
-    if ((await indexPage.locator(".playlist a").count()) !== 27) errors.push("index does not contain 27 module links");
+    const expectedIndexLinks = Object.keys(catalog.locales).length * catalog.locales.en.moduleOrder.length;
+    if ((await indexPage.locator(".playlist a").count()) !== expectedIndexLinks) {
+      errors.push(`index does not contain ${expectedIndexLinks} module links`);
+    }
     await indexPage.screenshot({ path: path.join(outputRoot, "index.png"), fullPage: true });
     await indexPage.close();
 

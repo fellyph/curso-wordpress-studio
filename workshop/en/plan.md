@@ -51,8 +51,8 @@ At check-in, each person creates a test site, opens WP Admin, and confirms that 
 | 02:00–02:30 | 30 | Inspect and adjust | Site Editor, content, styles, headings, and mobile. |
 | 02:30–03:00 | 30 | Apply Annotate | Specific visual feedback, reviewed diff, and screenshots. |
 | 03:00–03:30 | 30 | Share a Preview | URL created and two peer comments received. |
-| 03:30–03:50 | 20 | Correct and update | Feedback applied locally and Preview replaced. |
-| 03:50–04:00 | 10 | Close the loop | Outcome review and publishing paths. |
+| 03:30–03:45 | 15 | Correct and update | Feedback applied locally and Preview replaced. |
+| 03:45–04:00 | 15 | Close and extend the loop | Handoff, Automattic for Agencies, Agent Skills, and MCP without a remote connection. |
 
 ## Participant mini-brief
 
@@ -122,11 +122,17 @@ Select two elements, describe the expected result and constraint, and send the a
 
 Name the Preview, share it with a partner, and review purpose clarity, confidence to click the CTA, mobile reading, and missing content. Remind participants that the URL is public, expires, and does not follow local changes automatically.
 
-### 8. Correct, update, and close
+### 8. Correct and update
 
-**Duration:** 30 minutes, including closing. **Input:** received feedback. **Observable outcome:** at least one local correction, an updated Preview, and an explanation of next steps.
+**Duration:** 15 minutes. **Input:** received feedback. **Observable outcome:** at least one local correction and an updated Preview.
 
-Apply only feedback that fits the brief, review again in the Site Editor, and use **Update** on the Preview. In the final ten minutes, distinguish Preview, export, Sync, and hosting without publishing or touching production.
+Apply only feedback that fits the brief, review again in the Site Editor, and use **Update** on the Preview.
+
+### 9. Close the loop and connect it to agency operations
+
+**Duration:** 15 minutes. **Input:** completed journey and Automattic for Agencies materials. **Observable outcome:** participants explain the handoff and distinguish program benefits, Agent Skills, and MCP, including their permission boundaries.
+
+In the first five minutes, distinguish Preview, export, Sync, and hosting without publishing or touching production. Then present the two extension videos. Relate WordPress.com and Jetpack to different portfolio needs; treat percentages as maximum benefits subject to current rules. Explain that Skills guide the agent and MCP connects authorized systems. Do not configure MCP, share client data, or perform remote writes.
 
 ## Optional challenges
 

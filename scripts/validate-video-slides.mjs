@@ -32,7 +32,7 @@ if (!catalog) errors.push("content.js did not expose window.STUDIO_VIDEO_DECKS")
 
 const canonicalOrder = catalog?.locales?.[canonicalLocale]?.moduleOrder ?? [];
 
-if (canonicalOrder.length !== 9) errors.push(`expected 9 modules, found ${canonicalOrder.length}`);
+if (canonicalOrder.length !== 11) errors.push(`expected 11 modules, found ${canonicalOrder.length}`);
 for (const locale of locales) {
   const order = catalog?.locales?.[locale]?.moduleOrder ?? [];
   if (JSON.stringify(order) !== JSON.stringify(canonicalOrder)) {
@@ -154,6 +154,6 @@ if (errors.length) {
 
 console.log("Video slide validation passed:");
 console.log(`- ${canonicalOrder.length} modules × ${locales.length} locales`);
-console.log("- 5 slides per deck (45 minutes per language)");
+console.log(`- 5 slides per deck (${canonicalOrder.length * 5} minutes per language)`);
 console.log("- multilingual layout, tone, item, slug, and entry-file parity");
 console.log("- required runtime, index, and documentation files present");

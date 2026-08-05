@@ -27,7 +27,9 @@ window.STUDIO_VIDEO_DECKS = {
         "annotate",
         "preview",
         "apply-feedback",
-        "next-steps"
+        "next-steps",
+        "agency-growth",
+        "mcp-for-agencies"
       ],
       modules: {
         "overview": {
@@ -632,12 +634,147 @@ window.STUDIO_VIDEO_DECKS = {
             {
               tone: "cream",
               layout: "outro",
-              eyebrow: "Série concluída",
+              eyebrow: "Fluxo principal concluído",
               title: "Ideia clara. Site revisável. Próximo passo.",
               accent: "Próximo passo",
-              body: "Volte ao índice para revisar um módulo ou use o plano completo para conduzir o workshop de quatro horas.",
+              body: "O projeto está pronto para o handoff. Agora conecte esse fluxo à operação e ao crescimento da agência.",
+              next: "10 · Escalar com A4A",
+              notes: "Encerre o percurso principal convidando a pessoa a explicar o site em três frases: para quem é, o que oferece e qual ação espera. Em seguida, abra a extensão para agências."
+            }
+          ]
+        },
+        "agency-growth": {
+          number: "10",
+          slug: "10-agency-growth.html",
+          shortTitle: "Escalar com A4A",
+          title: "Escalar a agência com Automattic for Agencies",
+          duration: "5 min",
+          promise: "Menos fragmentação, novas margens e uma operação conectada.",
+          slides: [
+            {
+              tone: "cobalt",
+              layout: "cover",
+              eyebrow: "Extensão para agências",
+              title: "Escalar exige uma operação mais previsível",
+              accent: "operação mais previsível",
+              body: "O handoff termina um projeto. A próxima pergunta é como repetir a entrega com mais clientes, menos atrito e margens melhores.",
+              takeaway: "Do projeto individual ao portfólio da agência",
+              notes: "Faça a ponte com o site criado no workshop. Automattic for Agencies é um programa gratuito para agências e freelancers que reúne incentivos, suporte e gestão de produtos Automattic. [Sources] [PT-BR] Automattic for Agencies.pdf; https://automattic.com/for-agencies/; https://agencieshelp.automattic.com/knowledge-base/automattic-for-agencies-partnership-program-overview/"
+            },
+            {
+              tone: "paper",
+              layout: "comparison",
+              eyebrow: "O problema de escala",
+              title: "Fragmentação consome margem e foco",
+              accent: "margem e foco",
+              items: [
+                { marker: "O", label: "Operação", text: "Painéis, licenças e cobranças dispersos consomem tempo faturável." },
+                { marker: "R", label: "Risco", text: "Segurança, desempenho e suporte variam de cliente para cliente." }
+              ],
+              notes: "Relacione a fragmentação ao cotidiano da agência: cada nova stack adiciona manutenção, suporte e risco operacional. WordPress.com e Jetpack aparecem nos materiais como caminhos diferentes para reduzir esse peso. [Sources] [PT-BR] WordPress.com para Agências.pdf; [PT-BR] Jetpack para Agências.pdf"
+            },
+            {
+              tone: "ink",
+              layout: "steps",
+              eyebrow: "Automattic for Agencies",
+              title: "O programa combina três alavancas",
+              accent: "três alavancas",
+              items: [
+                { marker: "1", label: "Economizar", text: "Até 80% de desconto em ferramentas e hospedagem elegíveis." },
+                { marker: "2", label: "Receita recorrente", text: "Comissões de até 50% em ofertas elegíveis." },
+                { marker: "3", label: "Visibilidade", text: "Diretórios, leads e suporte avançam conforme o nível." }
+              ],
+              notes: "Apresente os números como limites máximos, sujeitos à oferta e ao nível do programa, não como garantia. O cadastro é gratuito e não exige exclusividade. [Sources] A4A - TV 43_ 1920×1080 — PT-BR (1).png; https://automattic.com/for-agencies/; https://automattic.com/for-agencies/leads/"
+            },
+            {
+              tone: "frost",
+              layout: "comparison",
+              eyebrow: "Escolha pela necessidade",
+              title: "Uma parceria, bases diferentes",
+              accent: "bases diferentes",
+              items: [
+                { marker: "W", label: "WordPress.com", text: "Hospedagem gerenciada, segurança, backups e desempenho integrados." },
+                { marker: "J", label: "Jetpack", text: "Segurança, desempenho e recuperação para sites em diferentes hosts." }
+              ],
+              notes: "Não trate os produtos como uma escolha única para todo cliente. O programa também conecta WooCommerce, Pressable e WordPress VIP; a solução depende do portfólio e do serviço oferecido. [Sources] [PT-BR] WordPress.com para Agências.pdf; [PT-BR] Jetpack para Agências.pdf; https://automattic.com/for-agencies/"
+            },
+            {
+              tone: "terracotta",
+              layout: "outro",
+              eyebrow: "Próxima camada",
+              title: "Entre sem trocar seu modelo de negócio",
+              accent: "sem trocar",
+              body: "O cadastro é gratuito e sem exclusividade. Avalie os benefícios aplicáveis ao seu portfólio e preserve a escolha de cada cliente.",
+              next: "11 · Skills e MCP",
+              notes: "Use a chamada para ação fornecida como referência visual e direcione para agencies.automattic.com/signup. Esclareça que benefícios e uso de marca dependem do nível e das regras vigentes. [Sources] A4A - TV 43_ 1920×1080 — PT-BR (1).png; https://agencieshelp.automattic.com/knowledge-base/sign-up-for-automattic-for-agencies/; https://agencieshelp.automattic.com/knowledge-base/marketing-yourself-as-an-automattic-for-agencies-partner/"
+            }
+          ]
+        },
+        "mcp-for-agencies": {
+          number: "11",
+          slug: "11-mcp-for-agencies.html",
+          shortTitle: "Skills e MCP",
+          title: "Conectar agentes com Skills e MCP",
+          duration: "5 min",
+          promise: "Instruções especializadas, integrações autorizadas e controle humano.",
+          slides: [
+            {
+              tone: "ink",
+              layout: "cover",
+              eyebrow: "IA na operação",
+              title: "Skills orientam. MCP conecta.",
+              accent: "MCP conecta",
+              body: "Agent Skills ensinam como trabalhar. MCP oferece uma interface para acessar dados e ações de sistemas externos.",
+              takeaway: "Contexto certo + acesso controlado",
+              notes: "Corrija uma imprecisão do material: MCP é um padrão aberto adotado pela Automattic, não um padrão criado pela Automattic. Agent Skills e MCP resolvem problemas diferentes e podem ser usados em conjunto. [Sources] [PT-BR] Model Context Protocol (MCP) na Automattic.pdf; https://automattic.ai/mcp/; https://developer.wordpress.com/docs/agent-skills/"
+            },
+            {
+              tone: "paper",
+              layout: "comparison",
+              eyebrow: "Papéis diferentes",
+              title: "Separe instrução de integração",
+              accent: "instrução de integração",
+              items: [
+                { marker: "S", label: "Agent Skill", text: "Um SKILL.md orienta tarefas WordPress com práticas e guardrails." },
+                { marker: "M", label: "MCP", text: "Um padrão conecta o agente a ferramentas, dados e ações autorizadas." }
+              ],
+              notes: "Skills são arquivos versionáveis, instalados no projeto ou globalmente. MCP conecta clientes compatíveis a implementações específicas de cada produto. Nenhum dos dois elimina revisão, testes ou permissões. [Sources] https://developer.wordpress.com/docs/agent-skills/; https://developer.wordpress.com/docs/developer-tools/studio/agent-skills-wordpress-studio/; https://automattic.ai/mcp/"
+            },
+            {
+              tone: "cobalt",
+              layout: "flow",
+              eyebrow: "Como a conexão funciona",
+              title: "A permissão acompanha cada etapa",
+              accent: "permissão",
+              items: [
+                { label: "1 · Conectar", text: "Escolha o cliente e o produto compatíveis." },
+                { label: "2 · Autorizar", text: "Conceda somente dados e ações necessários." },
+                { label: "3 · Confirmar", text: "Revise o resultado e as mudanças realizadas." }
+              ],
+              notes: "Cada produto tem configuração, autorização e capacidades próprias. Algumas integrações são somente leitura; outras podem criar, atualizar ou excluir. Leia a documentação da implementação antes de conectar. [Sources] https://automattic.ai/mcp/"
+            },
+            {
+              tone: "frost",
+              layout: "checklist",
+              eyebrow: "Primeiros usos",
+              title: "Comece por tarefas verificáveis",
+              accent: "verificáveis",
+              items: [
+                { marker: "R", label: "Relatórios", text: "Consultar conteúdo e métricas com escopo definido." },
+                { marker: "L", label: "Leitura", text: "Analisar produtos, pedidos ou atividade sem alterar dados." },
+                { marker: "A", label: "Ações", text: "Escrever somente com aprovação, backup e ambiente adequado." }
+              ],
+              notes: "Para uma introdução, priorize leitura e relatórios. Dados de clientes, pedidos e conversas exigem atenção adicional. Não faça escrita remota nem operações de produção durante este workshop. [Sources] [PT-BR] Model Context Protocol (MCP) na Automattic.pdf; https://automattic.ai/mcp/"
+            },
+            {
+              tone: "cream",
+              layout: "outro",
+              eyebrow: "Série concluída",
+              title: "Automatize com governança",
+              accent: "governança",
+              body: "Skills dão consistência; MCP amplia o acesso. Use privilégio mínimo, dados autorizados e revisão humana.",
               next: "Voltar ao índice",
-              notes: "Encerre convidando a pessoa a explicar o site em três frases: para quem é, o que oferece e qual ação espera. Essa é a prova final de clareza."
+              notes: "Feche sem demonstrar uma conexão real. A mensagem é um modelo mental: Skills orientam o comportamento; MCP amplia o alcance; a equipe mantém responsabilidade, consentimento e controle."
             }
           ]
         }
@@ -666,7 +803,9 @@ window.STUDIO_VIDEO_DECKS = {
         "annotate",
         "preview",
         "apply-feedback",
-        "next-steps"
+        "next-steps",
+        "agency-growth",
+        "mcp-for-agencies"
       ],
       modules: {
         "overview": {
@@ -1271,12 +1410,147 @@ window.STUDIO_VIDEO_DECKS = {
             {
               tone: "cream",
               layout: "outro",
-              eyebrow: "Series complete",
+              eyebrow: "Core journey complete",
               title: "Clear idea. Reviewable site. Conscious next step.",
               accent: "Conscious next step",
-              body: "Return to the index to revisit a module or use the full plan to run the four-hour workshop.",
+              body: "The project is ready for handoff. Now connect this workflow to agency operations and growth.",
+              next: "10 · Scale with A4A",
+              notes: "Close the core journey by asking participants to explain the site in three sentences: who it is for, what it offers, and which action it expects. Then open the agency extension."
+            }
+          ]
+        },
+        "agency-growth": {
+          number: "10",
+          slug: "10-agency-growth.html",
+          shortTitle: "Scale with A4A",
+          title: "Scale with Automattic for Agencies",
+          duration: "5 min",
+          promise: "Less fragmentation, stronger margins, and connected operations.",
+          slides: [
+            {
+              tone: "cobalt",
+              layout: "cover",
+              eyebrow: "Agency extension",
+              title: "Scale requires more predictable operations",
+              accent: "predictable operations",
+              body: "Handoff completes one project. The next question is how to repeat delivery for more clients with less friction and stronger margins.",
+              takeaway: "From an individual project to an agency portfolio",
+              notes: "Connect this lesson to the site built in the workshop. Automattic for Agencies is a free program for agencies and freelancers that brings together incentives, support, and management for Automattic products. [Sources] [PT-BR] Automattic for Agencies.pdf; https://automattic.com/for-agencies/; https://agencieshelp.automattic.com/knowledge-base/automattic-for-agencies-partnership-program-overview/"
+            },
+            {
+              tone: "paper",
+              layout: "comparison",
+              eyebrow: "The scaling problem",
+              title: "Fragmentation consumes margin and focus",
+              accent: "margin and focus",
+              items: [
+                { marker: "O", label: "Operations", text: "Scattered dashboards, licenses, and billing consume billable time." },
+                { marker: "R", label: "Risk", text: "Security, performance, and support vary from client to client." }
+              ],
+              notes: "Relate fragmentation to agency work: each new stack adds maintenance, support, and operational risk. WordPress.com and Jetpack appear in the supplied materials as different ways to reduce this burden. [Sources] [PT-BR] WordPress.com para Agências.pdf; [PT-BR] Jetpack para Agências.pdf"
+            },
+            {
+              tone: "ink",
+              layout: "steps",
+              eyebrow: "Automattic for Agencies",
+              title: "The program combines three levers",
+              accent: "three levers",
+              items: [
+                { marker: "1", label: "Save", text: "Up to 80% off eligible tools and hosting." },
+                { marker: "2", label: "Recurring revenue", text: "Commissions of up to 50% on eligible offers." },
+                { marker: "3", label: "Visibility", text: "Directories, leads, and support advance with tier." }
+              ],
+              notes: "Present the figures as maximums subject to the offer and program tier, not guarantees. Registration is free and does not require exclusivity. [Sources] A4A - TV 43_ 1920×1080 — PT-BR (1).png; https://automattic.com/for-agencies/; https://automattic.com/for-agencies/leads/"
+            },
+            {
+              tone: "frost",
+              layout: "comparison",
+              eyebrow: "Choose for the need",
+              title: "One partnership, different foundations",
+              accent: "different foundations",
+              items: [
+                { marker: "W", label: "WordPress.com", text: "Managed hosting with integrated security, backups, and performance." },
+                { marker: "J", label: "Jetpack", text: "Security, performance, and recovery for sites across different hosts." }
+              ],
+              notes: "Do not treat one product as the answer for every client. The program also connects WooCommerce, Pressable, and WordPress VIP; the solution depends on the portfolio and service offered. [Sources] [PT-BR] WordPress.com para Agências.pdf; [PT-BR] Jetpack para Agências.pdf; https://automattic.com/for-agencies/"
+            },
+            {
+              tone: "terracotta",
+              layout: "outro",
+              eyebrow: "The next layer",
+              title: "Join without replacing your business model",
+              accent: "without replacing",
+              body: "Registration is free and nonexclusive. Evaluate the benefits that apply to your portfolio and preserve each client's choice.",
+              next: "11 · Skills and MCP",
+              notes: "Use the supplied call to action as a visual reference and point to agencies.automattic.com/signup. Clarify that benefits and brand usage depend on current tiers and rules. [Sources] A4A - TV 43_ 1920×1080 — PT-BR (1).png; https://agencieshelp.automattic.com/knowledge-base/sign-up-for-automattic-for-agencies/; https://agencieshelp.automattic.com/knowledge-base/marketing-yourself-as-an-automattic-for-agencies-partner/"
+            }
+          ]
+        },
+        "mcp-for-agencies": {
+          number: "11",
+          slug: "11-mcp-for-agencies.html",
+          shortTitle: "Skills and MCP",
+          title: "Connect agents with Skills and MCP",
+          duration: "5 min",
+          promise: "Specialized instructions, authorized integrations, and human control.",
+          slides: [
+            {
+              tone: "ink",
+              layout: "cover",
+              eyebrow: "AI in operations",
+              title: "Skills guide. MCP connects.",
+              accent: "MCP connects",
+              body: "Agent Skills teach how to work. MCP provides an interface for accessing data and actions in external systems.",
+              takeaway: "The right context + controlled access",
+              notes: "Correct an inaccuracy in the supplied material: MCP is an open standard adopted by Automattic, not a standard created by Automattic. Agent Skills and MCP solve different problems and can work together. [Sources] [PT-BR] Model Context Protocol (MCP) na Automattic.pdf; https://automattic.ai/mcp/; https://developer.wordpress.com/docs/agent-skills/"
+            },
+            {
+              tone: "paper",
+              layout: "comparison",
+              eyebrow: "Different roles",
+              title: "Separate instruction from integration",
+              accent: "instruction from integration",
+              items: [
+                { marker: "S", label: "Agent Skill", text: "A SKILL.md guides WordPress tasks with practices and guardrails." },
+                { marker: "M", label: "MCP", text: "A standard connects the agent to authorized tools, data, and actions." }
+              ],
+              notes: "Skills are versionable files installed in a project or globally. MCP connects compatible clients to product-specific implementations. Neither replaces review, testing, or permissions. [Sources] https://developer.wordpress.com/docs/agent-skills/; https://developer.wordpress.com/docs/developer-tools/studio/agent-skills-wordpress-studio/; https://automattic.ai/mcp/"
+            },
+            {
+              tone: "cobalt",
+              layout: "flow",
+              eyebrow: "How connection works",
+              title: "Permission follows every step",
+              accent: "Permission",
+              items: [
+                { label: "1 · Connect", text: "Choose a compatible client and product." },
+                { label: "2 · Authorize", text: "Grant only the data and actions required." },
+                { label: "3 · Confirm", text: "Review the result and any changes performed." }
+              ],
+              notes: "Each product has its own setup, authorization, and capabilities. Some integrations are read-only; others may create, update, or delete. Read the implementation documentation before connecting. [Sources] https://automattic.ai/mcp/"
+            },
+            {
+              tone: "frost",
+              layout: "checklist",
+              eyebrow: "First uses",
+              title: "Start with verifiable tasks",
+              accent: "verifiable",
+              items: [
+                { marker: "R", label: "Reports", text: "Query content and metrics with a defined scope." },
+                { marker: "R", label: "Read", text: "Analyze products, orders, or activity without changing data." },
+                { marker: "A", label: "Actions", text: "Write only with approval, backup, and the right environment." }
+              ],
+              notes: "For an introduction, prioritize reading and reporting. Customer, order, and conversation data require extra care. Do not perform remote writes or production operations during this workshop. [Sources] [PT-BR] Model Context Protocol (MCP) na Automattic.pdf; https://automattic.ai/mcp/"
+            },
+            {
+              tone: "cream",
+              layout: "outro",
+              eyebrow: "Series complete",
+              title: "Automate with governance",
+              accent: "governance",
+              body: "Skills add consistency; MCP expands access. Use least privilege, authorized data, and human review.",
               next: "Back to index",
-              notes: "Close by asking the participant to explain the site in three sentences: who it is for, what it offers, and which action it expects. That is the final clarity test."
+              notes: "Close without demonstrating a real connection. The takeaway is a mental model: Skills guide behavior; MCP extends reach; the team remains responsible for consent and control."
             }
           ]
         }
@@ -1305,7 +1579,9 @@ window.STUDIO_VIDEO_DECKS = {
         "annotate",
         "preview",
         "apply-feedback",
-        "next-steps"
+        "next-steps",
+        "agency-growth",
+        "mcp-for-agencies"
       ],
       modules: {
         "overview": {
@@ -1910,12 +2186,147 @@ window.STUDIO_VIDEO_DECKS = {
             {
               tone: "cream",
               layout: "outro",
-              eyebrow: "Serie completa",
+              eyebrow: "Recorrido principal completado",
               title: "Idea clara. Sitio revisable. Siguiente paso.",
               accent: "Siguiente paso",
-              body: "Vuelve al índice para revisar un módulo o utiliza el plan completo para facilitar el workshop de cuatro horas.",
+              body: "El proyecto está listo para el handoff. Ahora conecta este flujo con la operación y el crecimiento de la agencia.",
+              next: "10 · Escalar con A4A",
+              notes: "Cierra el recorrido principal pidiendo a la persona que explique el sitio en tres frases: para quién es, qué ofrece y qué acción espera. Después, abre la extensión para agencias."
+            }
+          ]
+        },
+        "agency-growth": {
+          number: "10",
+          slug: "10-agency-growth.html",
+          shortTitle: "Escalar con A4A",
+          title: "Escalar con Automattic for Agencies",
+          duration: "5 min",
+          promise: "Menos fragmentación, mejores márgenes y una operación conectada.",
+          slides: [
+            {
+              tone: "cobalt",
+              layout: "cover",
+              eyebrow: "Extensión para agencias",
+              title: "Escalar exige una operación más predecible",
+              accent: "operación más predecible",
+              body: "El handoff completa un proyecto. La siguiente pregunta es cómo repetir la entrega para más clientes con menos fricción y mejores márgenes.",
+              takeaway: "Del proyecto individual al portafolio de la agencia",
+              notes: "Conecta esta lección con el sitio creado en el workshop. Automattic for Agencies es un programa gratuito para agencias y freelancers que reúne incentivos, soporte y gestión de productos Automattic. [Sources] [PT-BR] Automattic for Agencies.pdf; https://automattic.com/for-agencies/; https://agencieshelp.automattic.com/knowledge-base/automattic-for-agencies-partnership-program-overview/"
+            },
+            {
+              tone: "paper",
+              layout: "comparison",
+              eyebrow: "El problema de escala",
+              title: "La fragmentación consume margen y foco",
+              accent: "margen y foco",
+              items: [
+                { marker: "O", label: "Operación", text: "Paneles, licencias y facturación dispersos consumen tiempo facturable." },
+                { marker: "R", label: "Riesgo", text: "Seguridad, rendimiento y soporte varían de un cliente a otro." }
+              ],
+              notes: "Relaciona la fragmentación con el trabajo de agencia: cada nueva stack añade mantenimiento, soporte y riesgo operativo. WordPress.com y Jetpack aparecen en los materiales proporcionados como caminos distintos para reducir ese peso. [Sources] [PT-BR] WordPress.com para Agências.pdf; [PT-BR] Jetpack para Agências.pdf"
+            },
+            {
+              tone: "ink",
+              layout: "steps",
+              eyebrow: "Automattic for Agencies",
+              title: "El programa combina tres palancas",
+              accent: "tres palancas",
+              items: [
+                { marker: "1", label: "Ahorrar", text: "Hasta un 80% de descuento en herramientas y hosting elegibles." },
+                { marker: "2", label: "Ingresos recurrentes", text: "Comisiones de hasta un 50% en ofertas elegibles." },
+                { marker: "3", label: "Visibilidad", text: "Directorios, leads y soporte avanzan según el nivel." }
+              ],
+              notes: "Presenta las cifras como máximos sujetos a la oferta y al nivel del programa, no como garantías. El registro es gratuito y no exige exclusividad. [Sources] A4A - TV 43_ 1920×1080 — PT-BR (1).png; https://automattic.com/for-agencies/; https://automattic.com/for-agencies/leads/"
+            },
+            {
+              tone: "frost",
+              layout: "comparison",
+              eyebrow: "Elige según la necesidad",
+              title: "Una alianza, bases diferentes",
+              accent: "bases diferentes",
+              items: [
+                { marker: "W", label: "WordPress.com", text: "Hosting gestionado con seguridad, backups y rendimiento integrados." },
+                { marker: "J", label: "Jetpack", text: "Seguridad, rendimiento y recuperación para sitios en distintos hosts." }
+              ],
+              notes: "No presentes un producto como la respuesta para todos los clientes. El programa también conecta WooCommerce, Pressable y WordPress VIP; la solución depende del portafolio y del servicio ofrecido. [Sources] [PT-BR] WordPress.com para Agências.pdf; [PT-BR] Jetpack para Agências.pdf; https://automattic.com/for-agencies/"
+            },
+            {
+              tone: "terracotta",
+              layout: "outro",
+              eyebrow: "La siguiente capa",
+              title: "Participa sin reemplazar tu modelo de negocio",
+              accent: "sin reemplazar",
+              body: "El registro es gratuito y sin exclusividad. Evalúa los beneficios aplicables a tu portafolio y conserva la elección de cada cliente.",
+              next: "11 · Skills y MCP",
+              notes: "Usa la llamada a la acción proporcionada como referencia visual y dirige a agencies.automattic.com/signup. Aclara que los beneficios y el uso de marca dependen de los niveles y reglas vigentes. [Sources] A4A - TV 43_ 1920×1080 — PT-BR (1).png; https://agencieshelp.automattic.com/knowledge-base/sign-up-for-automattic-for-agencies/; https://agencieshelp.automattic.com/knowledge-base/marketing-yourself-as-an-automattic-for-agencies-partner/"
+            }
+          ]
+        },
+        "mcp-for-agencies": {
+          number: "11",
+          slug: "11-mcp-for-agencies.html",
+          shortTitle: "Skills y MCP",
+          title: "Conectar agentes con Skills y MCP",
+          duration: "5 min",
+          promise: "Instrucciones especializadas, integraciones autorizadas y control humano.",
+          slides: [
+            {
+              tone: "ink",
+              layout: "cover",
+              eyebrow: "IA en la operación",
+              title: "Skills orientan. MCP conecta.",
+              accent: "MCP conecta",
+              body: "Agent Skills enseñan cómo trabajar. MCP ofrece una interfaz para acceder a datos y acciones de sistemas externos.",
+              takeaway: "Contexto correcto + acceso controlado",
+              notes: "Corrige una imprecisión del material proporcionado: MCP es un estándar abierto adoptado por Automattic, no un estándar creado por Automattic. Agent Skills y MCP resuelven problemas distintos y pueden utilizarse juntos. [Sources] [PT-BR] Model Context Protocol (MCP) na Automattic.pdf; https://automattic.ai/mcp/; https://developer.wordpress.com/docs/agent-skills/"
+            },
+            {
+              tone: "paper",
+              layout: "comparison",
+              eyebrow: "Papeles diferentes",
+              title: "Separa instrucción de integración",
+              accent: "instrucción de integración",
+              items: [
+                { marker: "S", label: "Agent Skill", text: "Un SKILL.md orienta tareas WordPress con prácticas y guardrails." },
+                { marker: "M", label: "MCP", text: "Un estándar conecta al agente con herramientas, datos y acciones autorizadas." }
+              ],
+              notes: "Los Skills son archivos versionables instalados en el proyecto o globalmente. MCP conecta clientes compatibles con implementaciones específicas de cada producto. Ninguno reemplaza revisión, pruebas ni permisos. [Sources] https://developer.wordpress.com/docs/agent-skills/; https://developer.wordpress.com/docs/developer-tools/studio/agent-skills-wordpress-studio/; https://automattic.ai/mcp/"
+            },
+            {
+              tone: "cobalt",
+              layout: "flow",
+              eyebrow: "Cómo funciona la conexión",
+              title: "El permiso acompaña cada etapa",
+              accent: "permiso",
+              items: [
+                { label: "1 · Conectar", text: "Elige un cliente y un producto compatibles." },
+                { label: "2 · Autorizar", text: "Concede solo los datos y acciones necesarios." },
+                { label: "3 · Confirmar", text: "Revisa el resultado y los cambios realizados." }
+              ],
+              notes: "Cada producto tiene su propia configuración, autorización y capacidades. Algunas integraciones son de solo lectura; otras pueden crear, actualizar o eliminar. Lee la documentación de la implementación antes de conectar. [Sources] https://automattic.ai/mcp/"
+            },
+            {
+              tone: "frost",
+              layout: "checklist",
+              eyebrow: "Primeros usos",
+              title: "Empieza por tareas verificables",
+              accent: "verificables",
+              items: [
+                { marker: "R", label: "Informes", text: "Consultar contenido y métricas con un alcance definido." },
+                { marker: "L", label: "Lectura", text: "Analizar productos, pedidos o actividad sin cambiar datos." },
+                { marker: "A", label: "Acciones", text: "Escribir solo con aprobación, backup y entorno adecuado." }
+              ],
+              notes: "Para una introducción, prioriza lectura e informes. Los datos de clientes, pedidos y conversaciones requieren atención adicional. No hagas escrituras remotas ni operaciones de producción durante este workshop. [Sources] [PT-BR] Model Context Protocol (MCP) na Automattic.pdf; https://automattic.ai/mcp/"
+            },
+            {
+              tone: "cream",
+              layout: "outro",
+              eyebrow: "Serie completa",
+              title: "Automatiza con gobernanza",
+              accent: "gobernanza",
+              body: "Skills aportan consistencia; MCP amplía el acceso. Usa privilegio mínimo, datos autorizados y revisión humana.",
               next: "Volver al índice",
-              notes: "Cierra pidiendo a la persona que explique el sitio en tres frases: para quién es, qué ofrece y qué acción espera. Esa es la prueba final de claridad."
+              notes: "Cierra sin demostrar una conexión real. El mensaje es un modelo mental: Skills orientan el comportamiento; MCP amplía el alcance; el equipo mantiene responsabilidad, consentimiento y control."
             }
           ]
         }

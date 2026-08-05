@@ -5,17 +5,17 @@
   const labels = {
     "pt-BR": {
       section: "Série em português",
-      count: "9 vídeos · 45 minutos",
+      count: "11 vídeos · 55 minutos",
       path: "pt-BR"
     },
     "en": {
       section: "Series in English",
-      count: "9 videos · 45 minutes",
+      count: "11 videos · 55 minutes",
       path: "en"
     },
     "es": {
       section: "Serie en español",
-      count: "9 vídeos · 45 minutos",
+      count: "11 vídeos · 55 minutos",
       path: "es"
     }
   };

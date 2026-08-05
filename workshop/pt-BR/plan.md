@@ -51,8 +51,8 @@ Na entrada, cada pessoa cria um site de teste, abre WP Admin e confirma que a ab
 | 02:00–02:30 | 30 | Inspecionar e ajustar | Site Editor, conteúdo, estilos, títulos e mobile. |
 | 02:30–03:00 | 30 | Aplicar Annotate | Comentários visuais específicos, diff e capturas de tela revisados. |
 | 03:00–03:30 | 30 | Compartilhar Preview | URL criada e dois comentários recebidos em dupla. |
-| 03:30–03:50 | 20 | Corrigir e atualizar | Comentários aplicados localmente e Preview substituído. |
-| 03:50–04:00 | 10 | Fechar o ciclo | Demonstração dos resultados e caminhos de publicação. |
+| 03:30–03:45 | 15 | Corrigir e atualizar | Comentários aplicados localmente e Preview substituído. |
+| 03:45–04:00 | 15 | Fechar e ampliar o ciclo | Handoff, Automattic for Agencies, Agent Skills e MCP sem conexão remota. |
 
 ## Mini-brief do participante
 
@@ -122,11 +122,17 @@ Selecionar dois elementos, descrever resultado esperado e restrição e enviar a
 
 Nomear o Preview, compartilhar com a dupla e revisar: clareza do propósito, confiança para clicar no CTA, leitura mobile e conteúdo ausente. Lembrar que a URL é pública, expira e não acompanha mudanças locais automaticamente.
 
-### 8. Corrigir, atualizar e encerrar
+### 8. Corrigir e atualizar
 
-**Duração:** 30 minutos, incluindo o fechamento. **Entrada:** comentários recebidos. **Resultado observável:** ao menos uma correção local, Preview atualizado e explicação dos próximos passos.
+**Duração:** 15 minutos. **Entrada:** comentários recebidos. **Resultado observável:** ao menos uma correção local e um Preview atualizado.
 
-Aplicar somente comentários coerentes com o brief, revisar novamente no Site Editor e usar **Update** no Preview. Nos dez minutos finais, diferenciar Preview, exportação, Sync e hospedagem sem executar publicação ou produção.
+Aplicar somente comentários coerentes com o brief, revisar novamente no Site Editor e usar **Update** no Preview.
+
+### 9. Fechar o ciclo e conectar à operação da agência
+
+**Duração:** 15 minutos. **Entrada:** percurso completo e materiais do Automattic for Agencies. **Resultado observável:** participantes explicam o handoff e distinguem benefícios do programa, Agent Skills e MCP, incluindo seus limites de permissão.
+
+Nos primeiros cinco minutos, diferenciar Preview, exportação, Sync e hospedagem sem executar publicação ou produção. Depois, apresentar os dois vídeos de extensão. Relacionar WordPress.com e Jetpack a necessidades diferentes do portfólio; tratar percentuais como benefícios máximos sujeitos às regras vigentes. Explicar que Skills orientam o agente e MCP conecta sistemas autorizados. Não configurar MCP, compartilhar dados de clientes nem realizar escrita remota.
 
 ## Desafios opcionais
 

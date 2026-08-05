@@ -1,10 +1,10 @@
 # Slides para microaulas / Microlearning video slides / Slides para microlecciones
 
-Esta pasta contém uma série em português, inglês e espanhol com nove decks HTML por idioma, um para cada módulo prático do workshop. Cada deck tem cinco slides, planejados como cinco blocos narrativos de aproximadamente um minuto.
+Esta pasta contém uma série em português, inglês e espanhol com onze decks HTML por idioma: nove acompanham o percurso prático e dois formam uma extensão para agências. Cada deck tem cinco slides, planejados como cinco blocos narrativos de aproximadamente um minuto.
 
-This folder contains Portuguese, English, and Spanish series with nine HTML decks per language, one for each practical workshop module. Every deck has five slides, designed as five narrative beats of roughly one minute each.
+This folder contains Portuguese, English, and Spanish series with eleven HTML decks per language: nine follow the practical journey and two form an agency extension. Every deck has five slides, designed as five narrative beats of roughly one minute each.
 
-Esta carpeta contiene series en portugués, inglés y español con nueve decks HTML por idioma, uno para cada módulo práctico del workshop. Cada deck tiene cinco slides, diseñados como cinco bloques narrativos de aproximadamente un minuto.
+Esta carpeta contiene series en portugués, inglés y español con once decks HTML por idioma: nueve acompañan el recorrido práctico y dos forman una extensión para agencias. Cada deck tiene cinco slides, diseñados como cinco bloques narrativos de aproximadamente un minuto.
 
 ## Abrir / Open
 
@@ -54,6 +54,8 @@ El hash de la URL (`#1` a `#5`) identifica el slide actual y facilita volver a u
 | 07 | Compartilhar um Preview | Share a Preview | Compartir un Preview | URL pública temporária e revisão em dupla |
 | 08 | Aplicar feedback e atualizar | Apply feedback and update | Aplicar feedback y actualizar | Filtro, segunda rodada e Update |
 | 09 | Do Preview aos próximos passos | From Preview to next steps | Del Preview a los próximos pasos | Handoff, caminhos futuros e guardrails |
+| 10 | Escalar com Automattic for Agencies | Scale with Automattic for Agencies | Escalar con Automattic for Agencies | Operação, margens, WordPress.com, Jetpack e benefícios do programa |
+| 11 | Conectar agentes com Skills e MCP | Connect agents with Skills and MCP | Conectar agentes con Skills y MCP | Instruções, integrações, permissões e revisão humana |
 
 ## Manutenção / Maintenance
 
@@ -64,7 +66,7 @@ El hash de la URL (`#1` a `#5`) identifica el slide actual y facilita volver a u
 - Mantenha cinco slides por módulo e a mesma sequência de `layout` e `tone` nos três idiomas.
 - Preserve nomes de produto e rótulos da interface em inglês: `Add site`, `Build a new site`, `Quick Start`, `Studio Code`, `Site Editor`, `Annotate`, `Preview` e `Update`.
 - Execute `node scripts/validate-video-slides.mjs` depois de qualquer alteração estrutural ou multilíngue.
-- Para QA no navegador, execute `NODE_PATH=<workspace-node-modules> node scripts/test-video-slides-browser.cjs`; o script testa os 135 slides e gera capturas temporárias.
+- Para QA no navegador, execute `NODE_PATH=<workspace-node-modules> node scripts/test-video-slides-browser.cjs`; o script testa os 165 slides e gera capturas temporárias.
 
 ## Direção visual / Visual direction
 
@@ -93,8 +95,8 @@ Os roteiros acompanham os cinco slides de cada vídeo e incluem gancho, transiç
 
 ## Baseline editorial
 
-Conteúdo alinhado ao plano do workshop e à base local de referências para WordPress Studio 1.17.x, verificada em 4 de agosto de 2026. Preview é tratado como URL pública e temporária, não como hospedagem permanente. Sync, MCP, Liberate, criação de plugins e operações em produção permanecem fora do núcleo desta série.
+Conteúdo alinhado ao plano do workshop e à base local de referências para WordPress Studio 1.17.x, verificada em 4 de agosto de 2026. Preview é tratado como URL pública e temporária, não como hospedagem permanente. A extensão introduz Agent Skills e MCP sem realizar conexão, escrita remota ou operação em produção; Sync, Liberate e criação de plugins permanecem fora do núcleo.
 
-Content follows the workshop plan and the local WordPress Studio 1.17.x reference baseline, verified August 4, 2026. Preview is treated as a public, temporary URL—not permanent hosting. Sync, MCP, Liberate, plugin creation, and production operations remain outside the core series.
+Content follows the workshop plan and the local WordPress Studio 1.17.x reference baseline, verified August 4, 2026. Preview is treated as a public, temporary URL—not permanent hosting. The extension introduces Agent Skills and MCP without making a connection, remote write, or production operation; Sync, Liberate, and plugin creation remain outside the core journey.
 
-El contenido sigue el plan del workshop y la base local de referencias de WordPress Studio 1.17.x, verificada el 4 de agosto de 2026. Preview se trata como una URL pública y temporal, no como alojamiento permanente. Sync, MCP, Liberate, creación de plugins y operaciones en producción quedan fuera de la serie principal.
+El contenido sigue el plan del workshop y la base local de referencias de WordPress Studio 1.17.x, verificada el 4 de agosto de 2026. Preview se trata como una URL pública y temporal, no como alojamiento permanente. La extensión introduce Agent Skills y MCP sin realizar conexiones, escrituras remotas ni operaciones en producción; Sync, Liberate y la creación de plugins quedan fuera del recorrido principal.
