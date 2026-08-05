@@ -14,6 +14,14 @@ Open [`index.html`](./index.html) directly in a browser or serve the project roo
 
 Abre [`index.html`](./index.html) directamente en un navegador o sirve la raíz del proyecto con un servidor estático. El índice enlaza las versiones `pt-BR/`, `en/` y `es/`.
 
+## Publicar no GitHub Pages / Publish to GitHub Pages / Publicar en GitHub Pages
+
+O workflow [`deploy-slides.yml`](../../.github/workflows/deploy-slides.yml) valida o conteúdo e publica somente esta pasta quando mudanças relacionadas chegam à branch `main`. Antes da primeira execução, abra **Settings → Pages → Build and deployment** no repositório e selecione **GitHub Actions** como fonte. Também é possível executar o workflow manualmente pela aba **Actions**. Todo conteúdo publicado no GitHub Pages é público; mantenha apenas dados fictícios ou autorizados nos slides.
+
+The [`deploy-slides.yml`](../../.github/workflows/deploy-slides.yml) workflow validates the content and publishes only this folder when related changes reach the `main` branch. Before the first run, open **Settings → Pages → Build and deployment** in the repository and select **GitHub Actions** as the source. The workflow can also be run manually from the **Actions** tab. Everything published through GitHub Pages is public; keep only fictional or authorized data in the slides.
+
+El workflow [`deploy-slides.yml`](../../.github/workflows/deploy-slides.yml) valida el contenido y publica solamente esta carpeta cuando los cambios relacionados llegan a la rama `main`. Antes de la primera ejecución, abre **Settings → Pages → Build and deployment** en el repositorio y selecciona **GitHub Actions** como fuente. También puedes ejecutar el workflow manualmente desde la pestaña **Actions**. Todo el contenido publicado mediante GitHub Pages es público; conserva únicamente datos ficticios o autorizados en los slides.
+
 ## Controles / Controls
 
 | Ação / Action | Controle / Control |
@@ -36,8 +44,8 @@ El hash de la URL (`#1` a `#5`) identifica el slide actual y facilita volver a u
 
 | # | PT-BR | EN | ES | Foco / Focus |
 | --- | --- | --- | --- | --- |
-| 01 | Do brief ao Preview | From brief to Preview | Del brief al Preview | Visão geral do percurso / Journey overview |
-| 02 | Criar um mini-brief | Create a mini-brief | Crear un mini-brief | Propósito, público, CTA, tom e escopo |
+| 01 | Definir o projeto com IA | Define the project with AI | Definir el proyecto con IA | Conversa simulada, decisões e perguntas abertas / Simulated conversation, decisions, and open questions |
+| 02 | Definir os requisitos do evento | Define the event requirements | Definir los requisitos del evento | Brief do evento, `requirements.md`, Design System e `design.md` |
 | 03 | Criar um site com Quick Start | Create a site with Quick Start | Crear un sitio con Quick Start | Base local e tour essencial |
 | 04 | Planejar e construir com Studio Code | Plan and build with Studio Code | Planificar y construir con Studio Code | Contexto, plano e checkpoints humanos |
 | 05 | Revisar no Site Editor | Review in the Site Editor | Revisar en Site Editor | Editabilidade, conteúdo e mobile |

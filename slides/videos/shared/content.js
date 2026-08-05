@@ -1,7 +1,7 @@
 window.STUDIO_VIDEO_DECKS = {
   seriesTitle: "From brief to Preview · WordPress Studio",
   baseline: "WordPress Studio 1.17.x",
-  verifiedOn: "2026-08-04",
+  verifiedOn: "2026-08-05",
   locales: {
     "pt-BR": {
       seriesTitle: "Do brief ao Preview · WordPress Studio",
@@ -31,137 +31,138 @@ window.STUDIO_VIDEO_DECKS = {
         "overview": {
           number: "01",
           slug: "01-overview.html",
-          shortTitle: "Visão geral",
-          title: "Do brief ao Preview",
+          shortTitle: "Definir e planejar",
+          title: "Definir o projeto com IA",
           duration: "5 min",
-          promise: "Um percurso curto, local e revisável.",
+          promise: "Conversa → notas → perguntas abertas.",
           slides: [
             {
               tone: "cobalt",
               layout: "cover",
-              eyebrow: "Comece pelo resultado",
-              title: "Do brief ao Preview",
-              accent: "Preview",
-              body: "Um fluxo completo para transformar uma ideia em um site de uma página — sem tocar em produção.",
-              takeaway: "Ideia → construção local → revisão → compartilhamento",
-              notes: "Abra mostrando o resultado final e a URL de Preview. Explique que a série acompanha o mesmo percurso do workshop, em partes pequenas e independentes."
+              eyebrow: "Fase 1 · Conversa e descoberta",
+              title: "Antes de construir, defina o projeto",
+              accent: "defina",
+              body: "Nesta aula, uma conversa sobre um evento de IA em Faro vira contexto, decisões e perguntas abertas.",
+              takeaway: "Você está aqui: conversa e descoberta",
+              notes: "Localize esta apresentação no início do percurso. A entrega de hoje são notas confiáveis da conversa. Requisitos, design, construção e revisão aparecem nas fases seguintes."
             },
             {
               tone: "paper",
-              layout: "flow",
-              eyebrow: "O percurso",
-              title: "Quatro movimentos. Um site.",
-              accent: "Um site",
+              layout: "comparison",
+              eyebrow: "1 · Ouvir",
+              title: "Comece pela conversa",
+              accent: "conversa",
               items: [
-                { label: "Definir", text: "Mini-brief e escopo." },
-                { label: "Construir", text: "Studio + Studio Code." },
-                { label: "Revisar", text: "Site Editor + Annotate." },
-                { label: "Compartilhar", text: "Preview temporário." }
+                { marker: "C", label: "Cenário", text: "Evento de IA em Faro, com duas trilhas e participação da comunidade." },
+                { marker: "M", label: "Material", text: "Transcrição fictícia da reunião + briefing da agenda." }
               ],
-              notes: "Enfatize que cada etapa produz algo observável. A pessoa não precisa começar com código nem publicar um site real para aprender o fluxo."
+              notes: "Apresente a simulação: a turma recebe as notas de uma conversa com a organização do evento e o documento da agenda. O conteúdo é fictício e serve como matéria-prima para praticar descoberta de produto. [Sources] Plano para a agenda evento (1).pdf; workshop/pt-BR/event-meeting-notes.md"
             },
             {
               tone: "frost",
               layout: "steps",
-              eyebrow: "Mapa de ferramentas",
-              title: "Cada ferramenta tem um papel",
-              accent: "um papel",
+              eyebrow: "2 · Interpretar",
+              title: "A IA transforma falas em decisões",
+              accent: "decisões",
               items: [
-                { label: "Studio", text: "Cria e gerencia o site local." },
-                { label: "Studio Code", text: "Planeja e propõe mudanças." },
-                { label: "Site Editor", text: "Inspeciona e ajusta visualmente." },
-                { label: "Annotate + Preview", text: "Registra e compartilha feedback." }
+                { label: "Objetivo", text: "O que o evento precisa tornar possível?" },
+                { label: "Públicos", text: "Participantes, palestrantes, voluntários e patrocinadores." },
+                { label: "Funcionalidades", text: "Agenda, inscrições, formulários, contato e localização." },
+                { label: "Dúvidas", text: "Capacidade, tickets, critérios e uso responsável de dados." }
               ],
-              notes: "Evite apresentar uma lista de recursos. Associe cada ferramenta a uma decisão do processo e mantenha o foco na entrega de uma página."
+              notes: "Demonstre um pedido para a ferramenta de IA: separar fatos, necessidades, hipóteses e perguntas em aberto. A IA organiza o material; a equipe confirma as decisões e mantém controle sobre seleção de palestrantes e comunicações. [Sources] workshop/pt-BR/event-meeting-notes.md"
             },
             {
               tone: "ink",
-              layout: "comparison",
-              eyebrow: "Limite de segurança",
-              title: "Local primeiro. Remoto quando fizer sentido.",
-              accent: "Local primeiro",
+              layout: "flow",
+              eyebrow: "O percurso",
+              title: "A conversa abre três fases",
+              accent: "três fases",
               items: [
-                { marker: "L", label: "Local", text: "Construir, testar, revisar e errar com segurança." },
-                { marker: "R", label: "Remoto", text: "Compartilhar apenas conteúdo fictício ou autorizado." }
+                { label: "1 · Descoberta", text: "Ouvir, registrar e esclarecer." },
+                { label: "2 · Requisitos", text: "Definir propósito, público e voz." },
+                { label: "3 · Design", text: "Explorar a experiência no Claude Design." }
               ],
-              notes: "Diferencie Preview de hospedagem permanente. Nesta série não há Sync, produção nem dados reais; o remoto aparece apenas no momento de compartilhar."
+              notes: "Mostre a progressão sem antecipar a solução: primeiro entendemos a conversa; depois registramos requisitos em Markdown; só então exploramos o design. Construção e revisão vêm depois dessas três fases."
             },
             {
               tone: "terracotta",
               layout: "outro",
-              eyebrow: "Resultado da série",
-              title: "Uma página que você consegue explicar",
-              accent: "explicar",
-              body: "Você terá um site local, decisões registradas e um Preview revisado por outra pessoa.",
-              next: "02 · Mini-brief",
-              notes: "Feche com o critério mais importante: não basta gerar uma página; a pessoa deve reconhecer o propósito, justificar escolhas e conseguir revisar o resultado."
+              eyebrow: "Entrega da fase 1",
+              title: "Boas notas preservam o que a conversa revelou",
+              accent: "Boas notas",
+              body: "Contexto, decisões, dúvidas e limites ficam prontos para virar requisitos.",
+              next: "02 · Criar requirements.md",
+              notes: "Feche confirmando que as notas fictícias são a matéria-prima da fase seguinte. Ainda não escolhemos layout nem componentes; primeiro vamos transformar a conversa em requisitos verificáveis."
             }
           ]
         },
         "mini-brief": {
           number: "02",
           slug: "02-mini-brief.html",
-          shortTitle: "Mini-brief",
-          title: "Criar um mini-brief",
+          shortTitle: "Requisitos",
+          title: "Definir os requisitos do evento",
           duration: "5 min",
-          promise: "Um brief pequeno o bastante para orientar decisões.",
+          promise: "Propósito, público e voz registrados em requirements.md.",
           slides: [
             {
               tone: "ink",
               layout: "cover",
-              eyebrow: "Antes da ferramenta",
-              title: "Uma boa ideia cabe em um brief curto",
-              accent: "brief curto",
-              body: "Defina o que a página precisa fazer antes de decidir como ela vai parecer.",
-              notes: "Explique que o mini-brief não é burocracia. Ele é um filtro rápido para escolhas de conteúdo, estilo e feedback."
+              eyebrow: "Fase 2 · Requisitos",
+              title: "A conversa vira um brief do evento",
+              accent: "brief do evento",
+              body: "A comunidade WordPress organiza. O público geral do Algarve precisa se reconhecer na proposta.",
+              takeaway: "Evento de IA em Faro · aberto para além da comunidade WordPress",
+              notes: "Retome as notas da reunião. O evento nasce na comunidade WordPress, mas o site deve acolher pessoas sem vínculo com WordPress que querem compreender e aplicar inteligência artificial. [Sources] workshop/pt-BR/event-meeting-notes.md"
             },
             {
               tone: "paper",
-              layout: "split",
-              eyebrow: "Fundação",
-              title: "Propósito + público",
-              accent: "público",
-              body: "Comece com duas frases específicas.",
+              layout: "steps",
+              eyebrow: "O mini-brief",
+              title: "Três decisões dão foco ao evento",
+              accent: "Três decisões",
               items: [
-                { marker: "P", label: "Propósito", text: "O que esta página precisa tornar possível?" },
-                { marker: "A", label: "Público", text: "Para quem essa decisão deve ficar fácil?" }
+                { marker: "P", label: "Propósito", text: "Aproximar a IA dos negócios e da comunidade local." },
+                { marker: "A", label: "Público", text: "Hotéis, restaurantes, agências de viagens e profissionais curiosos." },
+                { marker: "V", label: "Voz", text: "Acolhedora, prática, clara e sem jargão técnico." }
               ],
-              notes: "Peça respostas concretas. ‘Divulgar meu trabalho’ é amplo; ‘ajudar organizadores a solicitar uma palestra’ já orienta uma página."
+              notes: "Explique que WordPress é quem reúne a comunidade, não um pré-requisito para participar. Use exemplos do sul de Portugal: proprietários de hotéis, restaurantes e agências de viagens que querem entender usos práticos de IA."
             },
             {
               tone: "cobalt",
-              layout: "split",
-              eyebrow: "Direção",
-              title: "Uma ação. Uma voz.",
-              accent: "Uma voz",
+              layout: "checklist",
+              eyebrow: "Registro do projeto",
+              title: "Registre o acordo",
+              accent: "acordo",
               items: [
-                { marker: "→", label: "CTA principal", text: "Escolha uma única próxima ação." },
-                { marker: "Aa", label: "Tom", text: "Use três adjetivos que guiem texto e imagem." }
+                { marker: "MD", label: "requirements.md", text: "Propósito, público e voz." },
+                { marker: "02", label: "Experiência", text: "Páginas, ações e prioridades." },
+                { marker: "03", label: "Limites", text: "Hipóteses, dúvidas e aceite." }
               ],
-              notes: "O CTA resolve prioridade. O tom evita descrições vagas como ‘bonito e moderno’; use características que mudem decisões, como direto, acolhedor e confiante."
+              takeaway: "Uma fonte de verdade para as próximas fases",
+              notes: "Crie requirements.md a partir das notas da primeira conversa. O arquivo deve separar fatos confirmados, decisões, hipóteses e questões abertas para que as fases seguintes não dependam da memória da reunião. [Sources] workshop/pt-BR/requirements.md"
             },
             {
               tone: "frost",
-              layout: "checklist",
-              eyebrow: "Conteúdo mínimo",
-              title: "Três mensagens. Cinco seções no máximo.",
-              accent: "Cinco seções",
+              layout: "comparison",
+              eyebrow: "Fase 3 · Design",
+              title: "Dois artefatos orientam os rascunhos",
+              accent: "Dois artefatos",
               items: [
-                { marker: "3", label: "Mensagens", text: "O que a pessoa precisa entender." },
-                { marker: "5", label: "Seções", text: "A ordem que conta a história." },
-                { marker: "✓", label: "Assets", text: "Somente arquivos disponíveis e autorizados." }
+                { marker: "DS", label: "Design System", text: "Cores, tipografia, componentes e padrões gerados ou importados no Claude Design." },
+                { marker: "MD", label: "design.md", text: "Decisões visuais e de interação solicitadas ao Claude Design e revisadas pela equipe." }
               ],
-              notes: "Sugira uma estrutura simples: hero, prova, oferta, como funciona e CTA. Os assets podem ser fotos próprias, logotipo e textos já aprovados."
+              notes: "As referências oficiais dizem que Claude Design pode extrair um Design System de código, apresentações, documentos e assets de marca. design.md é uma convenção deste workshop: peça à ferramenta que registre ali as decisões e revise o arquivo antes do handoff. [Sources] https://support.claude.com/en/articles/14604397-set-up-your-design-system-in-claude-design; https://support.claude.com/en/articles/14604416-get-started-with-claude-design"
             },
             {
               tone: "cream",
               layout: "outro",
-              eyebrow: "Checkpoint",
-              title: "Se não está no brief, não bloqueia a primeira versão",
-              accent: "não bloqueia",
-              body: "Guarde ideias extras para depois. O objetivo agora é criar uma base que possa ser revisada.",
+              eyebrow: "Entrega da fase 3",
+              title: "Claude Design transforma requisitos em rascunhos",
+              accent: "rascunhos",
+              body: "Anexe requirements.md, referências e o Design System; compare alternativas e consolide as escolhas em design.md.",
               next: "03 · Criar o site",
-              notes: "Mostre o brief completo em uma única tela. Se ele não puder ser lido em um minuto, reduza o escopo antes de abrir o Studio."
+              notes: "Demonstre o fluxo oficial: criar projeto, anexar ou importar o Design System, adicionar contexto, descrever o que construir, revisar no canvas e iterar. A primeira geração é um ponto de partida, não a solução final. [Sources] https://www.anthropic.com/news/claude-design-anthropic-labs; https://support.claude.com/en/articles/14604416-get-started-with-claude-design"
             }
           ]
         },
@@ -667,137 +668,138 @@ window.STUDIO_VIDEO_DECKS = {
         "overview": {
           number: "01",
           slug: "01-overview.html",
-          shortTitle: "Overview",
-          title: "From brief to Preview",
+          shortTitle: "Define and plan",
+          title: "Define the project with AI",
           duration: "5 min",
-          promise: "A short, local, reviewable journey.",
+          promise: "Conversation → notes → open questions.",
           slides: [
             {
               tone: "cobalt",
               layout: "cover",
-              eyebrow: "Start with the outcome",
-              title: "From brief to Preview",
-              accent: "Preview",
-              body: "A complete flow for turning an idea into a one-page site — without touching production.",
-              takeaway: "Idea → local build → review → sharing",
-              notes: "Open by showing the finished result and its Preview URL. Explain that the series follows the workshop journey in small, independent parts."
+              eyebrow: "Phase 1 · Conversation and discovery",
+              title: "Define the project before you build",
+              accent: "Define",
+              body: "In this lesson, a conversation about an AI event in Faro becomes context, decisions, and open questions.",
+              takeaway: "You are here: conversation and discovery",
+              notes: "Place this presentation at the beginning of the journey. Today's deliverable is a reliable set of conversation notes. Requirements, design, build, and review appear in later phases."
             },
             {
               tone: "paper",
-              layout: "flow",
-              eyebrow: "The journey",
-              title: "Four moves. One site.",
-              accent: "One site",
+              layout: "comparison",
+              eyebrow: "1 · Listen",
+              title: "Start with the conversation",
+              accent: "conversation",
               items: [
-                { label: "Define", text: "Mini-brief and scope." },
-                { label: "Build", text: "Studio + Studio Code." },
-                { label: "Review", text: "Site Editor + Annotate." },
-                { label: "Share", text: "Temporary Preview." }
+                { marker: "S", label: "Scenario", text: "An AI event in Faro with two tracks and community participation." },
+                { marker: "M", label: "Material", text: "A fictional meeting transcript + the agenda brief." }
               ],
-              notes: "Stress that each step produces something observable. A participant does not need to begin with code or publish a real site to learn the flow."
+              notes: "Introduce the simulation: the class receives notes from a conversation with the event organizers and the agenda document. The content is fictional and serves as raw material for product discovery practice. [Sources] Plano para a agenda evento (1).pdf; workshop/en/event-meeting-notes.md"
             },
             {
               tone: "frost",
               layout: "steps",
-              eyebrow: "Tool map",
-              title: "Each tool has one job",
-              accent: "one job",
+              eyebrow: "2 · Interpret",
+              title: "AI turns discussion into decisions",
+              accent: "decisions",
               items: [
-                { label: "Studio", text: "Creates and manages the local site." },
-                { label: "Studio Code", text: "Plans and proposes changes." },
-                { label: "Site Editor", text: "Inspects and adjusts visually." },
-                { label: "Annotate + Preview", text: "Captures and shares feedback." }
+                { label: "Goal", text: "What must the event make possible?" },
+                { label: "Audiences", text: "Attendees, speakers, volunteers, and sponsors." },
+                { label: "Capabilities", text: "Agenda, registration, forms, contact, and venue." },
+                { label: "Questions", text: "Capacity, tickets, criteria, and responsible data use." }
               ],
-              notes: "Avoid presenting a feature list. Connect each tool to a process decision and keep the focus on delivering one page."
+              notes: "Demonstrate a request to the AI tool: separate facts, needs, hypotheses, and open questions. AI organizes the material; the team confirms decisions and retains control over speaker selection and communications. [Sources] workshop/en/event-meeting-notes.md"
             },
             {
               tone: "ink",
-              layout: "comparison",
-              eyebrow: "Safety boundary",
-              title: "Local first. Remote when it makes sense.",
-              accent: "Local first",
+              layout: "flow",
+              eyebrow: "The journey",
+              title: "The conversation opens three phases",
+              accent: "three phases",
               items: [
-                { marker: "L", label: "Local", text: "Build, test, review, and fail safely." },
-                { marker: "R", label: "Remote", text: "Share only fictional or authorized content." }
+                { label: "1 · Discovery", text: "Listen, record, and clarify." },
+                { label: "2 · Requirements", text: "Define purpose, audience, and voice." },
+                { label: "3 · Design", text: "Explore the experience in Claude Design." }
               ],
-              notes: "Distinguish Preview from permanent hosting. This series uses no Sync, production, or real data; remote appears only at sharing time."
+              notes: "Show the progression without jumping to a solution: first understand the conversation; then record requirements in Markdown; only then explore design. Build and review follow these three phases."
             },
             {
               tone: "terracotta",
               layout: "outro",
-              eyebrow: "Series outcome",
-              title: "A page you can explain",
-              accent: "explain",
-              body: "You will have a local site, recorded decisions, and a Preview reviewed by another person.",
-              next: "02 · Mini-brief",
-              notes: "Close with the most important criterion: generating a page is not enough; the participant should recognize its purpose, justify choices, and review the result."
+              eyebrow: "Phase 1 deliverable",
+              title: "Good notes preserve what the conversation revealed",
+              accent: "Good notes",
+              body: "Context, decisions, questions, and boundaries are ready to become requirements.",
+              next: "02 · Create requirements.md",
+              notes: "Close by confirming that the fictional meeting notes are the raw material for the next phase. We have not chosen layouts or components yet; first we will turn the conversation into verifiable requirements."
             }
           ]
         },
         "mini-brief": {
           number: "02",
           slug: "02-mini-brief.html",
-          shortTitle: "Mini-brief",
-          title: "Create a mini-brief",
+          shortTitle: "Requirements",
+          title: "Define the event requirements",
           duration: "5 min",
-          promise: "A brief small enough to guide decisions.",
+          promise: "Purpose, audience, and voice recorded in requirements.md.",
           slides: [
             {
               tone: "ink",
               layout: "cover",
-              eyebrow: "Before the tool",
-              title: "A good idea fits in a short brief",
-              accent: "short brief",
-              body: "Define what the page needs to do before deciding how it should look.",
-              notes: "Explain that the mini-brief is not bureaucracy. It is a quick filter for content, style, and feedback decisions."
+              eyebrow: "Phase 2 · Requirements",
+              title: "The conversation becomes an event brief",
+              accent: "event brief",
+              body: "The WordPress community organizes it. The wider Algarve audience must recognize itself in the proposition.",
+              takeaway: "AI event in Faro · open beyond the WordPress community",
+              notes: "Return to the meeting notes. The event comes from the WordPress community, but the website must welcome people with no WordPress connection who want to understand and apply artificial intelligence. [Sources] workshop/en/event-meeting-notes.md"
             },
             {
               tone: "paper",
-              layout: "split",
-              eyebrow: "Foundation",
-              title: "Purpose + audience",
-              accent: "audience",
-              body: "Begin with two specific sentences.",
+              layout: "steps",
+              eyebrow: "The mini-brief",
+              title: "Three decisions focus the event",
+              accent: "Three decisions",
               items: [
-                { marker: "P", label: "Purpose", text: "What must this page make possible?" },
-                { marker: "A", label: "Audience", text: "Whose decision should become easier?" }
+                { marker: "P", label: "Purpose", text: "Bring AI closer to local businesses and the community." },
+                { marker: "A", label: "Audience", text: "Hotels, restaurants, travel agencies, and curious professionals." },
+                { marker: "V", label: "Voice", text: "Welcoming, practical, clear, and free of technical jargon." }
               ],
-              notes: "Ask for concrete answers. ‘Promote my work’ is broad; ‘help organizers request a talk’ already guides a page."
+              notes: "Explain that WordPress brings the community together; it is not a prerequisite for attending. Use examples from southern Portugal: hotel, restaurant, and travel-agency owners who want to understand practical uses of AI."
             },
             {
               tone: "cobalt",
-              layout: "split",
-              eyebrow: "Direction",
-              title: "One action. One voice.",
-              accent: "One voice",
+              layout: "checklist",
+              eyebrow: "Project record",
+              title: "Record the agreement",
+              accent: "agreement",
               items: [
-                { marker: "→", label: "Primary CTA", text: "Choose one next action." },
-                { marker: "Aa", label: "Tone", text: "Use three adjectives to guide copy and imagery." }
+                { marker: "MD", label: "requirements.md", text: "Purpose, audience, and voice." },
+                { marker: "02", label: "Experience", text: "Pages, actions, and priorities." },
+                { marker: "03", label: "Boundaries", text: "Hypotheses, questions, and acceptance." }
               ],
-              notes: "The CTA resolves priority. Tone avoids vague descriptions like ‘beautiful and modern’; use qualities that change decisions, such as direct, warm, and confident."
+              takeaway: "One source of truth for the next phases",
+              notes: "Create requirements.md from the first conversation notes. The file should separate confirmed facts, decisions, hypotheses, and open questions so later phases do not depend on meeting memory. [Sources] workshop/en/requirements.md"
             },
             {
               tone: "frost",
-              layout: "checklist",
-              eyebrow: "Minimum content",
-              title: "Three messages. Five sections at most.",
-              accent: "Five sections",
+              layout: "comparison",
+              eyebrow: "Phase 3 · Design",
+              title: "Two artifacts guide the drafts",
+              accent: "Two artifacts",
               items: [
-                { marker: "3", label: "Messages", text: "What the visitor must understand." },
-                { marker: "5", label: "Sections", text: "The order that tells the story." },
-                { marker: "✓", label: "Assets", text: "Only available, authorized files." }
+                { marker: "DS", label: "Design System", text: "Colors, typography, components, and patterns generated or imported in Claude Design." },
+                { marker: "MD", label: "design.md", text: "Visual and interaction decisions requested from Claude Design and reviewed by the team." }
               ],
-              notes: "Suggest a simple structure: hero, proof, offer, process, and CTA. Assets can be owned photos, a logo, and approved copy."
+              notes: "Official references say Claude Design can extract a Design System from code, slide decks, documents, and brand assets. design.md is a workshop convention: ask the tool to record decisions there and review the file before handoff. [Sources] https://support.claude.com/en/articles/14604397-set-up-your-design-system-in-claude-design; https://support.claude.com/en/articles/14604416-get-started-with-claude-design"
             },
             {
               tone: "cream",
               layout: "outro",
-              eyebrow: "Checkpoint",
-              title: "If it is not in the brief, it cannot block version one",
-              accent: "cannot block",
-              body: "Save extra ideas for later. The goal now is a base that can be reviewed.",
+              eyebrow: "Phase 3 deliverable",
+              title: "Claude Design turns requirements into drafts",
+              accent: "drafts",
+              body: "Attach requirements.md, references, and the Design System; compare alternatives and consolidate choices in design.md.",
               next: "03 · Create the site",
-              notes: "Show the completed brief on one screen. If it cannot be read in one minute, reduce the scope before opening Studio."
+              notes: "Demonstrate the official flow: create a project, attach or import the Design System, add context, describe what to build, review on the canvas, and iterate. The first generation is a starting point, not the final solution. [Sources] https://www.anthropic.com/news/claude-design-anthropic-labs; https://support.claude.com/en/articles/14604416-get-started-with-claude-design"
             }
           ]
         },
@@ -1303,137 +1305,138 @@ window.STUDIO_VIDEO_DECKS = {
         "overview": {
           number: "01",
           slug: "01-overview.html",
-          shortTitle: "Visión general",
-          title: "Del brief al Preview",
+          shortTitle: "Definir y planificar",
+          title: "Definir el proyecto con IA",
           duration: "5 min",
-          promise: "Un recorrido breve, local y revisable.",
+          promise: "Conversación → notas → preguntas abiertas.",
           slides: [
             {
               tone: "cobalt",
               layout: "cover",
-              eyebrow: "Comienza por el resultado",
-              title: "Del brief al Preview",
-              accent: "Preview",
-              body: "Un flujo completo para transformar una idea en un sitio de una página, sin tocar producción.",
-              takeaway: "Idea → construcción local → revisión → compartir",
-              notes: "Comienza mostrando el resultado final y la URL de Preview. Explica que la serie sigue el mismo recorrido del workshop en partes pequeñas e independientes."
+              eyebrow: "Fase 1 · Conversación y descubrimiento",
+              title: "Antes de construir, define el proyecto",
+              accent: "define",
+              body: "En esta clase, una conversación sobre un evento de IA en Faro se convierte en contexto, decisiones y preguntas abiertas.",
+              takeaway: "Estás aquí: conversación y descubrimiento",
+              notes: "Sitúa esta presentación al comienzo del recorrido. La entrega de hoy son notas fiables de la conversación. Los requisitos, el diseño, la construcción y la revisión aparecen en fases posteriores."
             },
             {
               tone: "paper",
-              layout: "flow",
-              eyebrow: "El recorrido",
-              title: "Cuatro movimientos. Un sitio.",
-              accent: "Un sitio",
+              layout: "comparison",
+              eyebrow: "1 · Escuchar",
+              title: "Comienza por la conversación",
+              accent: "conversación",
               items: [
-                { label: "Definir", text: "Mini-brief y alcance." },
-                { label: "Construir", text: "Studio + Studio Code." },
-                { label: "Revisar", text: "Site Editor + Annotate." },
-                { label: "Compartir", text: "Preview temporal." }
+                { marker: "E", label: "Escenario", text: "Evento de IA en Faro, con dos pistas y participación de la comunidad." },
+                { marker: "M", label: "Material", text: "Transcripción ficticia de la reunión + briefing de la agenda." }
               ],
-              notes: "Destaca que cada etapa produce algo observable. No es necesario comenzar con código ni publicar un sitio real para aprender el flujo."
+              notes: "Presenta la simulación: la clase recibe las notas de una conversación con la organización del evento y el documento de la agenda. El contenido es ficticio y sirve como materia prima para practicar descubrimiento de producto. [Sources] Plano para a agenda evento (1).pdf; workshop/es/event-meeting-notes.md"
             },
             {
               tone: "frost",
               layout: "steps",
-              eyebrow: "Mapa de herramientas",
-              title: "Cada herramienta tiene una función",
-              accent: "una función",
+              eyebrow: "2 · Interpretar",
+              title: "La IA convierte la conversación en decisiones",
+              accent: "decisiones",
               items: [
-                { label: "Studio", text: "Crea y administra el sitio local." },
-                { label: "Studio Code", text: "Planifica y propone cambios." },
-                { label: "Site Editor", text: "Inspecciona y ajusta visualmente." },
-                { label: "Annotate + Preview", text: "Registra y comparte feedback." }
+                { label: "Objetivo", text: "¿Qué debe hacer posible el evento?" },
+                { label: "Públicos", text: "Participantes, ponentes, voluntarios y patrocinadores." },
+                { label: "Funciones", text: "Agenda, inscripciones, formularios, contacto y lugar." },
+                { label: "Dudas", text: "Capacidad, tickets, criterios y uso responsable de datos." }
               ],
-              notes: "Evita presentar una lista de funciones. Relaciona cada herramienta con una decisión del proceso y mantén el foco en entregar una página."
+              notes: "Demuestra una petición a la herramienta de IA: separar hechos, necesidades, hipótesis y preguntas abiertas. La IA organiza el material; el equipo confirma las decisiones y mantiene el control sobre la selección de ponentes y las comunicaciones. [Sources] workshop/es/event-meeting-notes.md"
             },
             {
               tone: "ink",
-              layout: "comparison",
-              eyebrow: "Límite de seguridad",
-              title: "Local primero. Remoto cuando tenga sentido.",
-              accent: "Local primero",
+              layout: "flow",
+              eyebrow: "El recorrido",
+              title: "La conversación abre tres fases",
+              accent: "tres fases",
               items: [
-                { marker: "L", label: "Local", text: "Construir, probar, revisar y equivocarse con seguridad." },
-                { marker: "R", label: "Remoto", text: "Compartir solo contenido ficticio o autorizado." }
+                { label: "1 · Descubrimiento", text: "Escuchar, registrar y aclarar." },
+                { label: "2 · Requisitos", text: "Definir propósito, público y voz." },
+                { label: "3 · Diseño", text: "Explorar la experiencia en Claude Design." }
               ],
-              notes: "Diferencia Preview de alojamiento permanente. En esta serie no hay Sync, producción ni datos reales; lo remoto aparece solamente al compartir."
+              notes: "Muestra la progresión sin adelantar la solución: primero entendemos la conversación; después registramos requisitos en Markdown; solo entonces exploramos el diseño. La construcción y la revisión vienen después de estas tres fases."
             },
             {
               tone: "terracotta",
               layout: "outro",
-              eyebrow: "Resultado de la serie",
-              title: "Una página que puedes explicar",
-              accent: "explicar",
-              body: "Tendrás un sitio local, decisiones registradas y un Preview revisado por otra persona.",
-              next: "02 · Mini-brief",
-              notes: "Cierra con el criterio más importante: no basta con generar una página; la persona debe reconocer su propósito, justificar decisiones y revisar el resultado."
+              eyebrow: "Entrega de la fase 1",
+              title: "Las buenas notas conservan lo que reveló la conversación",
+              accent: "buenas notas",
+              body: "Contexto, decisiones, dudas y límites quedan listos para convertirse en requisitos.",
+              next: "02 · Crear requirements.md",
+              notes: "Cierra confirmando que las notas ficticias son la materia prima de la fase siguiente. Todavía no elegimos layouts ni componentes; primero convertiremos la conversación en requisitos verificables."
             }
           ]
         },
         "mini-brief": {
           number: "02",
           slug: "02-mini-brief.html",
-          shortTitle: "Mini-brief",
-          title: "Crear un mini-brief",
+          shortTitle: "Requisitos",
+          title: "Definir los requisitos del evento",
           duration: "5 min",
-          promise: "Un brief lo bastante pequeño para orientar decisiones.",
+          promise: "Propósito, público y voz registrados en requirements.md.",
           slides: [
             {
               tone: "ink",
               layout: "cover",
-              eyebrow: "Antes de la herramienta",
-              title: "Una buena idea cabe en un brief breve",
-              accent: "brief breve",
-              body: "Define lo que la página debe conseguir antes de decidir cómo debe verse.",
-              notes: "Explica que el mini-brief no es burocracia. Es un filtro rápido para decisiones de contenido, estilo y feedback."
+              eyebrow: "Fase 2 · Requisitos",
+              title: "La conversación se convierte en el brief del evento",
+              accent: "brief del evento",
+              body: "La comunidad WordPress lo organiza. El público general del Algarve debe reconocerse en la propuesta.",
+              takeaway: "Evento de IA en Faro · abierto más allá de la comunidad WordPress",
+              notes: "Retoma las notas de la reunión. El evento nace en la comunidad WordPress, pero el sitio debe acoger a personas sin relación con WordPress que quieren comprender y aplicar inteligencia artificial. [Sources] workshop/es/event-meeting-notes.md"
             },
             {
               tone: "paper",
-              layout: "split",
-              eyebrow: "Base",
-              title: "Propósito + público",
-              accent: "público",
-              body: "Comienza con dos frases específicas.",
+              layout: "steps",
+              eyebrow: "El mini-brief",
+              title: "Tres decisiones enfocan el evento",
+              accent: "Tres decisiones",
               items: [
-                { marker: "P", label: "Propósito", text: "¿Qué debe hacer posible esta página?" },
-                { marker: "A", label: "Público", text: "¿Para quién debe ser más fácil esta decisión?" }
+                { marker: "P", label: "Propósito", text: "Acercar la IA a los negocios y a la comunidad local." },
+                { marker: "A", label: "Público", text: "Hoteles, restaurantes, agencias de viajes y profesionales con curiosidad." },
+                { marker: "V", label: "Voz", text: "Acogedora, práctica, clara y sin jerga técnica." }
               ],
-              notes: "Pide respuestas concretas. ‘Promocionar mi trabajo’ es amplio; ‘ayudar a organizadores a solicitar una charla’ ya orienta una página."
+              notes: "Explica que WordPress reúne a la comunidad, pero no es un requisito para participar. Usa ejemplos del sur de Portugal: propietarios de hoteles, restaurantes y agencias de viajes que quieren entender usos prácticos de la IA."
             },
             {
               tone: "cobalt",
-              layout: "split",
-              eyebrow: "Dirección",
-              title: "Una acción. Una voz.",
-              accent: "Una voz",
+              layout: "checklist",
+              eyebrow: "Registro del proyecto",
+              title: "Registra el acuerdo",
+              accent: "acuerdo",
               items: [
-                { marker: "→", label: "CTA principal", text: "Elige una única acción siguiente." },
-                { marker: "Aa", label: "Tono", text: "Usa tres adjetivos para guiar texto e imágenes." }
+                { marker: "MD", label: "requirements.md", text: "Propósito, público y voz." },
+                { marker: "02", label: "Experiencia", text: "Páginas, acciones y prioridades." },
+                { marker: "03", label: "Límites", text: "Hipótesis, dudas y aceptación." }
               ],
-              notes: "La CTA resuelve la prioridad. El tono evita descripciones vagas como ‘bonito y moderno’; usa características que cambien decisiones, como directo, acogedor y seguro."
+              takeaway: "Una fuente de verdad para las próximas fases",
+              notes: "Crea requirements.md a partir de las notas de la primera conversación. El archivo debe separar hechos confirmados, decisiones, hipótesis y preguntas abiertas para que las fases siguientes no dependan de la memoria de la reunión. [Sources] workshop/es/requirements.md"
             },
             {
               tone: "frost",
-              layout: "checklist",
-              eyebrow: "Contenido mínimo",
-              title: "Tres mensajes. Cinco secciones como máximo.",
-              accent: "Cinco secciones",
+              layout: "comparison",
+              eyebrow: "Fase 3 · Diseño",
+              title: "Dos artefactos orientan los borradores",
+              accent: "Dos artefactos",
               items: [
-                { marker: "3", label: "Mensajes", text: "Lo que la persona debe comprender." },
-                { marker: "5", label: "Secciones", text: "El orden que cuenta la historia." },
-                { marker: "✓", label: "Assets", text: "Solo archivos disponibles y autorizados." }
+                { marker: "DS", label: "Design System", text: "Colores, tipografía, componentes y patrones generados o importados en Claude Design." },
+                { marker: "MD", label: "design.md", text: "Decisiones visuales y de interacción solicitadas a Claude Design y revisadas por el equipo." }
               ],
-              notes: "Sugiere una estructura simple: hero, evidencia, oferta, proceso y CTA. Los assets pueden ser fotos propias, logotipo y textos aprobados."
+              notes: "Las referencias oficiales indican que Claude Design puede extraer un Design System de código, presentaciones, documentos y assets de marca. design.md es una convención de este workshop: pide a la herramienta que registre allí las decisiones y revisa el archivo antes del handoff. [Sources] https://support.claude.com/en/articles/14604397-set-up-your-design-system-in-claude-design; https://support.claude.com/en/articles/14604416-get-started-with-claude-design"
             },
             {
               tone: "cream",
               layout: "outro",
-              eyebrow: "Checkpoint",
-              title: "Si no está en el brief, no bloquea la primera versión",
-              accent: "no bloquea",
-              body: "Guarda las ideas adicionales para después. Ahora necesitas una base que pueda revisarse.",
+              eyebrow: "Entrega de la fase 3",
+              title: "Claude Design convierte requisitos en borradores",
+              accent: "borradores",
+              body: "Adjunta requirements.md, referencias y el Design System; compara alternativas y consolida las decisiones en design.md.",
               next: "03 · Crear el sitio",
-              notes: "Muestra el brief completo en una sola pantalla. Si no puede leerse en un minuto, reduce el alcance antes de abrir Studio."
+              notes: "Demuestra el flujo oficial: crear un proyecto, adjuntar o importar el Design System, añadir contexto, describir lo que se quiere construir, revisar en el canvas e iterar. La primera generación es un punto de partida, no la solución final. [Sources] https://www.anthropic.com/news/claude-design-anthropic-labs; https://support.claude.com/en/articles/14604416-get-started-with-claude-design"
             }
           ]
         },

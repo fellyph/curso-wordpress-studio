@@ -18,6 +18,8 @@ This project uses WordPress Studio 1.17.0 as its stable reference release. It wa
 - Free beta usage has a monthly account-level limit.
 - Preview requires a WordPress.com login but not paid hosting.
 - Sync and WordPress.com MCP depend on specific accounts, plans, and permissions and are outside the core path.
+- Claude Design is in beta for Pro, Max, Team, and Enterprise plans; on Enterprise, the capability is off by default. Review the [announcement](https://www.anthropic.com/news/claude-design-anthropic-labs), [Get started](https://support.claude.com/en/articles/14604416-get-started-with-claude-design), and [Design System setup](https://support.claude.com/en/articles/14604397-set-up-your-design-system-in-claude-design) guides before the workshop.
+- `design.md` is a workshop convention, not a documented native export format. Ask for decisions to be recorded in that file and apply human review.
 
 ## Documented models
 

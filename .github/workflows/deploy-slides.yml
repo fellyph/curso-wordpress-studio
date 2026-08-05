@@ -1,0 +1,67 @@
+name: Deploy video slides to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/deploy-slides.yml
+      - scripts/validate-content.mjs
+      - scripts/validate-video-slides.mjs
+      - slides/videos/**
+      - studio/**
+      - workshop/**
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Validate and package slides
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          package-manager-cache: false
+
+      - name: Validate multilingual content
+        run: node scripts/validate-content.mjs
+
+      - name: Validate video slides
+        run: node scripts/validate-video-slides.mjs
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload slides artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: slides/videos
+
+  deploy:
+    name: Publish slides
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "supported_locales": ["pt-BR", "en", "es"],
   "editorial_baseline": "1.17.0",
-  "verified_on": "2026-08-04",
+  "verified_on": "2026-08-05",
   "local_non_authoritative_build": "1.18.0-dev79",
   "sources": [
     {
@@ -93,10 +93,13 @@
         "https://developer.wordpress.com/docs/developer-tools/studio/studio-code/",
         "https://developer.wordpress.com/docs/developer-tools/studio/roadmap/",
         "https://developer.wordpress.com/docs/developer-tools/studio/roadmap/beta-features/",
-        "https://github.com/Automattic/studio/releases/tag/v1.17.0"
+        "https://github.com/Automattic/studio/releases/tag/v1.17.0",
+        "https://www.anthropic.com/news/claude-design-anthropic-labs",
+        "https://support.claude.com/en/articles/14604397-set-up-your-design-system-in-claude-design",
+        "https://support.claude.com/en/articles/14604416-get-started-with-claude-design"
       ],
       "official_last_updated": "2026-08-03",
-      "verified_on": "2026-08-04",
+      "verified_on": "2026-08-05",
       "tested_with_studio": null,
       "stability": "volatile",
       "source_status": "aligned",
