@@ -137,12 +137,12 @@ window.STUDIO_VIDEO_DECKS = {
               title: "Registre o acordo",
               accent: "acordo",
               items: [
-                { marker: "MD", label: "requirements.md", text: "Propósito, público e voz.", resource: "requirements.md" },
-                { marker: "02", label: "Experiência", text: "Páginas, ações e prioridades." },
+                { marker: "MD", label: "requirements.md", text: "Propósito, público, voz e contexto WordPress.", resource: "requirements.md" },
+                { marker: "02", label: "Experiência", text: "Página única ou multipágina, navegação e prioridade mobile." },
                 { marker: "03", label: "Limites", text: "Hipóteses, dúvidas e aceite." }
               ],
               takeaway: "Uma fonte de verdade para as próximas fases",
-              notes: "Crie requirements.md a partir das notas da primeira conversa. O arquivo deve separar fatos confirmados, decisões, hipóteses e questões abertas para que as fases seguintes não dependam da memória da reunião. [Sources] workshop/pt-BR/requirements.md"
+              notes: "Crie requirements.md a partir das notas da primeira conversa. Registre que a implementação será em WordPress e defina a experiência: página única ou multipágina, fluxo de navegação e prioridade entre desktop e mobile. Separe fatos confirmados, decisões, hipóteses, limites e questões abertas. [Sources] workshop/pt-BR/requirements.md"
             },
             {
               tone: "frost",
@@ -162,7 +162,7 @@ window.STUDIO_VIDEO_DECKS = {
               eyebrow: "Entrega da fase 3",
               title: "Claude Design transforma requisitos em rascunhos",
               accent: "rascunhos",
-              body: "Anexe requirements.md, referências e o Design System; compare alternativas e consolide as escolhas em design.md.",
+              body: "Anexe requirements.md e referências. Gere ou importe o Design System e registre as escolhas em design.md.",
               next: "03 · Criar o site",
               notes: "Demonstre o fluxo oficial: criar projeto, anexar ou importar o Design System, adicionar contexto, descrever o que construir, revisar no canvas e iterar. A primeira geração é um ponto de partida, não a solução final. [Sources] https://www.anthropic.com/news/claude-design-anthropic-labs; https://support.claude.com/en/articles/14604416-get-started-with-claude-design"
             }
@@ -776,12 +776,12 @@ window.STUDIO_VIDEO_DECKS = {
               title: "Record the agreement",
               accent: "agreement",
               items: [
-                { marker: "MD", label: "requirements.md", text: "Purpose, audience, and voice.", resource: "requirements.md" },
-                { marker: "02", label: "Experience", text: "Pages, actions, and priorities." },
+                { marker: "MD", label: "requirements.md", text: "Purpose, audience, voice, and WordPress context.", resource: "requirements.md" },
+                { marker: "02", label: "Experience", text: "Single or multiple pages, navigation, and mobile priority." },
                 { marker: "03", label: "Boundaries", text: "Hypotheses, questions, and acceptance." }
               ],
               takeaway: "One source of truth for the next phases",
-              notes: "Create requirements.md from the first conversation notes. The file should separate confirmed facts, decisions, hypotheses, and open questions so later phases do not depend on meeting memory. [Sources] workshop/en/requirements.md"
+              notes: "Create requirements.md from the first conversation notes. Record that implementation will use WordPress and define the experience: a single or multipage structure, navigation flow, and desktop or mobile priority. Separate confirmed facts, decisions, hypotheses, boundaries, and open questions. [Sources] workshop/en/requirements.md"
             },
             {
               tone: "frost",
@@ -801,7 +801,7 @@ window.STUDIO_VIDEO_DECKS = {
               eyebrow: "Phase 3 deliverable",
               title: "Claude Design turns requirements into drafts",
               accent: "drafts",
-              body: "Attach requirements.md, references, and the Design System; compare alternatives and consolidate choices in design.md.",
+              body: "Attach requirements.md and references. Generate or import the Design System and record choices in design.md.",
               next: "03 · Create the site",
               notes: "Demonstrate the official flow: create a project, attach or import the Design System, add context, describe what to build, review on the canvas, and iterate. The first generation is a starting point, not the final solution. [Sources] https://www.anthropic.com/news/claude-design-anthropic-labs; https://support.claude.com/en/articles/14604416-get-started-with-claude-design"
             }
@@ -1415,12 +1415,12 @@ window.STUDIO_VIDEO_DECKS = {
               title: "Registra el acuerdo",
               accent: "acuerdo",
               items: [
-                { marker: "MD", label: "requirements.md", text: "Propósito, público y voz.", resource: "requirements.md" },
-                { marker: "02", label: "Experiencia", text: "Páginas, acciones y prioridades." },
+                { marker: "MD", label: "requirements.md", text: "Propósito, público, voz y contexto WordPress.", resource: "requirements.md" },
+                { marker: "02", label: "Experiencia", text: "Página única o multipágina, navegación y prioridad móvil." },
                 { marker: "03", label: "Límites", text: "Hipótesis, dudas y aceptación." }
               ],
               takeaway: "Una fuente de verdad para las próximas fases",
-              notes: "Crea requirements.md a partir de las notas de la primera conversación. El archivo debe separar hechos confirmados, decisiones, hipótesis y preguntas abiertas para que las fases siguientes no dependan de la memoria de la reunión. [Sources] workshop/es/requirements.md"
+              notes: "Crea requirements.md a partir de las notas de la primera conversación. Registra que la implementación será en WordPress y define la experiencia: página única o multipágina, flujo de navegación y prioridad entre escritorio y móvil. Separa hechos confirmados, decisiones, hipótesis, límites y preguntas abiertas. [Sources] workshop/es/requirements.md"
             },
             {
               tone: "frost",
@@ -1440,7 +1440,7 @@ window.STUDIO_VIDEO_DECKS = {
               eyebrow: "Entrega de la fase 3",
               title: "Claude Design convierte requisitos en borradores",
               accent: "borradores",
-              body: "Adjunta requirements.md, referencias y el Design System; compara alternativas y consolida las decisiones en design.md.",
+              body: "Adjunta requirements.md y referencias. Genera o importa el Design System y registra las decisiones en design.md.",
               next: "03 · Crear el sitio",
               notes: "Demuestra el flujo oficial: crear un proyecto, adjuntar o importar el Design System, añadir contexto, describir lo que se quiere construir, revisar en el canvas e iterar. La primera generación es un punto de partida, no la solución final. [Sources] https://www.anthropic.com/news/claude-design-anthropic-labs; https://support.claude.com/en/articles/14604416-get-started-with-claude-design"
             }
