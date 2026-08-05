@@ -33,6 +33,7 @@ El workflow [`deploy-slides.yml`](../../.github/workflows/deploy-slides.yml) val
 | Notas do apresentador / Speaker notes | `N` |
 | Repetir animação / Replay animation | `R` |
 | Celular ou tablet / Touch device | Deslizar horizontalmente / Swipe horizontally |
+| Próxima apresentação / Next deck / Siguiente presentación | Link circular no último slide / Circular link on the final slide |
 
 O hash da URL (`#1` a `#5`) identifica o slide atual e facilita retornar a uma tela específica.
 

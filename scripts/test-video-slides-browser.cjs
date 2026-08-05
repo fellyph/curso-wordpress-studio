@@ -97,6 +97,35 @@ fs.mkdirSync(outputRoot, { recursive: true });
           checkedSlides += 1;
         }
 
+        const moduleIndex = localeData.moduleOrder.indexOf(moduleId);
+        const nextModuleId = localeData.moduleOrder[moduleIndex + 1];
+        const expectedHref = nextModuleId
+          ? localeData.modules[nextModuleId].slug
+          : "../index.html";
+        const nextDeckLink = page.locator(".slide.is-active .slide__next");
+        if ((await nextDeckLink.count()) !== 1) {
+          errors.push(`${locale}/${moduleId}: final slide does not contain one next-deck link`);
+        } else {
+          const actualHref = await nextDeckLink.getAttribute("href");
+          if (actualHref !== expectedHref) {
+            errors.push(`${locale}/${moduleId}: next-deck href is ${actualHref}, expected ${expectedHref}`);
+          }
+          if ((await nextDeckLink.getAttribute("tabindex")) !== "0") {
+            errors.push(`${locale}/${moduleId}: active next-deck link is not keyboard focusable`);
+          }
+          if (!(await nextDeckLink.getAttribute("aria-label"))) {
+            errors.push(`${locale}/${moduleId}: next-deck link has no accessible label`);
+          }
+          const expectedDestination = nextModuleId
+            ? pathToFileURL(path.join(videoRoot, locale, localeData.modules[nextModuleId].slug)).href
+            : pathToFileURL(path.join(videoRoot, "index.html")).href;
+          await nextDeckLink.click();
+          await page.waitForLoadState("load");
+          if (page.url() !== expectedDestination) {
+            errors.push(`${locale}/${moduleId}: next-deck link opened ${page.url()}, expected ${expectedDestination}`);
+          }
+        }
+
         if (pageErrors.length) errors.push(`${locale}/${moduleId}: ${pageErrors.join(" | ")}`);
         await page.close();
       }
@@ -158,6 +187,7 @@ fs.mkdirSync(outputRoot, { recursive: true });
   console.log(`- ${checkedSlides} slides rendered without stage overflow`);
   console.log(`- ${checkedMobileSlides} PT-BR/ES slides rendered at 390 × 844`);
   console.log("- keyboard navigation, notes, animation, and reduced motion verified");
+  console.log("- every final-slide link points to the next localized deck or the series index");
   console.log(`- visual QA output: ${outputRoot}`);
 })().catch((error) => {
   console.error(error);

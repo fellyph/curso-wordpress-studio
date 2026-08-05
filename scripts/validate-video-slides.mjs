@@ -65,6 +65,9 @@ for (const locale of locales) {
       errors.push(`${locale}/${moduleId}: expected exactly 5 slides`);
       return;
     }
+    if (module.slides.at(-1)?.layout !== "outro" || !module.slides.at(-1)?.next) {
+      errors.push(`${locale}/${moduleId}: final slide must be an outro with a next label`);
+    }
 
     const htmlPath = path.join(videosDir, locale, module.slug);
     if (!fs.existsSync(htmlPath)) {
@@ -85,6 +88,9 @@ for (const locale of locales) {
       if (!validLayouts.has(slide.layout)) errors.push(`${context}: invalid layout ${slide.layout}`);
       if (slide.accent && !slide.title.includes(slide.accent)) {
         errors.push(`${context}: accent is not present in the title`);
+      }
+      if (slideIndex < module.slides.length - 1 && slide.layout === "outro") {
+        errors.push(`${context}: outro layout is only allowed on the final slide`);
       }
     });
   });

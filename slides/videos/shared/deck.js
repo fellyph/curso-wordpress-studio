@@ -119,9 +119,18 @@
     content.append(headline);
 
     if (slide.layout === "outro") {
-      const next = element("div", "slide__next reveal");
+      const moduleIndex = localeData.moduleOrder.indexOf(moduleId);
+      const nextModuleId = localeData.moduleOrder[moduleIndex + 1];
+      const nextModule = nextModuleId ? localeData.modules[nextModuleId] : null;
+      const next = element("a", "slide__next reveal");
       next.style.setProperty("--reveal-index", "3");
+      next.href = nextModule?.slug || body.dataset.indexHref || "../index.html";
       next.textContent = slide.next || ui.nextVideo;
+      next.setAttribute(
+        "aria-label",
+        nextModule ? `${ui.nextVideo}: ${nextModule.title}` : ui.seriesIndex,
+      );
+      next.title = next.getAttribute("aria-label");
       content.append(next);
     } else if (slide.items?.length) {
       const list = element("ol", "slide__items");
@@ -210,9 +219,12 @@
   function update() {
     const articles = [...stage.querySelectorAll(".slide")];
     articles.forEach((article, index) => {
-      article.classList.toggle("is-active", index === state.index);
+      const isActive = index === state.index;
+      article.classList.toggle("is-active", isActive);
       article.classList.toggle("is-before", index < state.index);
-      article.setAttribute("aria-hidden", String(index !== state.index));
+      article.setAttribute("aria-hidden", String(!isActive));
+      const nextDeckLink = article.querySelector(".slide__next");
+      if (nextDeckLink) nextDeckLink.tabIndex = isActive ? 0 : -1;
     });
     previousButton.disabled = state.index === 0;
     nextButton.disabled = state.index === slides.length - 1;

@@ -427,15 +427,28 @@ a:focus-visible {
   width: clamp(7rem, 13vw, 15rem);
   aspect-ratio: 1;
   place-items: center;
+  padding: 0.8rem;
   background: var(--lime);
   border-radius: 50%;
   color: var(--ink);
+  cursor: pointer;
   font-family: var(--mono);
   font-size: clamp(0.75rem, 1.1vw, 1.2rem);
   font-weight: 600;
   text-align: center;
+  text-decoration: none;
   text-transform: uppercase;
   transform: rotate(-6deg);
+  transition: box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.slide[data-layout="outro"] .slide__next:hover {
+  box-shadow: 0 0 0 0.45rem color-mix(in srgb, var(--lime) 36%, transparent);
+}
+
+.slide[data-layout="outro"] .slide__next:focus-visible {
+  outline: 0.22rem solid currentColor;
+  outline-offset: 0.35rem;
 }
 
 .reveal {
