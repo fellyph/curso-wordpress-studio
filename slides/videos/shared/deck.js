@@ -142,8 +142,16 @@
         markerText.textContent = item.marker || String(itemIndex + 1).padStart(2, "0");
         marker.append(markerText);
         const copy = element("span", "slide__item-copy");
-        const label = element("strong", "slide__item-label");
+        const label = element(item.resource ? "a" : "strong", "slide__item-label");
         label.textContent = item.label;
+        if (item.resource) {
+          label.classList.add("slide__resource-link");
+          label.href = `${catalog.workshopFilesUrl}/${locale}/${encodeURIComponent(item.resource)}`;
+          label.target = "_blank";
+          label.rel = "noreferrer";
+          label.setAttribute("aria-label", `${ui.openResource}: ${item.label}`);
+          label.title = label.getAttribute("aria-label");
+        }
         copy.append(label);
         if (item.text) {
           const text = element("span", "slide__item-text");
@@ -225,6 +233,9 @@
       article.setAttribute("aria-hidden", String(!isActive));
       const nextDeckLink = article.querySelector(".slide__next");
       if (nextDeckLink) nextDeckLink.tabIndex = isActive ? 0 : -1;
+      article.querySelectorAll(".slide__resource-link").forEach((link) => {
+        link.tabIndex = isActive ? 0 : -1;
+      });
     });
     previousButton.disabled = state.index === 0;
     nextButton.disabled = state.index === slides.length - 1;

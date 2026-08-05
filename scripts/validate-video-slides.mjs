@@ -92,6 +92,17 @@ for (const locale of locales) {
       if (slideIndex < module.slides.length - 1 && slide.layout === "outro") {
         errors.push(`${context}: outro layout is only allowed on the final slide`);
       }
+      for (const item of slide.items ?? []) {
+        if (!item.resource) continue;
+        if (!/^[a-z0-9-]+\.md$/.test(item.resource)) {
+          errors.push(`${context}: invalid workshop resource ${item.resource}`);
+          continue;
+        }
+        const resourcePath = path.join(root, "workshop", locale, item.resource);
+        if (!fs.existsSync(resourcePath)) {
+          errors.push(`${context}: missing workshop resource ${item.resource}`);
+        }
+      }
     });
   });
 }
@@ -111,6 +122,9 @@ for (const moduleId of canonicalOrder) {
       }
       if ((slide.items?.length ?? 0) !== (counterpart.items?.length ?? 0)) {
         errors.push(`${moduleId} slide ${index + 1}: ${locale} item count differs from ${canonicalLocale}`);
+      }
+      if ((slide.items?.filter((item) => item.resource).length ?? 0) !== (counterpart.items?.filter((item) => item.resource).length ?? 0)) {
+        errors.push(`${moduleId} slide ${index + 1}: ${locale} resource link count differs from ${canonicalLocale}`);
       }
     });
   }

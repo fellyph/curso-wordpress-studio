@@ -2,6 +2,7 @@ window.STUDIO_VIDEO_DECKS = {
   seriesTitle: "From brief to Preview · WordPress Studio",
   baseline: "WordPress Studio 1.17.x",
   verifiedOn: "2026-08-05",
+  workshopFilesUrl: "https://github.com/fellyph/curso-wordpress-studio/blob/main/workshop",
   locales: {
     "pt-BR": {
       seriesTitle: "Do brief ao Preview · WordPress Studio",
@@ -13,6 +14,7 @@ window.STUDIO_VIDEO_DECKS = {
         previous: "Slide anterior",
         next: "Próximo slide",
         nextVideo: "Próximo vídeo",
+        openResource: "Abrir arquivo no GitHub",
         speakerNotes: "Notas de apresentação",
         noNotes: "Sem notas adicionais para este slide."
       },
@@ -54,7 +56,7 @@ window.STUDIO_VIDEO_DECKS = {
               accent: "conversa",
               items: [
                 { marker: "C", label: "Cenário", text: "Evento de IA em Faro, com duas trilhas e participação da comunidade." },
-                { marker: "M", label: "Material", text: "Transcrição fictícia da reunião + briefing da agenda." }
+                { marker: "M", label: "Briefing da conversa", text: "Transcrição fictícia da reunião + briefing da agenda.", resource: "event-meeting-notes.md" }
               ],
               notes: "Apresente a simulação: a turma recebe as notas de uma conversa com a organização do evento e o documento da agenda. O conteúdo é fictício e serve como matéria-prima para praticar descoberta de produto. [Sources] Plano para a agenda evento (1).pdf; workshop/pt-BR/event-meeting-notes.md"
             },
@@ -135,7 +137,7 @@ window.STUDIO_VIDEO_DECKS = {
               title: "Registre o acordo",
               accent: "acordo",
               items: [
-                { marker: "MD", label: "requirements.md", text: "Propósito, público e voz." },
+                { marker: "MD", label: "requirements.md", text: "Propósito, público e voz.", resource: "requirements.md" },
                 { marker: "02", label: "Experiência", text: "Páginas, ações e prioridades." },
                 { marker: "03", label: "Limites", text: "Hipóteses, dúvidas e aceite." }
               ],
@@ -149,8 +151,8 @@ window.STUDIO_VIDEO_DECKS = {
               title: "Dois artefatos orientam os rascunhos",
               accent: "Dois artefatos",
               items: [
-                { marker: "DS", label: "Design System", text: "Cores, tipografia, componentes e padrões gerados ou importados no Claude Design." },
-                { marker: "MD", label: "design.md", text: "Decisões visuais e de interação solicitadas ao Claude Design e revisadas pela equipe." }
+                { marker: "DS", label: "Design System", text: "Cores, tipografia, componentes e padrões gerados ou importados no Claude Design.", resource: "design-system.md" },
+                { marker: "MD", label: "design.md", text: "Decisões visuais e de interação solicitadas ao Claude Design e revisadas pela equipe.", resource: "design.md" }
               ],
               notes: "As referências oficiais dizem que Claude Design pode extrair um Design System de código, apresentações, documentos e assets de marca. design.md é uma convenção deste workshop: peça à ferramenta que registre ali as decisões e revise o arquivo antes do handoff. [Sources] https://support.claude.com/en/articles/14604397-set-up-your-design-system-in-claude-design; https://support.claude.com/en/articles/14604416-get-started-with-claude-design"
             },
@@ -286,9 +288,9 @@ window.STUDIO_VIDEO_DECKS = {
               title: "Três fontes guiam o agente",
               accent: "Três fontes",
               items: [
-                { marker: "R", label: "requirements.md", text: "Propósito, público, funcionalidades e aceite." },
-                { marker: "D", label: "design.md", text: "Layout, comportamento e decisões visuais." },
-                { marker: "DS", label: "Design System", text: "Cores, tipografia, componentes, tokens e assets." }
+                { marker: "R", label: "requirements.md", text: "Propósito, público, funcionalidades e aceite.", resource: "requirements.md" },
+                { marker: "D", label: "design.md", text: "Layout, comportamento e decisões visuais.", resource: "design.md" },
+                { marker: "DS", label: "Design System", text: "Cores, tipografia, componentes, tokens e assets.", resource: "design-system.md" }
               ],
               notes: "Anexe os dois arquivos Markdown e indique a pasta ou os assets do Design System. Peça ao agente para ler as três fontes, inspecionar o site atual, apontar conflitos e propor um plano curto antes de editar. Uploads de arquivos são suportados no desktop e na CLI. [Sources] https://developer.wordpress.com/docs/developer-tools/studio/studio-code/"
             },
@@ -651,6 +653,7 @@ window.STUDIO_VIDEO_DECKS = {
         previous: "Previous slide",
         next: "Next slide",
         nextVideo: "Next video",
+        openResource: "Open file on GitHub",
         speakerNotes: "Speaker notes",
         noNotes: "No additional notes for this slide."
       },
@@ -692,7 +695,7 @@ window.STUDIO_VIDEO_DECKS = {
               accent: "conversation",
               items: [
                 { marker: "S", label: "Scenario", text: "An AI event in Faro with two tracks and community participation." },
-                { marker: "M", label: "Material", text: "A fictional meeting transcript + the agenda brief." }
+                { marker: "M", label: "Conversation brief", text: "A fictional meeting transcript + the agenda brief.", resource: "event-meeting-notes.md" }
               ],
               notes: "Introduce the simulation: the class receives notes from a conversation with the event organizers and the agenda document. The content is fictional and serves as raw material for product discovery practice. [Sources] Plano para a agenda evento (1).pdf; workshop/en/event-meeting-notes.md"
             },
@@ -773,7 +776,7 @@ window.STUDIO_VIDEO_DECKS = {
               title: "Record the agreement",
               accent: "agreement",
               items: [
-                { marker: "MD", label: "requirements.md", text: "Purpose, audience, and voice." },
+                { marker: "MD", label: "requirements.md", text: "Purpose, audience, and voice.", resource: "requirements.md" },
                 { marker: "02", label: "Experience", text: "Pages, actions, and priorities." },
                 { marker: "03", label: "Boundaries", text: "Hypotheses, questions, and acceptance." }
               ],
@@ -787,8 +790,8 @@ window.STUDIO_VIDEO_DECKS = {
               title: "Two artifacts guide the drafts",
               accent: "Two artifacts",
               items: [
-                { marker: "DS", label: "Design System", text: "Colors, typography, components, and patterns generated or imported in Claude Design." },
-                { marker: "MD", label: "design.md", text: "Visual and interaction decisions requested from Claude Design and reviewed by the team." }
+                { marker: "DS", label: "Design System", text: "Colors, typography, components, and patterns generated or imported in Claude Design.", resource: "design-system.md" },
+                { marker: "MD", label: "design.md", text: "Visual and interaction decisions requested from Claude Design and reviewed by the team.", resource: "design.md" }
               ],
               notes: "Official references say Claude Design can extract a Design System from code, slide decks, documents, and brand assets. design.md is a workshop convention: ask the tool to record decisions there and review the file before handoff. [Sources] https://support.claude.com/en/articles/14604397-set-up-your-design-system-in-claude-design; https://support.claude.com/en/articles/14604416-get-started-with-claude-design"
             },
@@ -924,9 +927,9 @@ window.STUDIO_VIDEO_DECKS = {
               title: "Three sources guide the agent",
               accent: "Three sources",
               items: [
-                { marker: "R", label: "requirements.md", text: "Purpose, audience, features, and acceptance criteria." },
-                { marker: "D", label: "design.md", text: "Layout, behavior, and visual decisions." },
-                { marker: "DS", label: "Design System", text: "Colors, typography, components, tokens, and assets." }
+                { marker: "R", label: "requirements.md", text: "Purpose, audience, features, and acceptance criteria.", resource: "requirements.md" },
+                { marker: "D", label: "design.md", text: "Layout, behavior, and visual decisions.", resource: "design.md" },
+                { marker: "DS", label: "Design System", text: "Colors, typography, components, tokens, and assets.", resource: "design-system.md" }
               ],
               notes: "Attach both Markdown files and point to the Design System folder or assets. Ask the agent to read all three sources, inspect the current site, flag conflicts, and propose a short plan before editing. File uploads are supported on desktop and in the CLI. [Sources] https://developer.wordpress.com/docs/developer-tools/studio/studio-code/"
             },
@@ -1289,6 +1292,7 @@ window.STUDIO_VIDEO_DECKS = {
         previous: "Slide anterior",
         next: "Siguiente slide",
         nextVideo: "Siguiente vídeo",
+        openResource: "Abrir archivo en GitHub",
         speakerNotes: "Notas del presentador",
         noNotes: "No hay notas adicionales para este slide."
       },
@@ -1330,7 +1334,7 @@ window.STUDIO_VIDEO_DECKS = {
               accent: "conversación",
               items: [
                 { marker: "E", label: "Escenario", text: "Evento de IA en Faro, con dos pistas y participación de la comunidad." },
-                { marker: "M", label: "Material", text: "Transcripción ficticia de la reunión + briefing de la agenda." }
+                { marker: "M", label: "Briefing de la conversación", text: "Transcripción ficticia de la reunión + briefing de la agenda.", resource: "event-meeting-notes.md" }
               ],
               notes: "Presenta la simulación: la clase recibe las notas de una conversación con la organización del evento y el documento de la agenda. El contenido es ficticio y sirve como materia prima para practicar descubrimiento de producto. [Sources] Plano para a agenda evento (1).pdf; workshop/es/event-meeting-notes.md"
             },
@@ -1411,7 +1415,7 @@ window.STUDIO_VIDEO_DECKS = {
               title: "Registra el acuerdo",
               accent: "acuerdo",
               items: [
-                { marker: "MD", label: "requirements.md", text: "Propósito, público y voz." },
+                { marker: "MD", label: "requirements.md", text: "Propósito, público y voz.", resource: "requirements.md" },
                 { marker: "02", label: "Experiencia", text: "Páginas, acciones y prioridades." },
                 { marker: "03", label: "Límites", text: "Hipótesis, dudas y aceptación." }
               ],
@@ -1425,8 +1429,8 @@ window.STUDIO_VIDEO_DECKS = {
               title: "Dos artefactos orientan los borradores",
               accent: "Dos artefactos",
               items: [
-                { marker: "DS", label: "Design System", text: "Colores, tipografía, componentes y patrones generados o importados en Claude Design." },
-                { marker: "MD", label: "design.md", text: "Decisiones visuales y de interacción solicitadas a Claude Design y revisadas por el equipo." }
+                { marker: "DS", label: "Design System", text: "Colores, tipografía, componentes y patrones generados o importados en Claude Design.", resource: "design-system.md" },
+                { marker: "MD", label: "design.md", text: "Decisiones visuales y de interacción solicitadas a Claude Design y revisadas por el equipo.", resource: "design.md" }
               ],
               notes: "Las referencias oficiales indican que Claude Design puede extraer un Design System de código, presentaciones, documentos y assets de marca. design.md es una convención de este workshop: pide a la herramienta que registre allí las decisiones y revisa el archivo antes del handoff. [Sources] https://support.claude.com/en/articles/14604397-set-up-your-design-system-in-claude-design; https://support.claude.com/en/articles/14604416-get-started-with-claude-design"
             },
@@ -1562,9 +1566,9 @@ window.STUDIO_VIDEO_DECKS = {
               title: "Tres fuentes guían al agente",
               accent: "Tres fuentes",
               items: [
-                { marker: "R", label: "requirements.md", text: "Propósito, público, funcionalidades y criterios de aceptación." },
-                { marker: "D", label: "design.md", text: "Layout, comportamiento y decisiones visuales." },
-                { marker: "DS", label: "Design System", text: "Colores, tipografía, componentes, tokens y assets." }
+                { marker: "R", label: "requirements.md", text: "Propósito, público, funcionalidades y criterios de aceptación.", resource: "requirements.md" },
+                { marker: "D", label: "design.md", text: "Layout, comportamiento y decisiones visuales.", resource: "design.md" },
+                { marker: "DS", label: "Design System", text: "Colores, tipografía, componentes, tokens y assets.", resource: "design-system.md" }
               ],
               notes: "Adjunta los dos archivos Markdown e indica la carpeta o los assets del Design System. Pide al agente que lea las tres fuentes, inspeccione el sitio actual, señale conflictos y proponga un plan breve antes de editar. La carga de archivos está disponible en desktop y en la CLI. [Sources] https://developer.wordpress.com/docs/developer-tools/studio/studio-code/"
             },

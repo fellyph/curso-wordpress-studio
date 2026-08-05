@@ -296,6 +296,39 @@ a:focus-visible {
   line-height: 1.05;
 }
 
+.slide__resource-link {
+  width: fit-content;
+  border-radius: 0.18em;
+  color: inherit;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.16em;
+  transition: color 160ms ease, text-decoration-thickness 160ms ease;
+}
+
+.slide__resource-link::after {
+  margin-left: 0.35em;
+  content: "↗";
+  font-family: var(--mono);
+  font-size: 0.55em;
+  vertical-align: 0.3em;
+}
+
+.slide__resource-link:hover {
+  color: var(--terracotta);
+  text-decoration-thickness: 0.14em;
+}
+
+[data-tone="cobalt"] .slide__resource-link:hover,
+[data-tone="ink"] .slide__resource-link:hover {
+  color: var(--lime);
+}
+
+.slide__resource-link:focus-visible {
+  outline: 0.16em solid currentColor;
+  outline-offset: 0.2em;
+}
+
 .slide__item-text {
   max-width: 36ch;
   opacity: 0.78;

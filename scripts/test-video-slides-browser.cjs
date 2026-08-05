@@ -90,6 +90,23 @@ fs.mkdirSync(outputRoot, { recursive: true });
             errors.push(`${locale}/${moduleId} slide ${index + 1}: reveal animation is not active`);
           }
 
+          const expectedResources = (module.slides[index].items || []).filter((item) => item.resource);
+          const resourceLinks = page.locator(".slide.is-active .slide__resource-link");
+          if ((await resourceLinks.count()) !== expectedResources.length) {
+            errors.push(`${locale}/${moduleId} slide ${index + 1}: resource link count differs from content`);
+          }
+          for (let resourceIndex = 0; resourceIndex < expectedResources.length; resourceIndex += 1) {
+            const resource = expectedResources[resourceIndex];
+            const resourceLink = resourceLinks.nth(resourceIndex);
+            const expectedResourceHref = `${catalog.workshopFilesUrl}/${locale}/${encodeURIComponent(resource.resource)}`;
+            if ((await resourceLink.getAttribute("href")) !== expectedResourceHref) {
+              errors.push(`${locale}/${moduleId} slide ${index + 1}: incorrect resource URL for ${resource.resource}`);
+            }
+            if ((await resourceLink.getAttribute("target")) !== "_blank" || (await resourceLink.getAttribute("tabindex")) !== "0") {
+              errors.push(`${locale}/${moduleId} slide ${index + 1}: ${resource.resource} is not an accessible external link`);
+            }
+          }
+
           if (locale === "pt-BR" || locale === "es") {
             const screenshotName = `${module.number}-${String(index + 1).padStart(2, "0")}.png`;
             await page.locator(".deck-stage").screenshot({ path: path.join(localeOutput, screenshotName) });
@@ -188,6 +205,7 @@ fs.mkdirSync(outputRoot, { recursive: true });
   console.log(`- ${checkedMobileSlides} PT-BR/ES slides rendered at 390 × 844`);
   console.log("- keyboard navigation, notes, animation, and reduced motion verified");
   console.log("- every final-slide link points to the next localized deck or the series index");
+  console.log("- every workshop artifact link points to its localized GitHub file and is keyboard focusable");
   console.log(`- visual QA output: ${outputRoot}`);
 })().catch((error) => {
   console.error(error);
