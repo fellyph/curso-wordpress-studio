@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink-900:#16130F; --ink-850:#181613; --ink-800:#1E1B18; --ink-750:#211E1B;
+    --ink-700:#262320; --ink-650:#2A2622; --ink-600:#2E2A22;
+    --line-soft:#37322C; --line-strong:#4A4438;
+    --grey-100:#F2EEE8; --grey-200:#DCD6CE; --grey-300:#B8B1A8;
+    --grey-400:#A9A29A; --grey-500:#8E877D; --grey-600:#6B6459;
+    --acid-500:#E8FF52; --acid-600:#D4EB3E; --coral-500:#FF7A45; --mint-500:#7CE0C3;
+    --alert-300:#FFB4A2;
+
+    --surface-page:var(--ink-800); --surface-alt:var(--ink-750); --surface-card:var(--ink-700);
+    --surface-bar:var(--ink-650); --surface-inset:var(--ink-800); --surface-footer:var(--ink-850);
+    --text-strong:var(--grey-100); --text-body:var(--grey-200); --text-muted:var(--grey-300);
+    --text-meta:var(--grey-400); --text-faint:var(--grey-500);
+    --border-default:var(--line-soft); --border-emphasis:var(--line-strong); --border-control:var(--grey-600);
+    --accent:var(--acid-500); --accent-hover:#FFFFFF; --on-accent:var(--ink-900);
+    --focus-ring:var(--acid-500); --text-error:var(--alert-300);
+
+    --font-sans:Archivo,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+    --size-display-1:clamp(44px,9vw,132px); --size-heading-1:clamp(28px,3.4vw,44px);
+    --size-heading-3:22px; --size-heading-4:19px; --size-title:17px;
+    --size-lead:clamp(16px,1.6vw,20px); --size-body:16px; --size-body-sm:15px; --size-body-xs:14px;
+    --size-label:13px; --size-label-sm:12px; --size-label-xs:11px; --size-label-2xs:10px;
+    --leading-display:.92; --leading-heading:1.05; --leading-body:1.55;
+    --tracking-display:-.035em; --tracking-heading:-.025em; --tracking-title:-.02em;
+    --tracking-label:.1em; --tracking-label-wide:.14em; --tracking-button:.05em;
+
+    --radius-field:12px; --radius-inset:14px; --radius-tile:16px; --radius-card:18px;
+    --radius-panel:20px; --radius-panel-lg:22px; --radius-panel-xl:24px; --radius-pill:999px;
+
+    --gutter-page:24px; --section-y:72px; --card-pad:26px; --panel-pad:28px;
+    --field-pad:14px; --max-content:1180px;
+
+    --duration-base:180ms; --ease-standard:cubic-bezier(.2,0,0,1);
+    --pattern-placeholder:repeating-linear-gradient(135deg,rgba(232,255,82,.10) 0 8px,rgba(232,255,82,0) 8px 16px);
+    --scrim-hero:linear-gradient(180deg,rgba(30,27,24,.35) 0%,rgba(30,27,24,.75) 60%,#1E1B18 100%);
+  }
+  html, body { margin:0; padding:0; background:var(--surface-page); }
+  * { box-sizing:border-box; }
+  body { font-family:var(--font-sans); color:var(--text-strong); -webkit-font-smoothing:antialiased; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { color:#fff; text-decoration:underline; }
+  :focus-visible { outline:2px solid var(--focus-ring); outline-offset:2px; }
+  pre { margin:0; overflow-x:auto; }
+</style>
+</helmet>
+
+<div style="background:var(--surface-page);color:var(--text-strong);min-height:100vh">
+
+<header style="padding:56px var(--gutter-page) 40px;border-bottom:1px solid var(--border-default)">
+  <div style="max-width:var(--max-content);margin:0 auto">
+    <div style="font-family:var(--font-mono);font-size:var(--size-label-xs);letter-spacing:var(--tracking-label-wide);text-transform:uppercase;color:var(--accent)">Design system · ficheiro único</div>
+    <h1 style="margin:16px 0 0;font-size:clamp(38px,7vw,92px);line-height:.94;font-weight:800;letter-spacing:var(--tracking-display);text-transform:uppercase;color:var(--accent)">AI Day Faro</h1>
+    <p style="margin:20px 0 0;max-width:60ch;font-size:var(--size-lead);line-height:1.5;color:var(--text-body);text-wrap:pretty">Referência completa de cor, tipografia, forma, componentes e regras de conteúdo do site do evento. Tudo num só ficheiro: as variáveis vivem no bloco <code style="font-family:var(--font-mono);font-size:.9em;color:var(--accent)">:root</code> desta página e podem ser copiadas no fim.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:26px">
+      <sc-for list="{{ nav }}" as="n" hint-placeholder-count="7">
+        <a href="{{ n.href }}" style="padding:8px 16px;border:1px solid var(--border-control);border-radius:var(--radius-pill);font-family:var(--font-mono);font-size:var(--size-label-xs);letter-spacing:.08em;text-transform:uppercase;color:var(--text-body);text-decoration:none" style-hover="border-color:var(--accent);color:var(--accent);text-decoration:none">{{ n.label }}</a>
+      </sc-for>
+    </div>
+  </div>
+</header>
+
+<section id="cor" style="padding:var(--section-y) var(--gutter-page);border-bottom:1px solid var(--border-default)">
+  <div style="max-width:var(--max-content);margin:0 auto">
+    <div style="font-family:var(--font-mono);font-size:var(--size-label-xs);letter-spacing:var(--tracking-label-wide);text-transform:uppercase;color:var(--accent)">01 · Cor</div>
+    <h2 style="margin:14px 0 0;font-size:var(--size-heading-1);line-height:var(--leading-heading);font-weight:800;letter-spacing:var(--tracking-heading);text-transform:uppercase">Preto quente e um acento</h2>
+    <p style="margin:16px 0 0;max-width:56ch;font-size:var(--size-body);line-height:var(--leading-body);color:var(--text-muted);text-wrap:pretty">As superfícies sobem em degraus próximos, nunca por sombra. Um único acento em toda a página. Nunca <code style="font-family:var(--font-mono);font-size:.9em">#000</code>.</p>
+
+    <sc-for list="{{ colorGroups }}" as="g" hint-placeholder-count="3">
+      <div style="margin-top:32px">
+        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;margin-bottom:14px">
+          <h3 style="margin:0;font-size:var(--size-title);font-weight:600">{{ g.title }}</h3>
+          <span style="font-size:var(--size-body-xs);color:var(--text-meta)">{{ g.note }}</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:12px">
+          <sc-for list="{{ g.swatches }}" as="s" hint-placeholder-count="6">
+            <div style="border:1px solid var(--border-default);border-radius:var(--radius-inset);overflow:hidden">
+              <div style="height:64px;background:{{ s.hex }}"></div>
+              <div style="padding:10px 11px 12px">
+                <div style="font-family:var(--font-mono);font-size:var(--size-label-2xs);color:var(--text-body)">{{ s.hex }}</div>
+                <div style="font-family:var(--font-mono);font-size:9px;line-height:1.5;color:var(--text-faint);margin-top:4px">{{ s.token }}</div>
+                <div style="font-family:var(--font-mono);font-size:9px;line-height:1.5;color:var(--text-faint)">{{ s.alias }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+
+    <div style="margin-top:34px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px">
+      <div style="padding:18px;background:var(--surface-page);border:1px solid var(--border-default);border-radius:var(--radius-inset)">
+        <div style="font-size:22px;font-weight:800;letter-spacing:var(--tracking-title);color:var(--accent)">AAA</div>
+        <div style="margin-top:8px;font-family:var(--font-mono);font-size:var(--size-label-2xs);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-meta)">Acento sobre superfície</div>
+      </div>
+      <div style="padding:18px;background:var(--accent);border-radius:var(--radius-inset)">
+        <div style="font-size:22px;font-weight:800;letter-spacing:var(--tracking-title);color:var(--on-accent)">AAA</div>
+        <div style="margin-top:8px;font-family:var(--font-mono);font-size:var(--size-label-2xs);letter-spacing:var(--tracking-label);text-transform:uppercase;color:rgba(22,19,15,.72)">Ink sobre acento</div>
+      </div>
+      <div style="padding:18px;background:var(--surface-card);border:1px solid var(--border-default);border-radius:var(--radius-inset)">
+        <div style="font-size:22px;font-weight:600;letter-spacing:var(--tracking-title);color:var(--text-muted)">AA</div>
+        <div style="margin-top:8px;font-family:var(--font-mono);font-size:var(--size-label-2xs);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-meta)">Corpo mínimo</div>
+      </div>
+      <div style="padding:18px;background:var(--accent);border-radius:var(--radius-inset)">
+        <div style="font-size:22px;font-weight:800;letter-spacing:var(--tracking-title);color:#fff">NÃO</div>
+        <div style="margin-top:8px;font-family:var(--font-mono);font-size:var(--size-label-2xs);letter-spacing:var(--tracking-label);text-transform:uppercase;color:rgba(22,19,15,.72)">Branco sobre acento</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tipografia" style="padding:var(--section-y) var(--gutter-page);background:var(--surface-alt);border-bottom:1px solid var(--border-default)">
+  <div style="max-width:var(--max-content);margin:0 auto">
+    <div style="font-family:var(--font-mono);font-size:var(--size-label-xs);letter-spacing:var(--tracking-label-wide);text-transform:uppercase;color:var(--accent)">02 · Tipografia</div>
+    <h2 style="margin:14px 0 0;font-size:var(--size-heading-1);line-height:var(--leading-heading);font-weight:800;letter-spacing:var(--tracking-heading);text-transform:uppercase">Archivo lê-se, Plex Mono etiqueta</h2>
+
+    <div style="margin-top:34px;padding:28px;background:var(--surface-card);border:1px solid var(--border-default);border-radius:var(--radius-panel-xl)">
+      <div style="font-size:clamp(40px,7vw,84px);line-height:var(--leading-display);font-weight:800;letter-spacing:var(--tracking-display);text-transform:uppercase;color:var(--accent)">Um dia para<br />trazer a IA</div>
+      <div style="margin-top:18px;font-family:var(--font-mono);font-size:var(--size-label-xs);color:var(--text-faint)">display-1 · Archivo 800 · 44–132px · lh .92 · ls −.035em · caixa alta</div>
+    </div>
+
+    <div style="margin-top:14px;display:grid;gap:1px;background:var(--border-default);border:1px solid var(--border-default);border-radius:var(--radius-panel);overflow:hidden">
+      <sc-for list="{{ typeSpecimens }}" as="t" hint-placeholder-count="7">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;align-items:baseline;padding:20px 22px;background:var(--surface-card)">
+          <div style="font-family:{{ t.family }};font-size:{{ t.size }};font-weight:{{ t.weight }};line-height:{{ t.lh }};letter-spacing:{{ t.ls }};text-transform:{{ t.transform }};color:{{ t.color }}">{{ t.sample }}</div>
+          <div style="font-family:var(--font-mono);font-size:var(--size-label-2xs);line-height:1.7;letter-spacing:.06em;color:var(--text-faint)">{{ t.spec }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="forma" style="padding:var(--section-y) var(--gutter-page);border-bottom:1px solid var(--border-default)">
+  <div style="max-width:var(--max-content);margin:0 auto">
+    <div style="font-family:var(--font-mono);font-size:var(--size-label-xs);letter-spacing:var(--tracking-label-wide);text-transform:uppercase;color:var(--accent)">03 · Forma e espaço</div>
+    <h2 style="margin:14px 0 0;font-size:var(--size-heading-1);line-height:var(--leading-heading);font-weight:800;letter-spacing:var(--tracking-heading);text-transform:uppercase">Cápsulas, hairlines, zero sombras</h2>
+
+    <div style="margin-top:32px;display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end">
+      <sc-for list="{{ radii }}" as="r" hint-placeholder-count="8">
+        <div style="text-align:center">
+          <div style="width:{{ r.w }};height:56px;border:1px solid var(--border-emphasis);border-radius:{{ r.value }};background:{{ r.bg }}"></div>
+          <div style="margin-top:8px;font-family:var(--font-mono);font-size:9px;color:var(--text-faint)">{{ r.label }}</div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="margin-top:34px;display:flex;align-items:flex-end;gap:10px;flex-wrap:wrap">
+      <sc-for list="{{ spaces }}" as="s" hint-placeholder-count="11">
+        <div style="text-align:center">
+          <div style="width:{{ s.w }};height:{{ s.h }};background:var(--accent);border-radius:3px"></div>
+          <div style="margin-top:6px;font-family:var(--font-mono);font-size:9px;color:var(--text-faint)">{{ s.label }}</div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="margin-top:34px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px">
+      <div style="padding:20px;background:var(--surface-page);border:1px solid var(--border-default);border-radius:var(--radius-panel-lg)">
+        <div style="font-family:var(--font-mono);font-size:var(--size-label-2xs);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-meta)">surface-page + hairline</div>
+      </div>
+      <div style="padding:20px;background:var(--surface-card);border:1px solid var(--border-default);border-radius:var(--radius-panel-lg)">
+        <div style="font-family:var(--font-mono);font-size:var(--size-label-2xs);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-meta)">surface-card</div>
+      </div>
+      <div style="padding:20px;background:var(--surface-card);border:1px solid var(--border-emphasis);border-radius:var(--radius-panel-lg)">
+        <div style="font-family:var(--font-mono);font-size:var(--size-label-2xs);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-meta)">border-emphasis · blocos de IA</div>
+      </div>
+      <div style="padding:20px;background-color:#252119;background-image:var(--pattern-placeholder);border:1px solid var(--border-default);border-radius:var(--radius-panel-lg)">
+        <div style="font-family:var(--font-mono);font-size:var(--size-label-2xs);letter-spacing:.06em;color:var(--text-faint)">[ placeholder de imagem ]</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="componentes" style="padding:var(--section-y) var(--gutter-page);background:var(--surface-alt);border-bottom:1px solid var(--border-default)">
+  <div style="max-width:var(--max-content);margin:0 auto">
+    <div style="font-family:var(--font-mono);font-size:var(--size-label-xs);letter-spacing:var(--tracking-label-wide);text-transform:uppercase;color:var(--accent)">04 · Componentes</div>
+    <h2 style="margin:14px 0 0;font-size:var(--size-heading-1);line-height:var(--leading-heading);font-weight:800;letter-spacing:var(--tracking-heading);text-transform:uppercase">Nove primitivos, nada mais</h2>
+
+    <div style="margin-top:32px;padding:26px;background:var(--surface-card);border:1px solid var(--border-default);border-radius:var(--radius-panel-lg)">
+      <div style="font-family:var(--font-mono);font-size:var(--size-label-2xs);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-faint);margin-bottom:14px">Button</div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+        <span style="padding:16px 28px;border-radius:var(--radius-pill);background:var(--accent);color:var(--on-accent);font-size:var(--size-body-xs);font-weight:700;letter-spacing:var(--tracking-button);text-transform:uppercase">Primary</span>
+        <span style="padding:16px 28px;border-radius:var(--radius-pill);background:var(--accent-hover);color:var(--on-accent);font-size:var(--size-body-xs);font-weight:700;letter-spacing:var(--tracking-button);text-transform:uppercase">Primary hover</span>
+        <span style="padding:16px 28px;border-radius:var(--radius-pill);border:1px solid var(--border-control);color:var(--text-strong);font-size:var(--size-body-xs);font-weight:600;letter-spacing:var(--tracking-button);text-transform:uppercase">Secondary</span>
+        <span style="padding:16px 28px;border-radius:var(--radius-pill);border:1px solid var(--accent);color:var(--accent);font-size:var(--size-body-xs);font-weight:600;letter-spacing:var(--tracking-button);text-transform:uppercase">Ghost</span>
+        <span style="padding:7px 14px;border-radius:var(--radius-pill);background:var(--accent);color:var(--on-accent);font-size:var(--size-label-xs);font-weight:700;letter-spacing:.08em;text-transform:uppercase">Small</span>
+        <span style="padding:16px 28px;border-radius:var(--radius-pill);background:var(--accent);color:var(--on-accent);font-size:var(--size-body-xs);font-weight:700;letter-spacing:var(--tracking-button);text-transform:uppercase;opacity:.45">Disabled</span>
+      </div>
+      <div style="margin-top:16px;font-family:var(--font-mono);font-size:var(--size-label-xs);line-height:1.7;color:var(--text-faint)">Hover inverte para branco. Foco é outline 2px amarelo com offset 2px. Sem transform, sem opacidade como hover.</div>
+    </div>
+
+    <div style="margin-top:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px">
+      <div style="padding:26px;background:var(--surface-card);border:1px solid var(--border-default);border-radius:var(--radius-panel-lg)">
+        <div style="font-family:var(--font-mono);font-size:var(--size-label-2xs);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-faint);margin-bottom:14px">Pill · Chip</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span style="padding:6px 14px;border:1px solid var(--accent);border-radius:var(--radius-pill);font-family:var(--font-mono);font-size:var(--size-label-xs);color:var(--accent)">24 OUT 2026</span>
+          <span style="padding:6px 14px;border:1px solid var(--border-control);border-radius:var(--radius-pill);font-family:var(--font-mono);font-size:var(--size-label-xs);color:var(--text-meta)">100 lugares</span>
+          <span style="padding:9px 15px;border-radius:var(--radius-pill);background:var(--accent);color:var(--on-accent);font-size:var(--size-label);font-weight:500">Hotelaria</span>
+          <span style="padding:9px 15px;border-radius:var(--radius-pill);border:1px solid var(--border-control);color:var(--text-body);font-size:var(--size-label);font-weight:500">Restauração</span>
+        </div>
+      </div>
+      <div style="padding:26px;background:var(--surface-card);border:1px solid var(--border-default);border-radius:var(--radius-panel-lg)">
+        <div style="font-family:var(--font-mono);font-size:var(--size-label-2xs);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-faint);margin-bottom:14px">Field</div>
+        <div style="display:grid;gap:7px">
+          <span style="font-size:var(--size-label);color:var(--text-muted)">Nome</span>
+          <div style="padding:var(--field-pad);border:1px solid var(--border-emphasis);border-radius:var(--radius-field);background:var(--surface-inset);color:var(--text-faint);font-size:var(--size-body-sm)">Ex. Marta Ferreira</div>
+          <span style="font-family:var(--font-mono);font-size:var(--size-label-xs);color:var(--text-faint)">Use dados fictícios.</span>
+        </div>
+      </div>
+      <div style="padding:26px;background:var(--surface-card);border:1px solid var(--border-default);border-radius:var(--radius-panel-lg)">
+        <div style="font-family:var(--font-mono);font-size:var(--size-label-2xs);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-faint);margin-bottom:14px">OptionCard</div>
+        <div style="display:flex;justify-content:space-between;gap:16px;align-items:flex-start;padding:18px;border-radius:var(--radius-tile);background:var(--ink-600);border:1px solid var(--accent)">
+          <span style="display:flex;flex-direction:column;gap:5px">
+            <span style="font-size:var(--size-title);font-weight:600">Geral</span>
+            <span style="font-size:var(--size-label);line-height:1.45;color:var(--text-meta)">Duas trilhas, almoço e cafés.</span>
+          </span>
+          <span style="font-size:20px;font-weight:700;color:var(--accent);white-space:nowrap">40 €</span>
+        </div>
+      </div>
+      <div style="padding:26px;background:var(--surface-card);border:1px solid var(--border-default);border-radius:var(--radius-panel-lg)">
+        <div style="font-family:var(--font-mono);font-size:var(--size-label-2xs);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-faint);margin-bottom:14px">StepBar</div>
+        <div style="display:flex;gap:8px">
+          <sc-for list="{{ stepDemo }}" as="s" hint-placeholder-count="3">
+            <div style="flex:1;display:flex;flex-direction:column;gap:8px">
+              <div style="height:3px;border-radius:2px;background:{{ s.bar }}"></div>
+              <span style="font-family:var(--font-mono);font-size:var(--size-label-2xs);letter-spacing:var(--tracking-label);text-transform:uppercase;color:{{ s.fg }}">{{ s.label }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:14px;padding:26px;background:var(--surface-card);border:1px solid var(--border-emphasis);border-radius:var(--radius-panel-lg)">
+      <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+        <span style="padding:5px 12px;border-radius:var(--radius-pill);background:var(--accent);color:var(--on-accent);font-family:var(--font-mono);font-size:var(--size-label-2xs);letter-spacing:var(--tracking-label);text-transform:uppercase">Sugestão por IA</span>
+        <h3 style="margin:0;font-size:var(--size-heading-4);font-weight:600">AiPanel — o invólucro de qualquer função assistida</h3>
+      </div>
+      <p style="margin:10px 0 0;max-width:70ch;font-size:var(--size-body-xs);line-height:var(--leading-body);color:var(--text-meta)">Etiqueta sempre visível, descrição do que faz, limite explícito do que não faz, e um caminho humano alternativo. Os três campos são obrigatórios neste projeto.</p>
+      <p style="margin:8px 0 0;max-width:70ch;font-size:var(--size-label);line-height:var(--leading-body);color:var(--text-faint)">A IA não aprova, recusa nem classifica propostas. A seleção é feita por pessoas da comunidade.</p>
+      <p style="margin:16px 0 0;font-family:var(--font-mono);font-size:var(--size-label-xs);color:var(--text-faint)">Prefere sem IA? Use o formulário de contacto.</p>
+    </div>
+  </div>
+</section>
+
+<section id="conteudo" style="padding:var(--section-y) var(--gutter-page);border-bottom:1px solid var(--border-default)">
+  <div style="max-width:var(--max-content);margin:0 auto">
+    <div style="font-family:var(--font-mono);font-size:var(--size-label-xs);letter-spacing:var(--tracking-label-wide);text-transform:uppercase;color:var(--accent)">05 · Conteúdo</div>
+    <h2 style="margin:14px 0 0;font-size:var(--size-heading-1);line-height:var(--leading-heading);font-weight:800;letter-spacing:var(--tracking-heading);text-transform:uppercase">Como se escreve aqui</h2>
+    <div style="margin-top:30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px">
+      <sc-for list="{{ voiceRules }}" as="v" hint-placeholder-count="4">
+        <div style="padding:22px;background:var(--surface-card);border:1px solid var(--border-default);border-radius:var(--radius-card)">
+          <div style="display:flex;gap:12px;align-items:baseline">
+            <span style="font-family:var(--font-mono);font-size:var(--size-label-xs);color:var(--accent)">{{ v.n }}</span>
+            <h3 style="margin:0;font-size:var(--size-title);font-weight:600">{{ v.title }}</h3>
+          </div>
+          <p style="margin:10px 0 0;font-size:var(--size-body-sm);line-height:var(--leading-body);color:var(--text-muted)">{{ v.desc }}</p>
+          <p style="margin:12px 0 0;font-size:var(--size-body-sm);line-height:var(--leading-body);color:var(--accent)">{{ v.example }}</p>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px">
+      <div style="padding:22px;background:var(--surface-card);border:1px solid var(--border-default);border-radius:var(--radius-card)">
+        <h3 style="margin:0;font-size:var(--size-title);font-weight:600">Sempre</h3>
+        <ul style="margin:14px 0 0;padding:0;list-style:none;display:grid;gap:9px">
+          <sc-for list="{{ doList }}" as="d" hint-placeholder-count="5">
+            <li style="display:flex;gap:10px;font-size:var(--size-body-sm);line-height:1.5;color:var(--text-body)"><span style="color:var(--accent)">—</span>{{ d }}</li>
+          </sc-for>
+        </ul>
+      </div>
+      <div style="padding:22px;background:var(--surface-card);border:1px solid var(--border-default);border-radius:var(--radius-card)">
+        <h3 style="margin:0;font-size:var(--size-title);font-weight:600">Nunca</h3>
+        <ul style="margin:14px 0 0;padding:0;list-style:none;display:grid;gap:9px">
+          <sc-for list="{{ dontList }}" as="d" hint-placeholder-count="5">
+            <li style="display:flex;gap:10px;font-size:var(--size-body-sm);line-height:1.5;color:var(--text-body)"><span style="color:var(--text-faint)">×</span>{{ d }}</li>
+          </sc-for>
+        </ul>
+      </div>
+    </div>
+    <p style="margin:22px 0 0;max-width:70ch;font-family:var(--font-mono);font-size:var(--size-label-xs);line-height:1.7;color:var(--text-faint)">Sem ícones e sem emoji, por decisão. A hierarquia faz-se com tipo, cor e cápsulas. Marcadores: travessão em acento, ponto médio para metadados, números em mono para enumerar.</p>
+  </div>
+</section>
+
+<section id="css" style="padding:var(--section-y) var(--gutter-page);background:var(--surface-alt);border-bottom:1px solid var(--border-default)">
+  <div style="max-width:var(--max-content);margin:0 auto">
+    <div style="font-family:var(--font-mono);font-size:var(--size-label-xs);letter-spacing:var(--tracking-label-wide);text-transform:uppercase;color:var(--accent)">06 · CSS</div>
+    <h2 style="margin:14px 0 0;font-size:var(--size-heading-1);line-height:var(--leading-heading);font-weight:800;letter-spacing:var(--tracking-heading);text-transform:uppercase">Copie e cole</h2>
+    <p style="margin:16px 0 0;max-width:56ch;font-size:var(--size-body);line-height:var(--leading-body);color:var(--text-muted)">Todos os tokens desta página, num bloco. É o mesmo <code style="font-family:var(--font-mono);font-size:.9em;color:var(--accent)">:root</code> que está no topo do ficheiro.</p>
+    <div style="margin-top:24px;padding:24px;background:var(--ink-900);border:1px solid var(--border-default);border-radius:var(--radius-panel)">
+      <pre style="font-family:var(--font-mono);font-size:var(--size-label-sm);line-height:1.75;color:var(--text-body)">{{ cssDump }}</pre>
+    </div>
+  </div>
+</section>
+
+<footer style="padding:48px var(--gutter-page);background:var(--surface-footer)">
+  <div style="max-width:var(--max-content);margin:0 auto;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-end">
+    <div>
+      <div style="font-size:24px;font-weight:800;letter-spacing:-.03em;text-transform:uppercase;color:var(--accent)">AI Day Faro</div>
+      <p style="margin:10px 0 0;font-family:var(--font-mono);font-size:var(--size-label-xs);line-height:1.7;color:var(--text-faint)">Design system em ficheiro único · derivado do protótipo do site.<br />Sem logótipo: o nome escreve-se em tipo. Sem ícones, sem emoji, sem sombras.<br />Nome final, capacidade e política de reembolso ainda por confirmar.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;font-size:var(--size-label)">
+      <a href="#cor">Cor</a>
+      <a href="#tipografia">Tipografia</a>
+      <a href="#forma">Forma</a>
+      <a href="#componentes">Componentes</a>
+      <a href="#conteudo">Conteúdo</a>
+      <a href="#css">CSS</a>
+    </div>
+  </div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const mono = 'var(--font-mono)', sans = 'var(--font-sans)';
+    return {
+      nav: [
+        { label: 'Cor', href: '#cor' },
+        { label: 'Tipografia', href: '#tipografia' },
+        { label: 'Forma', href: '#forma' },
+        { label: 'Componentes', href: '#componentes' },
+        { label: 'Conteúdo', href: '#conteudo' },
+        { label: 'CSS', href: '#css' }
+      ],
+
+      colorGroups: [
+        { title: 'Base', note: 'degraus de superfície, do fundo ao topo', swatches: [
+          { hex: '#16130F', token: '--ink-900', alias: 'on-accent' },
+          { hex: '#181613', token: '--ink-850', alias: 'surface-footer' },
+          { hex: '#1E1B18', token: '--ink-800', alias: 'surface-page' },
+          { hex: '#211E1B', token: '--ink-750', alias: 'surface-alt' },
+          { hex: '#262320', token: '--ink-700', alias: 'surface-card' },
+          { hex: '#2A2622', token: '--ink-650', alias: 'surface-bar' },
+          { hex: '#2E2A22', token: '--ink-600', alias: 'seleccionado' }
+        ] },
+        { title: 'Acento', note: 'um só em uso; coral e menta ficam para edições futuras', swatches: [
+          { hex: '#E8FF52', token: '--acid-500', alias: 'accent' },
+          { hex: '#D4EB3E', token: '--acid-600', alias: 'hover sólido' },
+          { hex: '#FF7A45', token: '--coral-500', alias: 'alternativo' },
+          { hex: '#7CE0C3', token: '--mint-500', alias: 'alternativo' },
+          { hex: '#FFB4A2', token: '--alert-300', alias: 'text-error' }
+        ] },
+        { title: 'Texto e linhas', note: 'cinzas quentes, do título à legenda', swatches: [
+          { hex: '#F2EEE8', token: '--grey-100', alias: 'text-strong' },
+          { hex: '#DCD6CE', token: '--grey-200', alias: 'text-body' },
+          { hex: '#B8B1A8', token: '--grey-300', alias: 'text-muted' },
+          { hex: '#A9A29A', token: '--grey-400', alias: 'text-meta' },
+          { hex: '#8E877D', token: '--grey-500', alias: 'text-faint' },
+          { hex: '#6B6459', token: '--grey-600', alias: 'border-control' },
+          { hex: '#4A4438', token: '--line-strong', alias: 'border-emphasis' },
+          { hex: '#37322C', token: '--line-soft', alias: 'border-default' }
+        ] }
+      ],
+
+      typeSpecimens: [
+        { sample: 'Duas trilhas, em paralelo', family: sans, size: 'var(--size-heading-1)', weight: 800, lh: 'var(--leading-heading)', ls: 'var(--tracking-heading)', transform: 'uppercase', color: 'var(--text-strong)', spec: 'heading-1 · 28–44px · 800 · lh 1.05 · ls −.025em' },
+        { sample: 'Escolha o bilhete', family: sans, size: 'var(--size-heading-3)', weight: 700, lh: '1.2', ls: 'var(--tracking-title)', transform: 'none', color: 'var(--text-strong)', spec: 'heading-3 · 22px · 700 · ls −.02em' },
+        { sample: 'Hotéis e alojamento', family: sans, size: 'var(--size-title)', weight: 600, lh: '1.3', ls: '-.01em', transform: 'none', color: 'var(--text-strong)', spec: 'title · 17px · 600' },
+        { sample: 'Um encontro presencial sobre inteligência artificial aplicada a negócios do Algarve.', family: sans, size: 'var(--size-lead)', weight: 400, lh: '1.5', ls: '0', transform: 'none', color: 'var(--text-body)', spec: 'lead · 16–20px · 400 · medida 52ch' },
+        { sample: 'Não há pré-requisitos. Explicamos os termos que não conseguimos evitar.', family: sans, size: 'var(--size-body-sm)', weight: 400, lh: 'var(--leading-body)', ls: '0', transform: 'none', color: 'var(--text-muted)', spec: 'body-sm · 15px · lh 1.55 · medida 46ch' },
+        { sample: 'Agenda', family: mono, size: 'var(--size-label-xs)', weight: 400, lh: '1.4', ls: 'var(--tracking-label-wide)', transform: 'uppercase', color: 'var(--accent)', spec: 'label-xs · 11px · ls .14em · rótulo de secção' },
+        { sample: '09:45 · 24.10.2026', family: mono, size: 'var(--size-label)', weight: 400, lh: '1.4', ls: '0', transform: 'none', color: 'var(--accent)', spec: 'label · 13px · horas e datas' },
+        { sample: 'MAPA ILUSTRATIVO — NÃO À ESCALA', family: mono, size: '9px', weight: 400, lh: '1.4', ls: '.08em', transform: 'none', color: 'var(--text-faint)', spec: 'caption · 9px · só legendas técnicas' }
+      ],
+
+      radii: [
+        { value: '12px', w: '72px', label: '12 campo', bg: 'var(--surface-card)' },
+        { value: '14px', w: '72px', label: '14 inset', bg: 'var(--surface-card)' },
+        { value: '16px', w: '72px', label: '16 tile', bg: 'var(--surface-card)' },
+        { value: '18px', w: '72px', label: '18 card', bg: 'var(--surface-card)' },
+        { value: '20px', w: '72px', label: '20 painel', bg: 'var(--surface-card)' },
+        { value: '22px', w: '72px', label: '22 painel lg', bg: 'var(--surface-card)' },
+        { value: '24px', w: '72px', label: '24 painel xl', bg: 'var(--surface-card)' },
+        { value: '999px', w: '110px', label: '999 pill', bg: 'var(--accent)' }
+      ],
+
+      spaces: [4, 6, 8, 10, 12, 14, 16, 20, 24, 28, 32, 44, 48, 72].map(n => ({
+        w: Math.max(10, Math.round(n / 1.4)) + 'px', h: n + 'px', label: String(n)
+      })),
+
+      stepDemo: ['Bilhete', 'Dados', 'Confirmação'].map((label, i) => ({
+        label, bar: i === 0 ? 'var(--accent)' : 'var(--border-emphasis)',
+        fg: i === 0 ? 'var(--accent)' : 'var(--text-faint)'
+      })),
+
+      voiceRules: [
+        { n: '01', title: 'Acolhedor', desc: 'Nunca pressupor conhecimento técnico.', example: '“Não é preciso saber programar nem usar WordPress.”' },
+        { n: '02', title: 'Prático', desc: 'Ligar a IA a situações reconhecíveis de um negócio local.', example: '“Menu, custos e desperdício: IA numa cozinha real.”' },
+        { n: '03', title: 'Claro', desc: 'Frases diretas; explicar o termo que não se consegue evitar.', example: '“Porque um modelo inventa quando não tem a informação.”' },
+        { n: '04', title: 'Confiável', desc: 'Separar o que está decidido do que não está.', example: '“A política de reembolso ainda está em definição.”' }
+      ],
+
+      doList: [
+        'Títulos em caixa alta, sem ponto final, com verbo',
+        'Números como números: 40 €, 100 lugares, 08:30',
+        'Etiquetas de metadados em mono e caixa alta',
+        'Declarar a incerteza: “ainda por definir”, “em avaliação”',
+        'Marcar tudo o que é fictício, em cada confirmação'
+      ],
+      dontList: [
+        'Emoji, em lado nenhum',
+        'Exclamações e hipérbole de IA',
+        'Dizer que a IA decide, aprova ou classifica',
+        'Texto branco sobre o amarelo',
+        'Sombras, gradientes decorativos, ícones desenhados à mão'
+      ],
+
+      cssDump: [
+        ':root {',
+        '  /* Base — pretos quentes */',
+        '  --ink-900:#16130F; --ink-850:#181613; --ink-800:#1E1B18; --ink-750:#211E1B;',
+        '  --ink-700:#262320; --ink-650:#2A2622; --ink-600:#2E2A22;',
+        '',
+        '  /* Linhas e cinzas quentes */',
+        '  --line-soft:#37322C; --line-strong:#4A4438;',
+        '  --grey-100:#F2EEE8; --grey-200:#DCD6CE; --grey-300:#B8B1A8;',
+        '  --grey-400:#A9A29A; --grey-500:#8E877D; --grey-600:#6B6459;',
+        '',
+        '  /* Acento */',
+        '  --acid-500:#E8FF52; --acid-600:#D4EB3E;',
+        '  --coral-500:#FF7A45; --mint-500:#7CE0C3; --alert-300:#FFB4A2;',
+        '',
+        '  /* Aliases semânticos */',
+        '  --surface-page:var(--ink-800); --surface-alt:var(--ink-750);',
+        '  --surface-card:var(--ink-700); --surface-bar:var(--ink-650);',
+        '  --surface-inset:var(--ink-800); --surface-footer:var(--ink-850);',
+        '  --text-strong:var(--grey-100); --text-body:var(--grey-200);',
+        '  --text-muted:var(--grey-300); --text-meta:var(--grey-400); --text-faint:var(--grey-500);',
+        '  --border-default:var(--line-soft); --border-emphasis:var(--line-strong);',
+        '  --border-control:var(--grey-600);',
+        '  --accent:var(--acid-500); --accent-hover:#FFFFFF; --on-accent:var(--ink-900);',
+        '  --focus-ring:var(--acid-500); --text-error:var(--alert-300);',
+        '',
+        '  /* Tipografia */',
+        '  --font-sans:Archivo,"Helvetica Neue",Helvetica,Arial,sans-serif;',
+        '  --font-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;',
+        '  --size-display-1:clamp(44px,9vw,132px); --size-heading-1:clamp(28px,3.4vw,44px);',
+        '  --size-heading-3:22px; --size-heading-4:19px; --size-title:17px;',
+        '  --size-lead:clamp(16px,1.6vw,20px); --size-body:16px; --size-body-sm:15px;',
+        '  --size-body-xs:14px; --size-label:13px; --size-label-sm:12px;',
+        '  --size-label-xs:11px; --size-label-2xs:10px;',
+        '  --leading-display:.92; --leading-heading:1.05; --leading-body:1.55;',
+        '  --tracking-display:-.035em; --tracking-heading:-.025em; --tracking-title:-.02em;',
+        '  --tracking-label:.1em; --tracking-label-wide:.14em; --tracking-button:.05em;',
+        '',
+        '  /* Forma e espaço */',
+        '  --radius-field:12px; --radius-inset:14px; --radius-tile:16px; --radius-card:18px;',
+        '  --radius-panel:20px; --radius-panel-lg:22px; --radius-panel-xl:24px; --radius-pill:999px;',
+        '  --gutter-page:24px; --section-y:72px; --card-pad:26px; --panel-pad:28px;',
+        '  --field-pad:14px; --max-content:1180px;',
+        '',
+        '  /* Movimento e texturas */',
+        '  --duration-base:180ms; --ease-standard:cubic-bezier(.2,0,0,1);',
+        '  --pattern-placeholder:repeating-linear-gradient(135deg,',
+        '    rgba(232,255,82,.10) 0 8px, rgba(232,255,82,0) 8px 16px);',
+        '  --scrim-hero:linear-gradient(180deg,',
+        '    rgba(30,27,24,.35) 0%, rgba(30,27,24,.75) 60%, #1E1B18 100%);',
+        '}',
+        '',
+        '/* Regras globais */',
+        'html, body { margin:0; background:var(--surface-page); }',
+        'body { font-family:var(--font-sans); color:var(--text-strong); }',
+        'a { color:var(--accent); text-decoration:none; }',
+        'a:hover { color:#fff; text-decoration:underline; }',
+        ':focus-visible { outline:2px solid var(--focus-ring); outline-offset:2px; }',
+        '/* Sem box-shadow em nenhum componente. */'
+      ].join('\n')
+    };
+  }
+}
+</script>
+</body>
+</html>
